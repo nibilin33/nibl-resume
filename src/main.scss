@@ -31,14 +31,20 @@ a {
   color: $color-green;
   @include transition(all .2s ease-in-out);
 }
-
+.head {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 0 10px 5px;
+  justify-content: space-between;
+}
 .last-modified {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  width: 1000px;
-  color: #bbb;
-  margin-left: -500px;
+  // position: absolute;
+  // top: 30px;
+  // left: 50%;
+  // width: 1000px;
+  color: #3591df;
+  // margin-left: -500px;
   font-size: 12px;
   text-align: right;
   @media screen and (max-width: 1024px) {
@@ -50,11 +56,11 @@ a {
 }
 
 .download-pdf {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  color: #bbb;
-  margin-left: -500px;
+  // position: absolute;
+  // top: 30px;
+  // left: 50%;
+  color: #3591df;
+  // margin-left: -500px;
   font-size: 12px;
   text-align: right;
   @media screen and (max-width: 1024px) {
@@ -83,8 +89,8 @@ a {
   width: 100%;
   padding: 30px 50px;
   color: #fff;
-  background-color: #1fc8db;
-  background-image: linear-gradient(141deg, #c25dec 0%, #198cde 51%, #3591e0 80%);
+  font-weight: 600;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   overflow: hidden;
   @media screen and (max-width: 720px) {
     padding: 25px 30px;
@@ -155,6 +161,7 @@ a {
     h2 {
       display: inline-block;
       font-size: 24px;
+      font-weight: 500;
       @media screen and (max-width: 720px) {
         border-top: 1px solid #ffffff38;
         margin: 5px auto 0;
@@ -209,6 +216,7 @@ a {
           }
 
           .contact-link {
+            margin-right: 2px;
             @media screen and (max-width: 720px) {
               display: none;
             }
