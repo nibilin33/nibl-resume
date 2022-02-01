@@ -6,5 +6,5 @@ const assetsPath = function (_path) {
 }
 module.exports = {
     outputDir: "docs",
-    publicPath: "../"
+    publicPath: "/nibl-resume/"
 }
