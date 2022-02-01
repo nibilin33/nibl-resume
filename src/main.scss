@@ -39,12 +39,7 @@ a {
   justify-content: space-between;
 }
 .last-modified {
-  // position: absolute;
-  // top: 30px;
-  // left: 50%;
-  // width: 1000px;
   color: #3591df;
-  // margin-left: -500px;
   font-size: 12px;
   text-align: right;
   @media screen and (max-width: 1024px) {
@@ -56,11 +51,7 @@ a {
 }
 
 .download-pdf {
-  // position: absolute;
-  // top: 30px;
-  // left: 50%;
   color: #3591df;
-  // margin-left: -500px;
   font-size: 12px;
   text-align: right;
   @media screen and (max-width: 1024px) {
@@ -318,11 +309,11 @@ a {
         font-size: 14px
       }
 
-      ol .project-1:before {
-        font-size: 15px;
-        content: counter(level1) ". ";
-        counter-increment: level1;
-      }
+      // ol .project-1:before {
+      //   font-size: 15px;
+      //   content: counter(level1) ". ";
+      //   counter-increment: level1;
+      // }
 
       ol li .item-bd { /* For IE6/7. */
         margin-left: 10px;
