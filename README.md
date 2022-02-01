@@ -1,6 +1,6 @@
 # nibl-resume
 个人简历
-
+https://nibilin33.github.io/nibl-resume/        
 ## Project setup
 ```
 npm install
