@@ -137,7 +137,7 @@
                 <li>Javascript,Html5,CSS</li>
                 <li>React,Vue,小程序</li>
                 <li>Webpack,Rollup</li>
-                <li>Python,Java</li>
+                <li>Python,Java,Shell</li>
               </ul>
             </div>
           </div>
