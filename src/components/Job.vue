@@ -8,7 +8,52 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="蚂蚁金服（杭州）" time="2020.06.18 至今" />
+          <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
+           <li class="project-1">
+              <h3 class="project-name">
+                <a href="" target="_blank" title="">数字虚拟</a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                        <h3 class="project-des">【简介】</h3>
+                        <p class="item-project-des">
+                        </p>
+                    </div>
+                      <div class="div-item">
+                        <h3 class="project-des">【主要业绩】</h3>
+                        <p class="item-project-des">
+                             
+                        </p>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="" target="_blank" title="">IoT</a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                        <h3 class="project-des">【简介】</h3>
+                        <p class="item-project-des">
+                        </p>
+                    </div>
+                      <div class="div-item">
+                        <h3 class="project-des">【主要业绩】</h3>
+                        <p class="item-project-des">
+                             
+                        </p>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </JobItem>
           <JobItem
             company="厦门亿联网络技术股份有限公司"
             time="2017.06 至 2020.2.21"
@@ -61,7 +106,6 @@
                         </ul>
                     </div>
                   </div>
-                  
                 </li>
               </ol>
             </li>
@@ -85,7 +129,19 @@
           <h2 class="section-title">技能</h2>
           <span class="section-title-r"></span>
         </header>
-        <div class="section-bd"></div>
+        <!--技能:WEB端开发-->
+        <div class="section-bd">
+          <div class="item">
+            <div class="item-bd">
+              <ul class="section-content">
+                <li>Javascript,Html5,CSS</li>
+                <li>React,Vue,小程序</li>
+                <li>Webpack,Rollup</li>
+                <li>Python,Java</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <!--奖项/证书-->
       <section class="prize">
@@ -95,13 +151,13 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <!--技能:WEB后端开发-->
           <div class="item">
             <div class="item-bd">
               <ul class="section-content">
                 <li>获得过国家奖学金</li>
                 <li>多次获院一等奖学金</li>
                 <li>专业排名均在前三</li>
+                <li>CET6</li>
               </ul>
             </div>
           </div>
