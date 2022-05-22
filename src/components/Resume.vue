@@ -3,7 +3,7 @@
     <div class="head">
       <div>
         <a class="download-pdf" href="http://www.baidu.com">下载 PDF</a>
-        <a class="language" href="/nibl-resume/en">English Verison</a>
+        <a class="language" href="/nibl-resume/#/en">English Verison</a>
        </div>
       <p class="last-modified">最后更新于2022年5月</p>
     </div>
