@@ -5,7 +5,7 @@
         <h1>倪必磷</h1>
       </div>
       <div class="job">
-        <h2>前端工程师</h2>
+        <h2>高级前端工程师</h2>
       </div>
     </section>
     <section class="info">

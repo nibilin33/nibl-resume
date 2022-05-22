@@ -11,18 +11,21 @@
           <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
             <li class="project-1">
               <h3 class="project-name">
-                <a href="" target="_blank" title="">数字虚拟</a>
+                <a href="" target="_blank" title="">淘宝数字虚拟</a>
               </h3>
               <ol>
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
-                      <h3 class="project-des">【简介】</h3>
-                      <p class="item-project-des"></p>
+                      <h3 class="project-des">【业务概况】</h3>
+                      <p class="item-project-des">分为直充<span class="alias_light">（充值中心）</span>，非充<span class="alias_light">（号卡，流量包）</span>，互动<span class="alias_light">（薅羊毛）</span>，B端侧商家运营平台，内部运营平台</p>
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【主要业绩】</h3>
-                      <p class="item-project-des"></p>
+                      <h3 class="project-des">【技术方向】</h3>
+                        <ul class="section-content">
+                        <li>H5全链路日志 </li>
+                        <li>基于边缘计算的个性化SSR </li>
+                      </ul>
                     </div>
                   </div>
                 </li>
@@ -30,18 +33,35 @@
             </li>
             <li class="project-1">
               <h3 class="project-name">
-                <a href="" target="_blank" title="">IoT</a>
+                <a href="" target="_blank" title="">蚂蚁IoT</a>
               </h3>
               <ol>
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
-                      <p class="item-project-des"></p>
+                      <p class="item-project-des">
+                        涵盖所有蚂蚁线下支付设备，中小商家里的支付宝盒，大型商场里的自助点餐机，扫脸付款设备等等<br/>
+                        支付设备的切入点是为了解决支付问题，除了支付场景之外，也有很多和内容运营相关的事情
+                        </p>       
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【主要业绩】</h3>
-                      <p class="item-project-des"></p>
+                      <h3 class="project-des">【业务方向】</h3>
+                      <ul class="section-content">
+                        <li>日常IoT设备上动态化业务场景（营销大促向）</li>
+                        <li>IoT营销类UIPaaS</li>
+                        <li>移动端刷脸相关的小程序应用/插件</li>
+                        <li>移动端音视频通话，ocr小程序插件</li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【技术产出】</h3>
+                        <ul class="section-content">
+                        <li>工程效能
+                        </li>
+                        <li>性能优化
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </li>

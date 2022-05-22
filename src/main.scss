@@ -65,7 +65,10 @@ a {
     display: none;
   }
 }
-
+.alias_light{
+  color: #8a8a8a!important;
+  font-size: 12px;
+}
 .content {
   position: relative;
   width: 1024px;
@@ -438,7 +441,7 @@ a {
   }
 
   .item-project-des {
-    background: #F3F3F2;
+    // background: #F3F3F2;
     border-radius: 6px;
     padding: 6px;
     color: #545454;
