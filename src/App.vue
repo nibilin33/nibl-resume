@@ -1,14 +1,17 @@
 <template>
-  <Resume/>
+  <Resume />
 </template>
 
 <script>
-import Resume from './components/Resume.vue'
+import Resume from "./components/Resume.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Resume
-  }
-}
+    Resume,
+  },
+  mounted() {
+    this.$i18n.locale = 'en'
+  },
+};
 </script>
