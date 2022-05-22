@@ -13,7 +13,10 @@ export default {
     Resume,
   },
   mounted() {
-    console.log("mounted",getLanguage());
+    const language = getLanguage();
+    if(language === 'en') {
+      alert('The English version is not finished yet😭')
+    }
   },
 };
 </script>
