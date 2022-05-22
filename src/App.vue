@@ -4,14 +4,16 @@
 
 <script>
 import Resume from "./components/Resume.vue";
-
+import {
+  getLanguage
+} from './i18n';
 export default {
   name: "App",
   components: {
     Resume,
   },
   mounted() {
-    this.$i18n.locale = 'en'
+    console.log("mounted",getLanguage());
   },
 };
 </script>

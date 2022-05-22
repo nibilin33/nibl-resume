@@ -21,7 +21,7 @@
                       <p class="item-project-des">分为直充<span class="alias_light">（充值中心）</span>，非充<span class="alias_light">（号卡，流量包）</span>，互动<span class="alias_light">（薅羊毛）</span>，B端侧商家运营平台，内部运营平台</p>
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【技术方向】</h3>
+                      <h3 class="project-des">【技术】</h3>
                         <ul class="section-content">
                         <li>H5全链路日志 </li>
                         <li>基于边缘计算的个性化SSR </li>
@@ -46,20 +46,26 @@
                         </p>       
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【业务方向】</h3>
+                      <h3 class="project-des">【工作内容】</h3>
                       <ul class="section-content">
-                        <li>日常IoT设备上动态化业务场景（营销大促向）</li>
+                        <li>日常IoT设备上动态化业务场景<span class="alias_light">（营销大促向）</span></li>
                         <li>IoT营销类UIPaaS</li>
                         <li>移动端刷脸相关的小程序应用/插件</li>
-                        <li>移动端音视频通话，ocr小程序插件</li>
+                        <li>移动端音视频通话，OCR小程序插件</li>
                       </ul>
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【技术产出】</h3>
+                      <h3 class="project-des">【技术】</h3>
                         <ul class="section-content">
                         <li>工程效能
+                          <p class="item-project-des">
+                            用python实现了桌面版对端调试工具，可视化操作，繁琐手工流程自动化
+                          </p>  
                         </li>
-                        <li>性能优化
+                        <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
+                          <p class="item-project-des">
+                            基于Skia绘制图形，封装渲染框架，同时支持一套代码构建多端产物<br/>
+                          </p>  
                         </li>
                       </ul>
                     </div>
@@ -98,15 +104,14 @@
                     <div class="div-item">
                       <h3 class="project-des">【主要业绩】</h3>
                       <p class="item-project-des">
-                        在支撑正常的需求开发的同时，引导UC项目的重构。由于UC是很多人经手过，代码量非常庞大，<br />
-                        可以看到各种各样的编码风格，同时技术债务高台。于是我做了重构的整体考虑，<br />
-                        输出规范，多彩解决方案，内嵌web优化方案，
-                        PC,移动逻辑UI抽离代码，<br />
+                        在支撑正常的需求开发的同时，主导UC项目的重构。<br />
+                        可以看到各种各样的编码风格，同时技术债务高台。<br />
+                        于是我做了重构的整体考虑，输出规范，多彩解决方案，<br />
+                        内嵌web优化方案，PC,移动逻辑UI抽离代码，<br />
                         引入了entity,adapter,interface的划分思路,<br />
-                        自动化测试方案，<br />
-                        重构后的更新策略等。<br />
+                        自动化测试方案，重构后的更新策略等。<br />
                         同时也引入electron作为模拟工具。<br />
-                        优化了整个开发链路，提高了整体效率。<br />
+                        优化了整个开发链路，提高效率。<br />
                       </p>
                     </div>
                     <div class="div-item">
