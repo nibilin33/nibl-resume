@@ -59,12 +59,13 @@
                         <ul class="section-content">
                         <li>工程效能
                           <p class="item-project-des">
-                            用python实现了桌面版对端调试工具，可视化操作，繁琐手工流程自动化
-                          </p>  
+                            实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br/>
+                            提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
+                          </p> 
                         </li>
                         <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
-                            基于Skia绘制图形，封装渲染框架，同时支持一套代码构建多端产物<br/>
+                            主导方案框架设计，底层基于Skia能力，封装渲染框架，同时支持一套代码构建多端产物<br/>
                           </p>  
                         </li>
                       </ul>
