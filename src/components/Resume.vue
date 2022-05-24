@@ -2,7 +2,7 @@
   <div>
     <div class="head">
       <div>
-        <a class="download-pdf" @click="this.downloadPdf">下载 PDF</a>
+        <a class="download-pdf" href="https://www.sejda.com/html-to-pdf">下载 PDF</a>
         <a class="language" href="/nibl-resume/#/en">English Verison</a>
        </div>
       <p class="last-modified">最后更新于2022年5月</p>
