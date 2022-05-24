@@ -62,6 +62,7 @@
                             实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br/>
                             提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                           </p> 
+                          <img src="https://raw.githubusercontent.com/nibilin33/nibl-resume/main/src/assets/lique.jpg"/>
                         </li>
                         <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
