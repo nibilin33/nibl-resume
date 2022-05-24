@@ -67,7 +67,7 @@
                         <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
                             背景：IoT设备种类多，配置参差不齐，很多设备无法达到秒开的诉求<span class="alias_light">（离线包方案）</span> <br/>
-                            基于IoT内部做了自研轻量跨端容器，主导方案框架设计，封装渲染框架，一套代码构建多端产物，自动H5降级<br/>
+                            基于IoT内部做了自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级<br/>
                           </p>  
                         </li>
                       </ul>
