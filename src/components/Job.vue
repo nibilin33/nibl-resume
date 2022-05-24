@@ -62,11 +62,12 @@
                             实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br/>
                             提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                           </p> 
-                          <img src="https://raw.githubusercontent.com/nibilin33/nibl-resume/main/src/assets/lique.jpg"/>
+                          <img style="width:200px" src="https://nibilin33.github.io/nibl-resume/static/lique.jpg"/>
                         </li>
                         <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
-                            主导方案框架设计，底层基于Skia能力，封装渲染框架，同时支持一套代码构建多端产物<br/>
+                            背景：IoT设备种类多，配置参差不齐，很多设备无法达到秒开的诉求<span class="alias_light">（离线包方案）</span> <br/>
+                            基于IoT内部做了自研轻量跨端容器，主导方案框架设计，封装渲染框架，一套代码构建多端产物，自动H5降级<br/>
                           </p>  
                         </li>
                       </ul>
