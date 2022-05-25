@@ -46,12 +46,12 @@
                         </p>       
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【工作内容】</h3>
+                      <h3 class="project-des">【工作方向】</h3>
                       <ul class="section-content">
                         <li>日常IoT设备上动态化业务场景<span class="alias_light">（营销大促向）</span></li>
                         <li>IoT营销类UIPaaS</li>
-                        <li>移动端刷脸相关的小程序应用/插件</li>
-                        <li>移动端音视频通话，OCR小程序插件</li>
+                        <li>刷脸相关的小程序应用/插件</li>
+                        <li>音视频通话，OCR小程序插件</li>
                       </ul>
                     </div>
                     <div class="div-item">
