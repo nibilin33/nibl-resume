@@ -59,6 +59,7 @@
                         <ul class="section-content">
                         <li>工程效能
                           <p class="item-project-des">
+                            背景：整个开发调试排查流程更多依赖文档步骤和重复地命令行执行 <br/>   
                             实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br/>
                             提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                           </p> 
@@ -159,7 +160,7 @@
                 <li>Javascript,Html5,CSS</li>
                 <li>React,Vue,小程序</li>
                 <li>Webpack,Rollup</li>
-                <li>Python,Java,Shell</li>
+                <li>Python,Node,Java,Shell</li>
               </ul>
             </div>
           </div>
