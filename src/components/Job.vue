@@ -121,9 +121,13 @@
                     <div class="div-item">
                       <h3 class="project-des">【碰到过的问题】</h3>
                       <ul class="section-content">
+                        <li>
+                          性能优化<br/>
+                          1. 会议预约组件：从打开奔溃到秒开<br/>
+                          2. 组织架构树:4+s -> 1+s<br/>
+                          3. 内嵌webview加载慢: 离线资源包<br/>
+                        </li>
                         <li>内存泄漏 : 去循环引用，主动触发GC</li>
-                        <li>上万的组织树展示: 可视区间</li>
-                        <li>内嵌web加载慢: 离线资源包</li>
                         <li>高并发NG502: 压测分析，参数调优</li>
                         <li>H5混合开发跨部门联调效率低: electron 做模拟工具</li>
                       </ul>
