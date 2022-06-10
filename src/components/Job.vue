@@ -4,7 +4,7 @@
       <section class="practice">
         <header class="section-hd">
           <span class="section-title-l"></span>
-          <h2 class="section-title">项目经历</h2>
+          <h2 class="section-title">工作经历</h2>
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
@@ -150,6 +150,19 @@
       </section>
     </div>
     <div class="content-right">
+         <section class="skill">
+        <header class="section-hd">
+          <span class="section-title-l"></span>
+          <h2 class="section-title">自我介绍</h2>
+          <span class="section-title-r"></span>
+        </header>
+        <!--技能:WEB端开发-->
+        <div class="section-bd">
+          <div class="item">
+           <img style="width:400px" src="https://nibilin33.github.io/nibl-resume/static/work.png"/>
+          </div>
+        </div>
+      </section>
       <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
