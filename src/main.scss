@@ -49,6 +49,9 @@ a {
     display: none;
   }
 }
+img:hover {
+  cursor: pointer;
+}
 .language{
   font-size:12px;
   color:#a18cd1;
@@ -439,7 +442,7 @@ a {
   .item-des {
     //margin-bottom: 16px;
   }
-
+  
   .item-project-des {
     // background: #F3F3F2;
     border-radius: 6px;
