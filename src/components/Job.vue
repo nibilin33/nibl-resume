@@ -63,8 +63,8 @@
                             实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br/>
                             提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                           </p> 
-                          <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/lique.jpg"/>
-                          <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/iot.png"/>
+                          <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/lique.webp"/>
+                          <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/iot.webp"/>
                         </li>
                         <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
@@ -160,7 +160,7 @@
         <!--技能:WEB端开发-->
         <div class="section-bd">
           <div class="item">
-           <img style="width:400px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/work.png"/>
+           <img style="width:400px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/work.webp"/>
           </div>
         </div>
       </section>
