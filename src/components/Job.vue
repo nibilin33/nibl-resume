@@ -64,6 +64,7 @@
                             提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                           </p> 
                           <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/lique.jpg"/>
+                          <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/iot.jpg"/>
                         </li>
                         <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
