@@ -159,7 +159,7 @@
         <!--技能:WEB端开发-->
         <div class="section-bd">
           <div class="item">
-           <img style="width:400px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/work.webp"/>
+           <img style="width:100%" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/work.webp"/>
           </div>
         </div>
       </section>
