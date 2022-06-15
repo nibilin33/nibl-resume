@@ -59,15 +59,16 @@
                         <ul class="section-content">
                         <li>工程效能
                           <p class="item-project-des">
-                            背景：整个开发调试排查流程更多依赖文档步骤和重复地命令行执行 <br/>   
+                            问题：整个开发调试排查流程更多依赖文档步骤和重复地命令行执行，效率低 <br/>   
                             实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br/>
                             提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                           </p> 
                           <img style="width:200px" @click="openImg" src="https://nibilin33.github.io/nibl-resume/static/lique.webp"/>
                         </li>
-                        <li>IoT前端性能优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
+                        <li>IoT前端优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
                             背景：IoT设备种类多，配置参差不齐，很多设备无法达到秒开的诉求<span class="alias_light">（离线包方案）</span> <br/>
+                            问题：IoT内部做了自研轻量跨端容器，由于还不成熟的容器，UI层面支持能力弱，营销需要投入双倍人力产出h5版本和内部应用版本<br/>
                             基于IoT内部做了自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级<br/>
                           </p>  
                         </li>
