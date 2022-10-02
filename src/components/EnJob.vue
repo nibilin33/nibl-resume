@@ -12,7 +12,7 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Taobao Digital Virtual（2022.03 - 2022.05）</a
+                  >Taobao Digital Virtual</a
                 >
               </h3>
               <ol>
@@ -56,8 +56,7 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Ant IoT（2020.06 - 2022.03）</a
-                >
+                  >Ant IoT</a>
               </h3>
               <ol>
                 <li class="project-2">
