@@ -176,7 +176,7 @@
                           2. Tree components:4+s -> 1+s<br />
                           3. Slow loading inline webview: offline package<br />
                         </li>
-                        <li>memory leak : De-cyclic references, active GC triggers</li>
+                        <li>Memory leak : De-cyclic references, active GC triggers</li>
                         <li>High concurrency NG502: Compression analysis, parameter tuning</li>
                         <li>Inefficient cross-departmental interfacing for H5 hybrid development: electron as a simulation tool</li>
                       </ul>
