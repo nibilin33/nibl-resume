@@ -216,7 +216,7 @@
           <div class="item">
             <div class="item-bd">
               <ul class="section-content">
-                <li>Javascript,Html5,CSS</li>
+                <li>Javascript,Typescript,Html5,CSS</li>
                 <li>React,Vue,Miniprogram</li>
                 <li>Webpack,Rollup</li>
                 <li>Python,Node,Java,Shell</li>
