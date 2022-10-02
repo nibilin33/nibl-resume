@@ -32,18 +32,18 @@
                       <ul class="section-content">
                         <li>H5 full-link log
                             <p class="item-project-des">
-                            Problem：Online problems are identified through a single point in the problem description <br/>
+                            <b>Problem:</b> Online problems are identified through a single point in the problem description <br/>
                             and cannot be located if the problem cannot be effectively reproduced <br/>
-                            Solution: Using indexDB to store logs and an edge script to <br/>
+                            <b>Solution: </b> Using indexDB to store logs and an edge script to <br/>
                             get the traceid of the request as a basis for log trace correlation<br />
                           </p>
                         </li>
                         <li>Personalised SSR based on edge computing
                             <p class="item-project-des">
-                              Problem：Different crowd tags correspond to different display effects, <br />
+                              <b>Problem:</b> Different crowd tags correspond to different display effects, <br />
                               SSR server pressure, resulting in long white screen time 
                                <br />
-                              Solution: Using edge computing to realize CDN's dynamic policy caching of HTML,<br />
+                              <b>Solution:</b> Using edge computing to realize CDN's dynamic policy caching of HTML,<br />
                               accelerating output content<br />
                           </p>
                         </li>
@@ -87,10 +87,10 @@
                         <li>
                           Dev tools
                           <p class="item-project-des">
-                            Problem：The entire development and debugging process relies on documentation <br />
+                            <b>Problem:</b> The entire development and debugging process relies on documentation <br />
                             and repetitive command line execution, which is inefficient
                             <br />
-                            Solution: realizing end-to-end debugging tools, <br />
+                            <b>Solution: </b>realizing end-to-end debugging tools, <br />
                             visual operation and automation of monotonous and repetitive manual processes,<br />
                             providing desktop version<span class="alias_light"
                               >（Developed in python）</span
@@ -107,15 +107,15 @@
                             >（Offline package->In-house self-developed cross-end container）</span
                           >
                           <p class="item-project-des">
-                            Background：There are many different types of IoT devices with varying configurations, <br />
+                            <b>Background:</b> There are many different types of IoT devices with varying configurations, <br />
                             many of which cannot meet the requirement of second turn-on<span
                               class="alias_light"
                               >（Offline package）</span
                             >
                             <br />
-                            Problem：self-developed container is not yet mature, UI level support ability is weak, <br />
+                            <b>Problem:</b> self-developed container is not yet mature, UI level support ability is weak, <br />
                             marketing need to invest double manpower output h5 version and internal application version<br />
-                            Solution: realizing a set of code to build multi-end product and automatic H5 downgrade,leading the design of the solution framework
+                            <b>Solution: </b> realizing a set of code to build multi-end product and automatic H5 downgrade,leading the design of the solution framework
                             <br />
                           </p>
                         </li>
