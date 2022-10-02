@@ -5,9 +5,9 @@
         <a class="download-pdf" href="https://www.sejda.com/html-to-pdf"
           >PDF</a
         >
-        <router-link to="/en">English Verison</router-link>
+        <router-link to="/">Chinese Version</router-link>
       </div>
-      <p class="last-modified">最后更新于2022年5月</p>
+      <p class="last-modified">最后更新于2022年9月</p>
     </div>
     <main>
       <BaseInfo />
@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import BaseInfo from "./BaseInfo.vue";
-import JobInfo from "./Job.vue";
+import BaseInfo from "../components/BaseInfo.vue";
+import JobInfo from "../components/EnJob.vue";
 
 export default {
   name: "Resume",

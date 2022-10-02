@@ -61,6 +61,7 @@ img:hover {
   color: #3591df;
   font-size: 12px;
   text-align: right;
+  margin-right: 10px;
   @media screen and (max-width: 1024px) {
     display: none;
   }
@@ -366,8 +367,8 @@ img:hover {
   .section-title {
     position: relative;
     z-index: 1;
-    width: 24%;
-    min-width: 100px;
+    width: 30%;
+    min-width: 180px;
     margin: 0 auto;
     padding: 4px 10px;
     @include border-radius(32px);

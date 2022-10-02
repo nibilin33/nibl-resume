@@ -4,45 +4,45 @@
       <section class="practice">
         <header class="section-hd">
           <span class="section-title-l"></span>
-          <h2 class="section-title">工作经历</h2>
+          <h2 class="section-title">Working experience</h2>
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
+          <JobItem company="Alibaba Group" time="2020.06.18 - 2022.05.20">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >淘宝数字虚拟（2022.03 - 2022.05）</a
+                  >Taobao Digital Virtual（2022.03 - 2022.05）</a
                 >
               </h3>
               <ol>
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
-                      <h3 class="project-des">【业务概况】</h3>
+                      <h3 class="project-des">【Business Overview】</h3>
                       <p class="item-project-des">
-                        分为直充<span class="alias_light">（充值中心）</span
-                        >，非充<span class="alias_light">（号卡，流量包）</span
-                        >，互动<span class="alias_light">（薅羊毛）</span
-                        >，B端侧商家运营平台，内部运营平台 <br/>
-                        并且通过A/B实验助力用户增长   
+                        including direct charging (recharge centre), <br/>
+                        non-charging (number card, traffic pack), interactive (wool pulling), <br/>
+                        B-side merchant operation platform, internal operation platform,<br/>
+                        and through A/B experiments to help user growth   <br/>
                       </p>
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【技术】</h3>
+                      <h3 class="project-des">【Techniques】</h3>
                       <ul class="section-content">
-                        <li>H5全链路日志
+                        <li>H5 full-link log
                             <p class="item-project-des">
-                            问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
-                            <br />
-                            解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
+                            Problem：Online problems are identified through a single point in the problem description <br/>
+                            and cannot be located if the problem cannot be effectively reproduced <br/>
+                            Solution: Using indexDB to store logs and an edge script to <br/>
+                            get the traceid of the request as a basis for log trace correlation<br />
                           </p>
                         </li>
-                        <li>基于边缘计算的个性化SSR
+                        <li>Personalised SSR based on edge computing
                             <p class="item-project-des">
-                              问题：不同的人群标签对应不同的展示效果，SSR服务器压力大，导致白屏时间偏长  
+                              Problem：不同的人群标签对应不同的展示效果，SSR服务器压力大，导致白屏时间偏长  
                                <br />
-                              解决方式: 通过边缘计算实现CDN动态策略缓存HTML，加速输出内容页面<br />
+                              Solution: 通过边缘计算实现CDN动态策略缓存HTML，加速输出内容页面<br />
                           </p>
                         </li>
                       </ul>
