@@ -145,7 +145,7 @@
                         with functions such as polling, questionnaire, announcement, <br />
                         meeting booking, PBX, SMS gateway, topics, etc.<br />
                         <img
-                            style="width: 200px"
+                            style="width: 400px"
                             @click="openImg"
                             src="https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
                         />
