@@ -12,7 +12,7 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Taobao Digital Virtual</a
+                  >Digital Virtual</a
                 >
               </h3>
               <ol>
@@ -56,7 +56,7 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Ant IoT</a>
+                  >IoT</a>
               </h3>
               <ol>
                 <li class="project-2">
