@@ -19,12 +19,17 @@
 <script>
 import BaseInfo from "../components/BaseInfo.vue";
 import JobInfo from "../components/EnJob.vue";
+import { getLanguage } from "../i18n";
 
 export default {
   name: "Resume",
   components: {
     BaseInfo,
     JobInfo,
+  },
+  mounted(){
+    const language = getLanguage();
+    this.$i18n.locale = language;
   },
   methods: {
     downloadPdf() {

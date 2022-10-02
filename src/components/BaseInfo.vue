@@ -2,25 +2,25 @@
   <header class="content-hd">
     <section class="title">
       <div class="name">
-        <h1>倪必磷</h1>
+        <h1>{{$t('message.myname')}}</h1>
       </div>
       <div class="job">
-        <h2>高级前端工程师</h2>
+        <h2>{{$t('message.jobtitle')}}</h2>
       </div>
     </section>
     <section class="info">
       <ul>
-        <li>女 / 1994.04</li>
-        <li>闽南师范大学</li>
-        <li>软件工程</li>
-        <li>本科 / 2017年6月毕业</li>
+        <li>{{$t('message.gender')}} / 1994.04</li>
+        <li>{{$t('message.university')}}</li>
+        <li>{{$t('message.profession')}}</li>
+        <li>{{$t('message.graduate')}}</li>
       </ul>
     </section>
     <section class="contact">
       <ul>
         <li>
           <a href="https://nibilin33.github.io/frontend-blog/" target="_blank">
-            <span class="contact-link">我的博客</span>
+            <span class="contact-link">Blog</span>
             <span class="iconfont">
               <svg width="16px" height="16px" viewBox="0 0 1024 1024">
                 <path

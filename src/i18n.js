@@ -4,6 +4,14 @@ export const message = {
       hello: "世界",
       unrealized: "未实现（-0-）",
       iotone: "",
+      work: '工作',
+      myname: '倪必磷',
+      englishName: 'Iris',
+      jobtitle: '高级前端工程师',
+      university: '闽南师范大学',
+      profession: '软件工程',
+      graduate: '本科 / 2017年6月毕业',
+      gender: '女'
     },
   },
   en: {
@@ -17,12 +25,20 @@ export const message = {
       desc: "Brief description",
       iotjob1: "Dynamic business scenarios on everyday IoT devices",
       iotjob2: "UIPaaS for IoT marketing",
+      work: 'work',
+      myname: 'NiBiLin',
+      englishName: 'Iris',
+      jobtitle: 'Senior Front End Engineer',
+      university: 'Minnan Normal University',
+      profession: 'Software Engineering',
+      graduate: "Bachelor's Degree / Graduated June 2017",
+      gender: 'female'
     },
   },
 };
 export function getLanguage() {
-  const paths = location.hash.split("/");
+  const paths = location.href.split("/");
   const lastItem = paths.pop();
-  const language = paths.length > 0 ? lastItem : "cn";
+  const language = lastItem ? lastItem : "cn";
   return language;
 }
