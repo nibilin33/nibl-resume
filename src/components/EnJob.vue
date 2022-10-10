@@ -64,9 +64,8 @@
                     <div class="div-item">
                       <h3 class="project-des">【Business Overview】</h3>
                       <p class="item-project-des">
-                        Covering all Ant offline payment devices, Alipay boxes in small and medium-sized merchants, <br />
-                        self-service ordering machines in large shopping malls, face-sweeping payment devices, etc.<br />
-                        The entry point for payment devices is to solve the payment problems, <br />
+                        Covering all Ant offline payment devices,  <br />
+                        The payment devices is to solve the payment problems, <br />
                         and there are many things related to content operations beyond the payment scenario <br />
                       </p>
                     </div>
