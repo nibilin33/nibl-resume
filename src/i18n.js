@@ -26,11 +26,11 @@ export const message = {
       iotjob1: "Dynamic business scenarios on everyday IoT devices",
       iotjob2: "UIPaaS for IoT marketing",
       work: 'work',
-      myname: 'NiBiLin',
+      myname: 'Bilin Ni',
       englishName: 'Iris',
       jobtitle: 'Senior Front End Engineer',
       university: 'Minnan Normal University',
-      profession: 'Software Engineering',
+      profession: 'Software Engineering Major',
       graduate: "Bachelor's Degree / Graduated June 2017",
       gender: 'female'
     },

@@ -154,14 +154,17 @@
                     <div class="div-item">
                       <h3 class="project-des">【主要业绩】</h3>
                       <p class="item-project-des">
-                        在支撑正常的需求开发的同时，主导UC项目的重构。<br />
+                        - 主导项目重构和输出规范<br />
+                        - 多彩、自动化测试解决方案<br />
+                        - 利用Electron作为模拟工具，优化开发链，提高效率<br />
+                        <!-- 在支撑正常的需求开发的同时，主导UC项目的重构。<br />
                         可以看到各种各样的编码风格，同时技术债务高台。<br />
                         于是我做了重构的整体考虑，输出规范，多彩解决方案，<br />
                         内嵌web优化方案，PC,移动逻辑UI抽离代码，<br />
                         引入了entity,adapter,interface的划分思路,<br />
                         自动化测试方案，重构后的更新策略等。<br />
                         同时也引入electron作为模拟工具。<br />
-                        优化了整个开发链路，提高效率。<br />
+                        优化了整个开发链路，提高效率。<br /> -->
                       </p>
                     </div>
                     <div class="div-item">
