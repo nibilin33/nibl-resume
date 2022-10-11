@@ -187,13 +187,14 @@
                   <li>Vue,React,Miniprogram</li>
                   <li>Webpack,Rollup</li>
                   <li>Python,Node,Java,Shell</li>
+                  <li>English level: intermediate</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
         <!--奖项/证书-->
-        <section class="prize">
+        <!-- <section class="prize">
           <header class="section-hd">
             <span class="section-title-l"></span>
             <h2 class="section-title">Awards / Certificates</h2>
@@ -210,7 +211,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
     </div>
   </template>
