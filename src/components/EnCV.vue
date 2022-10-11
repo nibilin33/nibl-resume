@@ -125,7 +125,7 @@
                         <h3 class="project-des">【Duties】</h3>
                         <ul class="section-content">
                           <li>Role：  principal of the front-end project</li>
-                          <li>Tasks： Requirements review, task allocation, technical support, functional development</li>
+                          <li>Tasks： requirements review, task allocation, technical support, functional development</li>
                         </ul>
                       </div>
                       <div class="div-item">
