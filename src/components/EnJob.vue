@@ -12,8 +12,7 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Digital Virtual</a
-                >
+                  >Digital Virtual（2022.03 - 2022.05）</a>
               </h3>
               <ol>
                 <li class="project-2">
@@ -56,7 +55,7 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >IoT</a>
+                  >IoT （2020.06 - 2022.03）</a>
               </h3>
               <ol>
                 <li class="project-2">
@@ -125,7 +124,14 @@
               </ol>
             </li>
           </JobItem>
-          <JobItem
+      
+        </div>
+      </section>
+    </div>
+    <div class="content-right">
+      <section class="practice">
+        <div class="section-bd">
+      <JobItem
             company="Yealink"
             time="2017.06 - 2020.2.21"
           >
@@ -169,12 +175,12 @@
                       <h3 class="project-des">【Techniques】</h3>
                       <ul class="section-content">
                         <li>
-                          High Performance<br />        
-                          1. Conference booking component：From runaway to second open<br />
-                          2. Tree components: from 4+seconds to 1+seconds<br />
-                          3. Slow loading inline webview: offline package<br />
+                          <b>High Performance</b><br />        
+                            1. Conference booking component：From runaway to second open<br />
+                            2. Tree components: from 4+seconds to 1+seconds<br />
+                            3. Slow loading inline webview: offline package<br />
                         </li>
-                        <li>Memory leak : De-cyclic references, active GC triggers</li>
+                        <li><b>Memory leak :</b> De-cyclic references, active GC triggers</li>
                         <li>High concurrency NG502: Compression analysis, parameter tuning</li>
                         <li>Inefficient cross-departmental interfacing for H5 hybrid development: electron as a simulation tool</li>
                       </ul>
@@ -186,8 +192,6 @@
           </JobItem>
         </div>
       </section>
-    </div>
-    <div class="content-right">
       <!-- <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
