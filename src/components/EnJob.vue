@@ -241,7 +241,7 @@
               <ul class="section-content">
                 <li>Received a national scholarship</li>
                 <li>Professional ranking in the top three</li>
-                <li>Having taken IELTS test（English level intermediate）</li>
+                <li>IELTS score is 7.0（English level upper-intermediate）</li>
               </ul>
             </div>
           </div>
