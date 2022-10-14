@@ -186,7 +186,7 @@
                   <li>Javascript,Typescript,Html5,CSS</li>
                   <li>Vue,React,Miniprogram</li>
                   <li>Webpack,Rollup</li>
-                  <li>Python,Node,Java,Shell</li>
+                  <li>Python,Node,Shell</li>
                   <li>English level: upper-intermediate（IELTS score is 7.0）</li>
                 </ul>
               </div>
