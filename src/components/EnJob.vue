@@ -74,7 +74,7 @@
                         <li>
                           Dynamic business scenarios on IoT devices
                         </li>
-                        <li>IoT Marketing UIPaaS</li>
+                        <li>IoT Marketing UIPaaS(low code)</li>
                         <li>Face recognition miniprograms/plugins</li>
                         <li>WebRTC，OCR plugins</li>
                       </ul>
