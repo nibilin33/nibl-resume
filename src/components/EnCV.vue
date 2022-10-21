@@ -1,162 +1,185 @@
 <template>
-    <div class="content-bd">
-      <div class="content-left">
-        <section class="practice">
-          <header class="section-hd">
-            <span class="section-title-l"></span>
-            <h2 class="section-title">Working experience</h2>
-            <span class="section-title-r"></span>
-          </header>
-          <div class="section-bd">
-            <JobItem company="Alibaba Group" time="2020.06.18 - 2022.05.20">
-              <li class="project-1">
-                <h3 class="project-name">
-                  <a href="" target="_blank" title=""
-                    >Digital Virtual（2022.03 - 2022.05）</a>
-                </h3>
-                <ol>
-                  <li class="project-2">
-                    <div class="item-bd">
-                      <div class="div-item">
-                        <h3 class="project-des">【Business Overview】</h3>
-                        <p class="item-project-des">
-                          including direct charging (recharge centre), <br/>
-                          non-charging (number card, traffic pack), Interactive games (Wool-gathering), <br/>
-                          B-side merchant operation platform, Internal operation platform,<br/>
-                          and through A/B experiments to help user growth   <br/>
-                        </p>
-                      </div>
-                      <div class="div-item">
-                        <h3 class="project-des">【Techniques】</h3>
-                        <ul class="section-content">
-                          <li>H5 full-link log</li>
-                          <li>Personalised SSR based on edge computing
-                          </li>
-                        </ul>
-                      </div>
+  <div class="content-bd">
+    <div class="content-left">
+      <section class="practice">
+        <header class="section-hd">
+          <span class="section-title-l"></span>
+          <h2 class="section-title">Working experience</h2>
+          <span class="section-title-r"></span>
+        </header>
+        <div class="section-bd">
+          <JobItem company="Alibaba Group" time="2020.06.18 - 2022.05.20">
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="" target="_blank" title=""
+                  >Digital Virtual（2022.03 - 2022.05）</a
+                >
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【Business Overview】</h3>
+                      <p class="item-project-des">
+                        including direct charging (recharge centre), <br />
+                        non-charging (number card, traffic pack), Interactive
+                        games (Wool-gathering), <br />
+                        B-side merchant operation platform, Internal operation
+                        platform,<br />
+                        and through A/B experiments to help user growth <br />
+                      </p>
                     </div>
-                  </li>
-                </ol>
-              </li>
-              <li class="project-1">
-                <h3 class="project-name">
-                  <a href="" target="_blank" title=""
-                    >Alipay IoT （2020.06 - 2022.03）</a>
-                </h3>
-                <ol>
-                  <li class="project-2">
-                    <div class="item-bd">
-                      <div class="div-item">
-                        <h3 class="project-des">【Business Overview】</h3>
-                        <p class="item-project-des">
-                          Covering all Ant offline payment devices,  <br />
-                          The payment devices is to solve the payment problems, <br />
-                          and there are many things related to content operations beyond the payment scenario <br />
-                        </p>
-                      </div>
-                      <div class="div-item">
-                        <h3 class="project-des">【Main Job Details】</h3>
-                        <ul class="section-content">
-                          <li>
-                            Dynamic business scenarios on IoT devices
-                          </li>
-                          <li>IoT Marketing UIPaaS(low code)</li>
-                          <li>Face recognition miniprograms/plugins</li>
-                          <li>WebRTC，OCR plugins</li>
-                        </ul>
-                      </div>
-                      <div class="div-item">
-                        <h3 class="project-des">【Techniques】</h3>
-                        <ul class="section-content">
-                          <li>
-                            Dev tools: end-to-end debugging tools for devices <br/>
-                            <span class="alias_light"
-                              >desktop version(developed in python) and Vscode plugin version</span
-                            ><br/>
-                            <img
-                              style="width: 200px"
-                              @click="openImg"
-                              src="https://nibilin33.github.io/nibl-resume/static/lique.webp"
-                            />
-                          </li>
-                          <li>
-                            IoT front-end optimisation <br/>
-                            <span class="alias_light"
-                              >Offline package->In-house self-developed cross-end container</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Techniques】</h3>
+                      <ul class="section-content">
+                        <li>H5 full-link log</li>
+                        <li>Personalised SSR based on edge computing</li>
+                      </ul>
                     </div>
-                  </li>
-                </ol>
-              </li>
-            </JobItem>
-        
-          </div>
-        </section>
-      </div>
-      <div class="content-right">
-        <section class="practice">
-          <div class="section-bd">
-        <JobItem
-              company="Yealink"
-              time="2017.06 - 2020.2.21"
-            >
-              <li class="project-1">
-                <h3 class="project-name">
-                  <a href="" target="_blank" title="">UC</a>
-                </h3>
-                <ol>
-                  <li class="project-2">
-                    <div class="item-bd">
-                      <div class="div-item">
-                        <h3 class="project-des">【Project】</h3>
-                        <p class="item-project-des">
-                          UC: Enterprise communications solution, including management and user side (PC, mobile)<br />
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="" target="_blank" title=""
+                  >Alipay IoT （2020.06 - 2022.03）</a
+                >
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【Business Overview】</h3>
+                      <p class="item-project-des">
+                        Covering all Ant offline payment devices, <br />
+                        The payment devices is to solve the payment problems,
+                        <br />
+                        and there are many things related to content operations
+                        beyond the payment scenario <br />
+                      </p>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Main Job Details】</h3>
+                      <ul class="section-content">
+                        <li>Dynamic business scenarios on IoT devices</li>
+                        <li>IoT Marketing UIPaaS(low code)</li>
+                        <li>Face recognition miniprograms/plugins</li>
+                        <li>WebRTC，OCR plugins</li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Techniques】</h3>
+                      <ul class="section-content">
+                        <li>
+                          Dev tools: end-to-end debugging tools for devices
+                          <br />
+                          <span class="alias_light"
+                            >desktop version(developed in python) and Vscode
+                            plugin version</span
+                          ><br />
                           <img
-                              style="width: 400px"
-                              @click="openImg"
-                              src="https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
+                            style="width: 200px"
+                            @click="openImg"
+                            src="https://nibilin33.github.io/nibl-resume/static/lique.webp"
                           />
-                        </p>
-                      </div>
-                      <div class="div-item">
-                        <h3 class="project-des">【Duties】</h3>
-                        <ul class="section-content">
-                          <li>Role：  principal of the front-end project</li>
-                          <li>Tasks： requirements review, task allocation, technical support, functional development</li>
-                        </ul>
-                      </div>
-                      <div class="div-item">
-                        <h3 class="project-des">【Main Job Details】</h3>
-                        <p class="item-project-des">
-                          - Lead project refactoring and output specifications<br />
-                          - Multi-skin, automated testing solutions<br />
-                          - Used Electron as a simulation tool to optimise the development chain and increase efficiency<br />
-                        </p>
-                      </div>
-                      <div class="div-item">
-                        <h3 class="project-des">【Techniques】</h3>
-                        <ul class="section-content">
-                          <li>
-                            High Performance<br />        
-                              1. Conference booking component：From runaway to second open<br />
-                              2. Tree components: from 4+seconds to 1+seconds<br />
-                              3. Slow loading inline webview: offline package<br />
-                          </li>
-                          <li>Memory leak:De-cyclic references, active GC triggers</li>
-                          <li>High concurrency NG502: Compression analysis, parameter tuning</li>
-                        </ul>
-                      </div>
+                        </li>
+                        <li>
+                          IoT front-end optimisation <br />
+                          <span class="alias_light"
+                            >Offline package->In-house self-developed cross-end
+                            container</span
+                          >
+                        </li>
+                      </ul>
                     </div>
-                  </li>
-                </ol>
-              </li>
-            </JobItem>
-          </div>
-        </section>
-        <!-- <section class="skill">
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </JobItem>
+        </div>
+      </section>
+    </div>
+    <div class="content-right">
+      <section class="practice">
+        <div class="section-bd">
+          <JobItem company="Yealink" time="2017.06 - 2020.2.21">
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="" target="_blank" title="">UC</a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【Project】</h3>
+                      <p class="item-project-des">
+                        UC: Enterprise communications solution, including
+                        management and user side (PC, mobile)<br />
+                        <img
+                          style="width: 400px"
+                          @click="openImg"
+                          src="https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
+                        />
+                      </p>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Duties】</h3>
+                      <ul class="section-content">
+                        <li>Role： principal of the front-end project</li>
+                        <li>
+                          Tasks： requirements review, task allocation,
+                          technical support, functional development
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Main Job Details】</h3>
+                      <p class="item-project-des">
+                        - Lead project refactoring and output specifications<br />
+                        - Multi-skin, automated testing solutions<br />
+                        - Used Electron as a simulation tool to optimise the
+                        development chain and increase efficiency<br />
+                      </p>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Techniques】</h3>
+                      <ul class="section-content">
+                        <li>
+                          High Performance<br />
+                          1. Conference booking component：From runaway to
+                          second open<br />
+                          2. Tree components: from 4+seconds to 1+seconds<br />
+                          3. Slow loading inline webview: offline package<br />
+                        </li>
+                        <li>
+                          Memory leak:De-cyclic references, active GC triggers
+                        </li>
+                        <li>
+                          High concurrency NG502: Compression analysis,
+                          parameter tuning
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </JobItem>
+          <JobItem company="Yealink" time="2016.12.16 - 2017.04" status="school">
+          </JobItem>
+        </div>
+      </section>
+      <!-- <div class="item">
+            <header class="item-hd">
+              <h3 class="item-name">Yealink</h3>
+              <span class="item-time">2016.12.16 ~ 2017.04</span>
+              <a class="btn item-more" href="" title="">Internships</a>
+            </header>
+            <div class="item-bd"></div>
+          </div> -->
+      <!-- <section class="skill">
           <header class="section-hd">
             <span class="section-title-l"></span>
             <h2 class="section-title">Self introduction</h2>
@@ -172,29 +195,29 @@
             </div>
           </div>
         </section> -->
-        <section class="skill">
-          <header class="section-hd">
-            <span class="section-title-l"></span>
-            <h2 class="section-title">Skills</h2>
-            <span class="section-title-r"></span>
-          </header>
-          <!--技能:WEB端开发-->
-          <div class="section-bd">
-            <div class="item">
-              <div class="item-bd">
-                <ul class="section-content">
-                  <li>Javascript,Typescript,Html5,CSS</li>
-                  <li>Vue,React,Miniprogram，Serverless</li>
-                  <li>Webpack,Rollup</li>
-                  <li>Python,Node,Shell</li>
-                  <li>English level: upper-intermediate（IELTS score is 7.0）</li>
-                </ul>
-              </div>
+      <section class="skill">
+        <header class="section-hd">
+          <span class="section-title-l"></span>
+          <h2 class="section-title">Skills</h2>
+          <span class="section-title-r"></span>
+        </header>
+        <!--技能:WEB端开发-->
+        <div class="section-bd">
+          <div class="item">
+            <div class="item-bd">
+              <ul class="section-content">
+                <li>Javascript,Typescript,Html5,CSS</li>
+                <li>Vue,React,Miniprogram，Serverless</li>
+                <li>Webpack,Rollup</li>
+                <li>Python,Node,Shell</li>
+                <li>English level: upper-intermediate（IELTS score is 7.0）</li>
+              </ul>
             </div>
           </div>
-        </section>
-        <!--奖项/证书-->
-        <!-- <section class="prize">
+        </div>
+      </section>
+      <!--奖项/证书-->
+      <!-- <section class="prize">
           <header class="section-hd">
             <span class="section-title-l"></span>
             <h2 class="section-title">Awards / Certificates</h2>
@@ -212,25 +235,24 @@
             </div>
           </div>
         </section> -->
-      </div>
     </div>
-  </template>
-  
-  <script>
-  import JobItem from "./JobItem.vue";
-  export default {
-    name: "JobInfo",
-    components: {
-      JobItem,
+  </div>
+</template>
+
+<script>
+import JobItem from "./JobItem.vue";
+export default {
+  name: "JobInfo",
+  components: {
+    JobItem,
+  },
+  methods: {
+    openImg(e) {
+      const { target } = e;
+      if (target.currentSrc) {
+        window.open(target.currentSrc);
+      }
     },
-    methods: {
-      openImg(e) {
-        const { target } = e;
-        if (target.currentSrc) {
-          window.open(target.currentSrc);
-        }
-      },
-    },
-  };
-  </script>
-  
+  },
+};
+</script>

@@ -4,14 +4,15 @@ export const message = {
       hello: "世界",
       unrealized: "未实现（-0-）",
       iotone: "",
-      work: '工作',
+      work: 'work',
       myname: '倪必磷',
       englishName: 'Iris',
       jobtitle: '高级前端工程师',
       university: '闽南师范大学',
       profession: '软件工程',
       graduate: '本科 / 2017年6月毕业',
-      gender: '女'
+      gender: '女',
+      school: 'Internships'
     },
   },
   en: {
@@ -32,7 +33,8 @@ export const message = {
       university: 'Minnan Normal University',
       profession: 'Software Engineering Major',
       graduate: "Bachelor's Degree / Graduated June 2017",
-      gender: 'female'
+      gender: 'female',
+      school: 'Internships'
     },
   },
 };
