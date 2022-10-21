@@ -220,7 +220,7 @@
             <div class="item-bd">
               <ul class="section-content">
                 <li>Javascript,Typescript,Html5,CSS</li>
-                <li>Vue,React,Miniprogram</li>
+                <li>Vue,React,Miniprogram,Serverless</li>
                 <li>Webpack,Rollup</li>
                 <li>Python,Node,Java,Shell</li>
               </ul>

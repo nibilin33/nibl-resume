@@ -228,7 +228,7 @@
             <div class="item-bd">
               <ul class="section-content">
                 <li>Javascript,Html5,CSS</li>
-                <li>React,Vue,小程序</li>
+                <li>React,Vue,小程序,Serverless</li>
                 <li>Webpack,Rollup</li>
                 <li>Python,Node,Java,Shell</li>
               </ul>
