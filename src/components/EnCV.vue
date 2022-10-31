@@ -210,7 +210,7 @@
                 <li>Vue,React,Miniprogram，Serverless</li>
                 <li>Webpack,Rollup</li>
                 <li>Python,Node,Shell</li>
-                <li>English level: upper-intermediate（IELTS score is 7.0）</li>
+                <li>English level: upper-intermediate（IELTS score is 7.0 in 2022.10）</li>
               </ul>
             </div>
           </div>
