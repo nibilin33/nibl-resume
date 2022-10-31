@@ -72,9 +72,9 @@
                       <h3 class="project-des">【Job Details】</h3>
                       <ul class="section-content">
                         <li>
-                          Dynamic business scenarios on IoT devices
+                          Dynamic business scenarios on IoT devices(React)
                         </li>
-                        <li>IoT Marketing UIPaaS(low code)</li>
+                        <li>IoT Marketing UIPaaS(low code)(React)</li>
                         <li>Face recognition miniprograms/plugins</li>
                         <li>WebRTC，OCR plugins</li>
                       </ul>
@@ -92,7 +92,7 @@
                             visual operation and automation of monotonous and repetitive manual processes,<br />
                             providing desktop version<span class="alias_light"
                               >（Developed in python）</span
-                            >and Vscode plugin version  
+                            >and Vscode plugin version(Typescript)  
                           </p>
                           <img
                             style="width: 200px"

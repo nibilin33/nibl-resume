@@ -62,8 +62,8 @@
                     <div class="div-item">
                       <h3 class="project-des">【Main Job Details】</h3>
                       <ul class="section-content">
-                        <li>Dynamic business scenarios on IoT devices</li>
-                        <li>IoT Marketing UIPaaS(low code)</li>
+                        <li>Dynamic business scenarios on IoT devices(React)</li>
+                        <li>IoT Marketing UIPaaS(low code)(React)</li>
                         <li>Face recognition miniprograms/plugins</li>
                         <li>WebRTC，OCR plugins</li>
                       </ul>
@@ -76,7 +76,7 @@
                           <br />
                           <span class="alias_light"
                             >desktop version(developed in python) and Vscode
-                            plugin version</span
+                            plugin version(Typescript)</span
                           ><br />
                           <img
                             style="width: 200px"
