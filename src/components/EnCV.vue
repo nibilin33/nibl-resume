@@ -207,9 +207,9 @@
             <div class="item-bd">
               <ul class="section-content">
                 <li>Javascript,Typescript,Html5,CSS</li>
-                <li>Vue,React,Miniprogram，Serverless</li>
+                <li>Vue,React,Miniprogram,Serverless</li>
                 <li>Webpack,Rollup</li>
-                <li>Python,Node,Shell</li>
+                <li>Python,Node,Shell,Docker</li>
                 <li>English level: upper-intermediate（IELTS score is 7.0 in 2022.10）</li>
               </ul>
             </div>
