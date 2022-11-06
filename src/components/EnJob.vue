@@ -75,8 +75,8 @@
                           Dynamic business scenarios on IoT devices(React)
                         </li>
                         <li>IoT Marketing UIPaaS(low code)(React)</li>
-                        <li>Face recognition miniprograms/plugins</li>
-                        <li>WebRTC，OCR plugins</li>
+                        <li>Face recognition miniprograms plugins</li>
+                        <li>WebRTC，OCR miniprograms plugins</li>
                       </ul>
                     </div>
                     <div class="div-item">
@@ -102,7 +102,7 @@
                         </li>
                         <li>
                           IoT front-end optimisation<span class="alias_light"
-                            >（Offline package->In-house self-developed cross-end container）</span
+                            >（Offline package->self-developed cross-end container）</span
                           >
                           <p class="item-project-des">
                             <b>Background:</b> There were many different types of IoT devices with varying configurations, <br />
@@ -159,7 +159,7 @@
                     <div class="div-item">
                       <h3 class="project-des">【Duties】</h3>
                       <ul class="section-content">
-                        <li>Role：  principal of the front-end project</li>
+                        <li>Role： Head of the front-end project</li>
                         <li>Tasks： Requirements review, task allocation, technical support, functional development</li>
                       </ul>
                     </div>

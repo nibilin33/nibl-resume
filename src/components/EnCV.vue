@@ -64,8 +64,8 @@
                       <ul class="section-content">
                         <li>Dynamic business scenarios on IoT devices(React)</li>
                         <li>IoT Marketing UIPaaS(low code)(React)</li>
-                        <li>Face recognition miniprograms/plugins</li>
-                        <li>WebRTC，OCR plugins</li>
+                        <li>Face recognition miniprograms plugins</li>
+                        <li>WebRTC，OCR miniprograms plugins</li>
                       </ul>
                     </div>
                     <div class="div-item">
@@ -87,7 +87,7 @@
                         <li>
                           IoT front-end optimisation <br />
                           <span class="alias_light"
-                            >Offline package->In-house self-developed cross-end
+                            >Offline package->self-developed cross-end
                             container</span
                           >
                         </li>
@@ -127,7 +127,7 @@
                     <div class="div-item">
                       <h3 class="project-des">【Duties】</h3>
                       <ul class="section-content">
-                        <li>Role： principal of the front-end project</li>
+                        <li>Role： Head of the front-end project</li>
                         <li>
                           Tasks： requirements review, task allocation,
                           technical support, functional development
