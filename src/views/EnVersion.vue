@@ -7,7 +7,7 @@
         >
         <router-link to="/">Chinese Version</router-link>
       </div>
-      <p class="last-modified">最后更新于2022年9月</p>
+      <p class="last-modified">last modified 2022.11</p>
     </div>
     <main>
       <BaseInfo />

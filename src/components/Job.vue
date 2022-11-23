@@ -8,6 +8,23 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
+          <JobItem company="开源社区" time="2022.11 - 至今">
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod"
+                  >
+                  Codepod
+                  </a>
+                <p class="item-project-des">
+                  可扩展的交互式编程 <br/>
+                  github <a  target="_blank" href="https://github.com/codepod-io/codepod">codepod</a>
+                 </p>
+              </h3>
+            </li>
+         
+          </JobItem>
+        </div>
+        <div class="section-bd">
           <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
             <li class="project-1">
               <h3 class="project-name">
