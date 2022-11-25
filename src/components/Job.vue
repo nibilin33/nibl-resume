@@ -8,7 +8,20 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="开源社区" time="2022.11 - 至今">
+          <JobItem company="Horizons" time="2022.11 - now">
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="#" target="_blank" title="Horizons"
+                  >
+                  Join
+                  </a
+                >
+              </h3>
+            </li>
+          </JobItem>
+        </div>
+        <div class="section-bd">
+          <JobItem company="开源社区" status="part" time="2022.11 - 至今">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod"

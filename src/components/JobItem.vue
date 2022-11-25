@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "JobItem",
   props: {
@@ -19,8 +20,12 @@ export default {
     status: String,
   },
   data() {
+    const statusType = {
+      school: this.$t("message.school"),
+      part: 'part-time'
+    }
     return {
-      tag: this.status ? this.$t("message.school") : this.$t("message.work"),
+      tag: this.status ? statusType[this.status]: this.$t("message.work"),
     };
   },
 };
