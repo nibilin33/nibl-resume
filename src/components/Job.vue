@@ -20,7 +20,7 @@
             </li>
           </JobItem>
         </div>
-        <div class="section-bd">
+        <!-- <div class="section-bd">
           <JobItem company="开源社区" status="part" time="2022.11 - 至今">
             <li class="project-1">
               <h3 class="project-name">
@@ -36,7 +36,7 @@
             </li>
          
           </JobItem>
-        </div>
+        </div> -->
         <div class="section-bd">
           <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
             <li class="project-1">

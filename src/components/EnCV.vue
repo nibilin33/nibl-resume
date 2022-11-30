@@ -21,7 +21,7 @@
          
           </JobItem>
         </div>
-        <div class="section-bd">
+        <!-- <div class="section-bd">
           <JobItem company="Open Source Community" status="part" time="2022.11 - now">
             <li class="project-1">
               <h3 class="project-name">
@@ -38,7 +38,7 @@
             </li>
          
           </JobItem>
-        </div>
+        </div> -->
         <div class="section-bd">
           <JobItem company="Alibaba Group" time="2020.06.18 - 2022.05.20">
             <li class="project-1">
