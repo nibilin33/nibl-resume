@@ -23,7 +23,8 @@ export default {
     const statusType = {
       school: this.$t("message.school"),
       part: 'part-time',
-      remote: 'remote-work'
+      remote: 'remote-work',
+      open: 'open-source'
     }
     return {
       tag: this.status ? statusType[this.status]: this.$t("message.work"),

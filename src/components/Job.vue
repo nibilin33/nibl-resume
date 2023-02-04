@@ -64,23 +64,18 @@
             </li>
           </JobItem>
         </div>
-        <!-- <div class="section-bd">
-          <JobItem company="开源社区" status="part" time="2022.11 - 至今">
+        <div class="section-bd">
+          <JobItem company="开源社区" status="open">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod"
                   >
                   Codepod
                   </a>
-                <p class="item-project-des">
-                  可扩展的交互式编程 <br/>
-                  github <a  target="_blank" href="https://github.com/codepod-io/codepod">codepod</a>
-                 </p>
               </h3>
             </li>
-         
           </JobItem>
-        </div> -->
+        </div>
         <div class="section-bd">
           <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
             <li class="project-1">
@@ -209,10 +204,15 @@
                     <div class="div-item">
                       <h3 class="project-des">【项目简介】</h3>
                       <p class="item-project-des">
-                        UC:企业统一通讯的解决方案，包含管理端和用户端（PC,移动端）。<br />
-                        管理端主要使用vue做前端，node做BFF层，
-                        redis做缓存，nginx做反向代理服务器。<br />
-                        用户端主要采用内嵌webview方式，主要有投票，问卷调查，公告，会议预约，PBX，短信网关，话题等功能
+                        UC:企业统一通讯的解决方案，主要有设备管理，会议预约，PBX，短信网关，话题等功能<br />
+                        <img
+                            style="width: 400px"
+                            @click="openImg"
+                            src="https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
+                        />
+                        <!-- 管理端主要使用vue做前端，node做BFF层，
+                        redis做缓存，nginx做反向代理服务器。<br /> -->
+                        <!-- 用户端主要采用内嵌webview方式，主要有投票，问卷调查，公告，会议预约，PBX，短信网关，话题等功能 -->
                       </p>
                     </div>
                     <div class="div-item">
