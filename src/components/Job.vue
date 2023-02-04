@@ -8,15 +8,59 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="Horizons" time="2022.11 - now">
+          <JobItem company="Horizons" status="remote" time="2022.11.25 - now">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="#" target="_blank" title="Horizons"
                   >
                   Join
-                  </a
-                >
+                  </a>
               </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【项目简介】</h3>
+                      <p class="item-project-des">
+                        提供一站式雇佣解决方案，同时负责薪酬发放的人力资源SaaS平台(<a href="https://app.joinhorizons.com/login">joinhorizons</a>)
+                        
+                      </p>
+                    </div>
+                 
+                    <div class="div-item">
+                      <h3 class="project-des">【工作方向】</h3>
+                      <ul class="section-content">
+                        <li>
+                          <a href="https://join-ui.joinhorizons.com/">Join-UI</a> 组件库开发维护
+                        </li>
+                        <li>Join 管理端&用户端重构</li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【技术】</h3>
+                      <ul class="section-content">
+                        <li>微前端集成，完成阶段性重构结果上线
+                            <!-- <p class="item-project-des">
+                            问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
+                            <br />
+                            解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
+                          </p> -->
+                        </li>
+                        <li>i18n一站式解决方案
+                            <!-- <p class="item-project-des">
+                            问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
+                            <br />
+                            解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
+                          </p> -->
+                        </li>
+                        <li>制定多端组件开发优化方案</li>
+                        <li>Mock方案迁移</li>
+                        <li>完善自动化Pipeline流程</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ol>
             </li>
           </JobItem>
         </div>
@@ -44,8 +88,7 @@
                 <a href="" target="_blank" title=""
                   >淘宝数字虚拟（2022.03 - 2022.05）
                   <!-- （2022.03 - 2022.05） -->
-                  </a
-                >
+                </a>
               </h3>
               <ol>
                 <li class="project-2">
@@ -56,26 +99,25 @@
                         分为直充<span class="alias_light">（充值中心）</span
                         >，非充<span class="alias_light">（号卡，流量包）</span
                         >，互动<span class="alias_light">（薅羊毛）</span
-                        >，B端侧商家运营平台，内部运营平台 <br/>
-                        并且通过A/B实验助力用户增长   
+                        >，B端侧商家运营平台，内部运营平台并且通过A/B实验助力用户增长   
                       </p>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li>H5全链路日志
-                            <p class="item-project-des">
+                            <!-- <p class="item-project-des">
                             问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
                             <br />
                             解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
-                          </p>
+                          </p> -->
                         </li>
                         <li>基于边缘计算的个性化SSR
-                            <p class="item-project-des">
+                            <!-- <p class="item-project-des">
                               问题：不同的人群标签对应不同的展示效果，SSR服务器压力大，导致白屏时间偏长  
                                <br />
                               解决方式: 通过边缘计算实现CDN动态策略缓存HTML，加速输出内容页面<br />
-                          </p>
+                          </p> -->
                         </li>
                       </ul>
                     </div>
@@ -87,7 +129,6 @@
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
                   >蚂蚁IoT（2020.06 - 2022.03）
-                  <!-- （2020.06 - 2022.03） -->
                   </a
                 >
               </h3>
@@ -111,7 +152,7 @@
                         </li>
                         <li>IoT营销类UIPaaS</li>
                         <li>刷脸相关的小程序应用/插件</li>
-                        <li>音视频通话，OCR小程序插件</li>
+                        <li>多媒体：音视频通话，OCR小程序插件等</li>
                       </ul>
                     </div>
                     <div class="div-item">
@@ -257,10 +298,10 @@
           <div class="item">
             <div class="item-bd">
               <ul class="section-content">
-                <li>Javascript,Html5,CSS</li>
-                <li>React,Vue,小程序,Serverless</li>
-                <li>Webpack,Rollup</li>
-                <li>Python,Node,Java,Shell</li>
+                <li>Javascript,Typescript,Html5,CSS</li>
+                <li>React,Vue,小程序,Tailwindcss</li>
+                <li>Webpack,Rollup,Vite</li>
+                <li>Python,Node,Java,Shell,Serverless</li>
               </ul>
             </div>
           </div>
