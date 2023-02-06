@@ -55,7 +55,7 @@
                         </li>
                         <li>制定多端组件开发优化方案</li>
                         <li>Mock方案优化迁移</li>
-                        <li>完善自动化Pipeline流程</li>
+                        <!-- <li>完善自动化Pipeline流程</li> -->
                       </ul>
                     </div>
                   </div>
