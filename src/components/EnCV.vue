@@ -18,7 +18,35 @@
                 >
               </h3>
             </li>
-         
+            <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【Tech stack】</h3>
+                      <p class="item-project-des">
+                        React, Typescript, Tailwindcss, Vite
+                      </p>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Summery】</h3>
+                      <ul class="section-content">
+                        <li>Responsible for Join-ui component library</li>
+                        <li>Responsible for HR saas platform</li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Techniques】</h3>
+                      <ul class="section-content">
+                        <li>Micro front-end integration for phase refactoring</li>
+                        <li>I18n solution</li>
+                        <li>Multi-end Component development enhancement</li>
+                        <li>Mock solution enhancement</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </li>
+              </ol>
           </JobItem>
         </div>
         <!-- <div class="section-bd">
@@ -50,7 +78,7 @@
               <ol>
                 <li class="project-2">
                   <div class="item-bd">
-                    <div class="div-item">
+                    <!-- <div class="div-item">
                       <h3 class="project-des">【Business Overview】</h3>
                       <p class="item-project-des">
                         including direct charging (recharge centre), <br />
@@ -60,6 +88,18 @@
                         platform,<br />
                         and through A/B experiments to help user growth <br />
                       </p>
+                    </div> -->
+                    <div class="div-item">
+                      <h3 class="project-des">【Tech stack】</h3>
+                      <p class="item-project-des">
+                        React, Rax, Serverless, A/B test
+                      </p>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Summery】</h3>
+                      <ul class="section-content">
+                        <li>Responsible for recharge business and interactive mini-games</li>
+                      </ul>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【Techniques】</h3>
@@ -81,7 +121,7 @@
               <ol>
                 <li class="project-2">
                   <div class="item-bd">
-                    <div class="div-item">
+                    <!-- <div class="div-item">
                       <h3 class="project-des">【Business Overview】</h3>
                       <p class="item-project-des">
                         Covering all Ant offline payment devices, <br />
@@ -90,14 +130,19 @@
                         and there are many things related to content operations
                         beyond the payment scenario <br />
                       </p>
+                    </div> -->
+                    <div class="div-item">
+                      <h3 class="project-des">【Tech stack】</h3>
+                      <p class="item-project-des">
+                        React, Miniprograms, WebRTC, Rollup, Python, Shell, Android
+                      </p>
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【Main Job Details】</h3>
+                      <h3 class="project-des">【Summery】</h3>
                       <ul class="section-content">
-                        <li>Dynamic business scenarios on IoT devices(React)</li>
-                        <li>IoT Marketing UIPaaS(low code)(React)</li>
-                        <li>Face recognition miniprograms plugins</li>
-                        <li>WebRTC，OCR miniprograms plugins</li>
+                        <li>Dynamic business scenarios on IoT devices</li>
+                        <li>IoT Marketing UIPaaS(low code)</li>
+                        <li>Multi-media: Face recognition, WebRTC，OCR miniprograms plugins</li>
                       </ul>
                     </div>
                     <div class="div-item">
@@ -106,21 +151,16 @@
                         <li>
                           Dev tools: end-to-end debugging tools for devices
                           <br />
-                          <span class="alias_light"
-                            >desktop version(developed in python) and Vscode
-                            plugin version(Typescript)</span
-                          ><br />
-                          <img
+                          <!-- <img
                             style="width: 200px"
                             @click="openImg"
                             src="https://nibilin33.github.io/nibl-resume/static/lique.webp"
-                          />
+                          /> -->
                         </li>
                         <li>
-                          IoT front-end optimisation <br />
+                          IoT canvas framework<br />
                           <span class="alias_light"
-                            >Offline package->self-developed cross-end
-                            container</span
+                            >enhancement for self-developed cross-end container</span
                           >
                         </li>
                       </ul>
@@ -144,7 +184,7 @@
               <ol>
                 <li class="project-2">
                   <div class="item-bd">
-                    <div class="div-item">
+                    <!-- <div class="div-item">
                       <h3 class="project-des">【Project】</h3>
                       <p class="item-project-des">
                         UC: Enterprise communications solution, including
@@ -155,8 +195,16 @@
                           src="https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
                         />
                       </p>
-                    </div>
+                    </div> -->
+                    <div class="item-bd">
                     <div class="div-item">
+                      <h3 class="project-des">【Tech stack】</h3>
+                      <p class="item-project-des">
+                        Vue, Webpack, Python, Ngixn, Electron
+                      </p>
+                    </div>
+               
+                    <!-- <div class="div-item">
                       <h3 class="project-des">【Duties】</h3>
                       <ul class="section-content">
                         <li>Role： Head of the front-end project</li>
@@ -165,15 +213,23 @@
                           technical support, functional development
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                     <div class="div-item">
-                      <h3 class="project-des">【Main Job Details】</h3>
-                      <p class="item-project-des">
+                      <h3 class="project-des">【Summery】</h3>
+                      <ul class="section-content">
+                        <li>Responsible for UC platform including web, app, desktop</li>
+                        <li>Responsible for project refactoring and output specifications</li>
+                        <li>Multi-skin, automated testing solutions</li>
+                        <li>Used Electron as a simulation tool to optimise the
+                        development chain and increase efficiency</li>
+                      </ul>
+                      <!-- <p class="item-project-des">
+                        - Responsible for UC platform including web, app, desktop<br />
                         - Lead project refactoring and output specifications<br />
                         - Multi-skin, automated testing solutions<br />
                         - Used Electron as a simulation tool to optimise the
                         development chain and increase efficiency<br />
-                      </p>
+                      </p> -->
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【Techniques】</h3>
@@ -194,6 +250,7 @@
                         </li>
                       </ul>
                     </div>
+                  </div>
                   </div>
                 </li>
               </ol>
