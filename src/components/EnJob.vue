@@ -12,7 +12,8 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Digital Virtual（2022.03 - 2022.05）</a>
+                  >Digital Virtual</a>
+                  <!-- （2022.03 - 2022.05） -->
               </h3>
               <ol>
                 <li class="project-2">
@@ -55,7 +56,8 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
-                  >Alipay IoT （2020.06 - 2022.03）</a>
+                  >Alipay IoT </a>
+                  <!-- （2020.06 - 2022.03） -->
               </h3>
               <ol>
                 <li class="project-2">
