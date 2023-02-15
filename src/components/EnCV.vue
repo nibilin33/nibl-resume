@@ -16,6 +16,9 @@
                   Join
                   </a
                 >
+                <p class="item-project-des">
+                  Global HR SaaS platform
+              </p>
               </h3>
             </li>
             <ol>
@@ -74,6 +77,9 @@
                 <a href="" target="_blank" title=""
                   >Digital Virtual</a
                 >
+                <p class="item-project-des">
+                  Cover non-physical trading business
+                </p>
               </h3>
               <ol>
                 <li class="project-2">
@@ -117,6 +123,9 @@
                 <a href="" target="_blank" title=""
                   >Alipay IoT</a
                 >
+                <p class="item-project-des">
+                  Provide offline solution for payment
+                </p>
               </h3>
               <ol>
                 <li class="project-2">
@@ -180,6 +189,9 @@
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title="">UC</a>
+                <p class="item-project-des">
+                  Provide enterprise communications solution
+              </p>
               </h3>
               <ol>
                 <li class="project-2">
