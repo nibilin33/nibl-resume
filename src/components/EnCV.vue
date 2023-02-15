@@ -37,7 +37,7 @@
                     <div class="div-item">
                       <h3 class="project-des">【Techniques】</h3>
                       <ul class="section-content">
-                        <li>Micro front-end integration for phase refactoring</li>
+                        <li>Micro front-end integration</li>
                         <li>I18n solution</li>
                         <li>Multi-end Component development enhancement</li>
                         <li>Mock solution enhancement</li>
@@ -134,7 +134,7 @@
                     <div class="div-item">
                       <h3 class="project-des">【Tech stack】</h3>
                       <p class="item-project-des">
-                        React, Miniprograms, WebRTC, Rollup, Python, Shell, Android
+                        React, Miniprograms, WebRTC, Rollup, Python, Node.js, Shell, Android
                       </p>
                     </div>
                     <div class="div-item">
@@ -200,7 +200,7 @@
                     <div class="div-item">
                       <h3 class="project-des">【Tech stack】</h3>
                       <p class="item-project-des">
-                        Vue, Webpack, Python, Ngixn, Electron
+                        Vue, Webpack, Python, Node.js, Ngixn, Electron
                       </p>
                     </div>
                
