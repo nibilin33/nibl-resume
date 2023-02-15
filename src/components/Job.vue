@@ -156,12 +156,16 @@
                         <li>
                           工程效能
                           <p class="item-project-des">
-                            问题：整个开发调试排查流程更多依赖文档步骤和重复地命令行执行，效率低
+                            实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br />
+                            提供了桌面版本<span class="alias_light"
+                              >（用python开发）</span
+                            >和 vscode插件版本
+                            <!-- 问题：整个开发调试排查流程更多依赖文档步骤和重复地命令行执行，效率低
                             <br />
                             解决方式: 实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br />
                             提供了桌面版本<span class="alias_light"
                               >（用python开发）</span
-                            >和 vscode插件版本
+                            >和 vscode插件版本 -->
                           </p>
                           <img
                             style="width: 200px"
@@ -174,13 +178,15 @@
                             >（离线包->内部自研跨端容器）</span
                           >
                           <p class="item-project-des">
-                            背景：IoT设备种类多，配置参差不齐，很多设备无法达到秒开的诉求<span
+                            基于IoT内部的自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级
+                            <!-- 背景：IoT设备种类多，配置参差不齐，很多设备无法达到秒开的诉求<span
                               class="alias_light"
                               >（离线包方案）</span
                             >
                             <br />
                             问题：IoT内部做了自研轻量跨端容器，由于还不成熟的容器，UI层面支持能力弱，营销需要投入双倍人力产出h5版本和内部应用版本<br />
                             解决方式: 基于IoT内部的自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级<br />
+                           -->
                           </p>
                         </li>
                       </ul>
@@ -215,13 +221,13 @@
                         <!-- 用户端主要采用内嵌webview方式，主要有投票，问卷调查，公告，会议预约，PBX，短信网关，话题等功能 -->
                       </p>
                     </div>
-                    <div class="div-item">
+                    <!-- <div class="div-item">
                       <h3 class="project-des">【个人职责】</h3>
                       <ul class="section-content">
                         <li>角色： 项目前端负责人</li>
                         <li>任务： 需求评审，任务分配，技术支持, 功能开发</li>
                       </ul>
-                    </div>
+                    </div> -->
                     <div class="div-item">
                       <h3 class="project-des">【主要业绩】</h3>
                       <p class="item-project-des">
