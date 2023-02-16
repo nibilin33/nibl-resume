@@ -53,7 +53,7 @@
           </JobItem>
         </div>
         <div class="section-bd">
-          <JobItem company="Open-source" status="open">
+          <JobItem company="Community" status="open">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod"
