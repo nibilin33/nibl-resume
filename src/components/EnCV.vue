@@ -52,24 +52,18 @@
               </ol>
           </JobItem>
         </div>
-        <!-- <div class="section-bd">
-          <JobItem company="Open Source Community" status="part" time="2022.11 - now">
+        <div class="section-bd">
+          <JobItem company="Open-source" status="open">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod"
                   >
                   Codepod
-                  </a
-                >
+                  </a>
               </h3>
-              <p class="item-project-des">
-                Scalable interactive programming on an organized 2D canvas. <br/>
-                github <a  target="_blank" href="https://github.com/codepod-io/codepod">codepod</a>
-              </p>
             </li>
-         
           </JobItem>
-        </div> -->
+        </div>
         <div class="section-bd">
           <JobItem company="Alibaba Group" time="2020.06.18 - 2022.05.20">
             <li class="project-1">
