@@ -316,7 +316,7 @@
                 <li>Javascript,Typescript,Html5,CSS</li>
                 <li>React,Vue,小程序,Tailwindcss</li>
                 <li>Webpack,Rollup,Vite</li>
-                <li>Python,Node,Java,Shell,Serverless</li>
+                <li>Python,Node,Shell,Serverless</li>
               </ul>
             </div>
           </div>
