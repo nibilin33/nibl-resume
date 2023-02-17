@@ -98,6 +98,14 @@
                       </p>
                     </div>
                     <div class="div-item">
+                      <h3 class="project-des">【工作方向】</h3>
+                      <ul class="section-content">
+                        <li>
+                           淘宝移动端充值中心相关业务
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li>H5全链路日志
@@ -141,11 +149,11 @@
                       <h3 class="project-des">【工作方向】</h3>
                       <ul class="section-content">
                         <li>
-                          日常IoT设备上动态化业务场景<span class="alias_light"
-                            >（营销大促向）</span
+                          日常IoT C端 动态化业务场景<span class="alias_light"
+                            >（营销+会员）</span
                           >
                         </li>
-                        <li>IoT营销类UIPaaS</li>
+                        <li>IoT营销类UIPaaS（low-code）</li>
                         <li>刷脸相关的小程序应用/插件</li>
                         <li>多媒体：音视频通话，OCR小程序插件等</li>
                       </ul>
