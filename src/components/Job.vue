@@ -153,7 +153,8 @@
                             >（营销+会员）</span
                           >
                         </li>
-                        <li>IoT营销类UIPaaS（low-code）</li>
+                        <li>IoT营销类UIPaaS<span class="alias_light"
+                            >（low-code）</span></li>
                         <li>刷脸相关的小程序应用/插件</li>
                         <li>多媒体：音视频通话，OCR小程序插件等</li>
                       </ul>
