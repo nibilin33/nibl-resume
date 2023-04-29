@@ -7,7 +7,7 @@ export const message = {
       work: 'work',
       myname: '倪必磷',
       englishName: 'Iris',
-      jobtitle: '高级前端工程师',
+      jobtitle: '资深前端工程师',
       university: '闽南师范大学',
       profession: '软件工程',
       graduate: '本科 / 2017年6月毕业',

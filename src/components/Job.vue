@@ -8,7 +8,50 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="Horizons" status="remote" time="2022.11.25 - now">
+          <JobItem company="缦图集团" status="work" time="2023.3 - now">
+          <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="#" target="_blank" title="海马体预约端"
+                  >
+                    海马体预约端
+                  </a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【项目简介】</h3>
+                      <p class="item-project-des">
+                        为海马体集团旗下所有品牌提供线上预约系统，下单，在线看片，直播等服务        
+                      </p>
+                    </div>
+                 
+                    <div class="div-item">
+                      <h3 class="project-des">【工作方向】</h3>
+                      <ul class="section-content">
+                        <li>维护&重构海马体小程序</li>
+                        <li>研发架构设计与工程效能</li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【技术】</h3>
+                      <ul class="section-content">
+                        <li> 小程序微应用架构设计
+                        </li>
+                        <li> 跨端组件库架构设计 </li>
+                        <li> 研发设计一体化架构设计 </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </JobItem>
+        </div>
+        <div class="section-bd">
+          <JobItem company="Horizons" status="remote" time="2022.11 - 2023.3">
+          <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
             <li class="project-1">
               <h3 class="project-name">
                 <a href="#" target="_blank" title="Horizons"
@@ -77,7 +120,8 @@
           </JobItem>
         </div>
         <div class="section-bd">
-          <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20">
+          <JobItem company="阿里巴巴集团" time="2020.06 至 2022.05">
+          <!-- <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20"> -->
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
@@ -209,6 +253,7 @@
             company="厦门亿联网络技术股份有限公司"
             time="2017.06 至 2020.2.21"
           >
+          <!-- 研发中心二部 -->
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title="">UC</a>

@@ -8,7 +8,7 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="Alibaba Group" time="2020.06.18 - 2022.05.20">
+          <JobItem company="Alibaba Group" time="2020.06 - 2022.05">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title=""
