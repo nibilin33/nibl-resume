@@ -8,7 +8,7 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="缦图集团" status="work" time="2023.3 - now">
+          <JobItem company="缦图集团" time="2023.3 - now">
           <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
             <li class="project-1">
               <h3 class="project-name">
@@ -249,6 +249,13 @@
               </ol>
             </li>
           </JobItem>
+        </div>
+       
+      </section>
+    </div>
+    <div class="content-right">
+      <section class="practice">
+        <div class="section-bd">
           <JobItem
             company="厦门亿联网络技术股份有限公司"
             time="2017.06 至 2020.2.21"
@@ -328,8 +335,6 @@
           </div>
         </div>
       </section>
-    </div>
-    <div class="content-right">
       <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
@@ -339,11 +344,13 @@
         <!--技能:WEB端开发-->
         <div class="section-bd">
           <div class="item">
-            <img
-              style="width: 100%"
-              @click="openImg"
+            <a href="https://nibilin33.github.io/nibl-resume/static/work.webp">
+              <img
+              style="width: 200px"
               src="https://nibilin33.github.io/nibl-resume/static/work.webp"
             />
+            </a>
+          
           </div>
         </div>
       </section>
@@ -359,7 +366,7 @@
             <div class="item-bd">
               <ul class="section-content">
                 <li>Javascript,Typescript,Html5,CSS</li>
-                <li>React,Vue,小程序,Tailwindcss</li>
+                <li>React,Vue,小程序,Uniapp,Tailwindcss</li>
                 <li>Webpack,Rollup,Vite</li>
                 <li>Python,Node,Shell,Serverless</li>
               </ul>

@@ -8,7 +8,7 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="Horizons" time="2022.11 - now">
+          <JobItem company="Horizons" status="remote" time="2022.11 - now">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="#" target="_blank" title="codepod"
