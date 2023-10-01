@@ -28,19 +28,21 @@
                     </div>
                  
                     <div class="div-item">
-                      <h3 class="project-des">【工作方向】</h3>
+                      <h3 class="project-des">【工作内容】</h3>
                       <ul class="section-content">
-                        <li>维护&重构海马体小程序</li>
-                        <li>研发架构设计与工程效能</li>
+                        <li>维护&重构海马体小程序（多端）</li>
+                        <li>完善基础建设（CICD等），制定规范</li>
+                        <li>技术创新，选型与设计，优化现有业务方案</li>
                       </ul>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
-                        <li> 小程序微应用架构设计
-                        </li>
-                        <li> 跨端组件库架构设计 </li>
-                        <li> 研发设计一体化架构设计 </li>
+                        <li> 小程序微应用方案（基于uniapp2）</li>
+                        <li> 多端组件库，支持多品牌主题定制 </li>
+                        <li> 营销场景化（3D）</li>
+                        <li> 测试覆盖率</li>  
+                        <li> 设计协作工具（adobe插件）</li>   
                       </ul>
                     </div>
                   </div>
