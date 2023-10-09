@@ -7,7 +7,7 @@
         >
         <router-link to="/">Chinese Version</router-link>
       </div>
-      <p class="last-modified">last modified 2023.2</p>
+      <p class="last-modified">last modified 2023.10</p>
     </div>
     <main>
       <BaseInfo />

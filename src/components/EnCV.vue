@@ -8,7 +8,55 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="Horizons" status="remote" time="2022.11 - now">
+          <JobItem company="Horizons" status="work" time="2023.3 - now">
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="#" target="_blank" title="Mainto"
+                  >
+                  Mainto
+                  </a
+                >
+                <p class="item-project-des">
+                  Provide customers with the ultimate shooting experience and high-quality photography services
+              </p>
+              </h3>
+            </li>
+            <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【Tech stack】</h3>
+                      <p class="item-project-des">
+                        Vue3, Typescript, Uniapp, Threejs, Vite, Chatgpt
+                      </p>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Summery】</h3>
+                      <ul class="section-content">
+                        <li>Maintained and reconstructed himo miniprogram, a multi-platform application, to improve performance and user experience</li>
+                        <li>Responsible for improving infrastructure, including implementing Continuous Integration and Continuous Deployment (CICD) pipelines, to increase efficiency and reduce downtime</li>
+                        <li>Formulated and enforced regulations and best practices for infrastructure management and security</li>
+                        <li>Responsible for technological innovation, selection, and design, as well as optimization of existing business solutions to improve efficiency and reduce costs</li>
+                      </ul>
+                    </div>
+                    <div class="div-item">
+                      <h3 class="project-des">【Techniques】</h3>
+                      <ul class="section-content">
+                        <li> Mini program micro application solution (based on uniapp2)</li>
+                        <li> Multi-platform component library that supports customization of multiple brand themes </li>
+                        <li> Marketing scene creation (3D)</li>
+                        <li> Test coverage rate</li>  
+                        <li> Design collaboration tool (Adobe plugin)</li>   
+                      </ul>
+                    </div>
+                  </div>
+
+                </li>
+              </ol>
+          </JobItem>
+        </div>
+        <div class="section-bd">
+          <JobItem company="Horizons" status="remote" time="2022.11 - 2023.3">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="#" target="_blank" title="codepod"
