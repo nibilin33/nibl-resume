@@ -1,3 +1,4 @@
+
 <template>
   <div class="content-bd">
     <div class="content-left">
@@ -8,12 +9,12 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="Horizons" status="work" time="2023.3 - now">
+          <JobItem company="Mainto Group" status="work" time="2023.3 - Present">
             <li class="project-1">
               <h3 class="project-name">
-                <a href="#" target="_blank" title="Mainto"
+                <a href="#" target="_blank" title="Mainto Group"
                   >
-                  Mainto
+                  Mainto Group
                   </a
                 >
                 <p class="item-project-des">
