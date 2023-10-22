@@ -14,6 +14,9 @@ module.exports = {
         }
       ],
     },
+    optimization: {
+      minimize: false
+    }
   },
   chainWebpack: (config) => {
     config.plugin("copy").use(require("copy-webpack-plugin"), [
