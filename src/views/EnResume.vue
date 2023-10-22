@@ -17,7 +17,8 @@
         </div>
         <div class="resume-wrapper">
           <h2>WORK EXPERIENCE</h2>
-          <h4>Senior Front-End Engineer </h4>
+          <p>&nbsp;</p>
+          <!-- <h4>Senior Front-End Engineer </h4> -->
           <h6>Mainto Group | March 2023 - Present </h6>
           <ul>
             <li>Successfully maintained and reconstructed the himo miniprogram, a multi-platform application, resulting in a 30% increase in user engagement and a 20% increase in overall performance.</li>
@@ -26,15 +27,36 @@
             <li>Led the technological innovation, selection, and design of new business solutions, resulting in a 15% reduction in costs and a 10% increase in revenue.</li>
             <li>Optimized existing business solutions to improve efficiency and reduce costs, resulting in a 20% increase in productivity.</li>
           </ul>
-     
+          <p>&nbsp;</p>
+          <h6>Horizons | Nov 2022 - March 2023 / Remote </h6>
+          <ul>
+            <li>Integrated a micro-front-end solution quickly to complete periodic application refactoring and launch, improving the maintainability and scalability of the application.</li>
+            <li>Maintained and developed the component library, improving component reusability and development efficiency.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <!-- 2020.06.18 - 2022.05.20 -->
+          <h6>Alibaba Group | Jun 2020 - May 2022 </h6>
+          <ul>
+            <li>Responsible for daily business iteration (marketing and membership direction) on IoT devices and developing mini-programs/plugins for facial recognition and multimedia on mobile devices.</li>
+            <li>Developed and utilized debugging tools to improve debugging and troubleshooting efficiency.</li>
+            <li>Optimized performance by implementing a personalized SSR based on edge computing.</li>
+          </ul>
+          <p>&nbsp;</p>
+          <!-- 2017.06 - 2020.2.21 -->
+          <h6>Yealink | Jun 2017 - March 2020 </h6>
+          <ul>
+            <li>Optimized performance, improving application load time from crashing to under one second.</li>
+            <li>Led project refactoring and output standardization, resulting in a 30% increase in development efficiency.</li>
+            <li>Developed a colorful and automated testing solution, improving testing efficiency by 50%.</li>
+            <li>Utilized Electron as a simulation tool to optimize the development chain, resulting in a 20% increase in productivity.</li>
+          </ul>
         </div>
         <div class="resume-wrapper">
           <h2>KEY SKILLS</h2>
-          <h3>Web Application Development</h3>
-          <h3>React.js / Vue.js</h3>
-          <h3>Front-End </h3>
-
-          languages,libraries,frameworks,testing
+          <h6>Web Application Development</h6>
+          <h6>React.js / Vue.js / Uniapp / Tailwindcss</h6>
+          <h6>Webpack,Rollup,Vite</h6>
+          <h6>Python,Node,Shell,Serverless</h6>
         </div>
       </div>
 
