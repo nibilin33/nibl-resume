@@ -10,7 +10,7 @@
     </section>
     <section class="info">
       <ul>
-        <li>{{$t('message.gender')}} / 1994.04</li>
+        <li>{{$t('message.gender')}} / 1994.04 / <span v-if="isEnglish">Chinese citizen</span> </li>
         <li>{{$t('message.university')}}</li>
         <li>{{$t('message.profession')}}</li>
         <li>{{$t('message.graduate')}}</li>
@@ -74,6 +74,11 @@
 <script>
 export default {
   name: "BaseInfo",
+  props: {
+    isEnglish: {
+      type: Boolean
+    }
+  },
   data() {
     return {};
   },

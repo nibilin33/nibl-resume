@@ -2992,9 +2992,9 @@ function registerGuard(record, name, guard) {
     const removeFromList = () => {
         record[name].delete(guard);
     };
-    Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* onUnmounted */ "v"])(removeFromList);
-    Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* onDeactivated */ "t"])(removeFromList);
-    Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* onActivated */ "r"])(() => {
+    Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* onUnmounted */ "w"])(removeFromList);
+    Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* onDeactivated */ "u"])(removeFromList);
+    Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* onActivated */ "s"])(() => {
         record[name].add(guard);
     });
     record[name].add(guard);
@@ -3008,7 +3008,7 @@ function registerGuard(record, name, guard) {
  */
 function onBeforeRouteLeave(leaveGuard) {
     if (false) {}
-    const activeRecord = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(matchedRouteKey, 
+    const activeRecord = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(matchedRouteKey, 
     // to avoid warning
     {}).value;
     if (!activeRecord) {
@@ -3027,7 +3027,7 @@ function onBeforeRouteLeave(leaveGuard) {
  */
 function onBeforeRouteUpdate(updateGuard) {
     if (false) {}
-    const activeRecord = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(matchedRouteKey, 
+    const activeRecord = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(matchedRouteKey, 
     // to avoid warning
     {}).value;
     if (!activeRecord) {
@@ -3172,9 +3172,9 @@ function loadRouteLocation(route) {
 // TODO: we could allow currentRoute as a prop to expose `isActive` and
 // `isExactActive` behavior should go through an RFC
 function useLink(props) {
-    const router = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(routerKey);
-    const currentRoute = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(routeLocationKey);
-    const route = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => router.resolve(Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "F"])(props.to)));
+    const router = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(routerKey);
+    const currentRoute = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(routeLocationKey);
+    const route = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => router.resolve(Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "G"])(props.to)));
     const activeRecordIndex = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => {
         const { matched } = route.value;
         const { length } = matched;
@@ -3206,7 +3206,7 @@ function useLink(props) {
         isSameRouteLocationParams(currentRoute.params, route.value.params));
     function navigate(e = {}) {
         if (guardEvent(e)) {
-            return router[Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "F"])(props.replace) ? 'replace' : 'push'](Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "F"])(props.to)
+            return router[Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "G"])(props.replace) ? 'replace' : 'push'](Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "G"])(props.to)
             // avoid uncaught errors are they are logged anyway
             ).catch(noop);
         }
@@ -3225,7 +3225,7 @@ function useLink(props) {
         navigate,
     };
 }
-const RouterLinkImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* defineComponent */ "k"])({
+const RouterLinkImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* defineComponent */ "l"])({
     name: 'RouterLink',
     compatConfig: { MODE: 3 },
     props: {
@@ -3245,8 +3245,8 @@ const RouterLinkImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* 
     },
     useLink,
     setup(props, { slots }) {
-        const link = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* reactive */ "y"])(useLink(props));
-        const { options } = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(routerKey);
+        const link = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* reactive */ "z"])(useLink(props));
+        const { options } = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(routerKey);
         const elClass = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => ({
             [getLinkClass(props.activeClass, options.linkActiveClass, 'router-link-active')]: link.isActive,
             // [getLinkClass(
@@ -3260,7 +3260,7 @@ const RouterLinkImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* 
             const children = slots.default && slots.default(link);
             return props.custom
                 ? children
-                : Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* h */ "n"])('a', {
+                : Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* h */ "o"])('a', {
                     'aria-current': link.isExactActive
                         ? props.ariaCurrentValue
                         : null,
@@ -3338,7 +3338,7 @@ const getLinkClass = (propClass, globalClass, defaultClass) => propClass != null
         ? globalClass
         : defaultClass;
 
-const RouterViewImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* defineComponent */ "k"])({
+const RouterViewImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* defineComponent */ "l"])({
     name: 'RouterView',
     // #674 we manually inherit them
     inheritAttrs: false,
@@ -3354,13 +3354,13 @@ const RouterViewImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* 
     compatConfig: { MODE: 3 },
     setup(props, { attrs, slots }) {
         ( false) && false;
-        const injectedRoute = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(routerViewLocationKey);
+        const injectedRoute = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(routerViewLocationKey);
         const routeToDisplay = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => props.route || injectedRoute.value);
-        const injectedDepth = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(viewDepthKey, 0);
+        const injectedDepth = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(viewDepthKey, 0);
         // The depth changes based on empty components option, which allows passthrough routes e.g. routes with children
         // that are used to reuse the `path` property
         const depth = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => {
-            let initialDepth = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "F"])(injectedDepth);
+            let initialDepth = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "G"])(injectedDepth);
             const { matched } = routeToDisplay.value;
             let matchedRoute;
             while ((matchedRoute = matched[initialDepth]) &&
@@ -3370,13 +3370,13 @@ const RouterViewImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* 
             return initialDepth;
         });
         const matchedRouteRef = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => routeToDisplay.value.matched[depth.value]);
-        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* provide */ "x"])(viewDepthKey, Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => depth.value + 1));
-        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* provide */ "x"])(matchedRouteKey, matchedRouteRef);
-        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* provide */ "x"])(routerViewLocationKey, routeToDisplay);
-        const viewRef = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* ref */ "z"])();
+        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* provide */ "y"])(viewDepthKey, Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* computed */ "c"])(() => depth.value + 1));
+        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* provide */ "y"])(matchedRouteKey, matchedRouteRef);
+        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* provide */ "y"])(routerViewLocationKey, routeToDisplay);
+        const viewRef = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* ref */ "A"])();
         // watch at the same time the component instance, the route record we are
         // rendering, and the name
-        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* watch */ "G"])(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
+        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* watch */ "H"])(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
             // copy reused instances
             if (to) {
                 // this will update the instance for new instances as well as reused
@@ -3431,7 +3431,7 @@ const RouterViewImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* 
                     matchedRoute.instances[currentName] = null;
                 }
             };
-            const component = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* h */ "n"])(ViewComponent, assign({}, routeProps, attrs, {
+            const component = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* h */ "o"])(ViewComponent, assign({}, routeProps, attrs, {
                 onVnodeUnmounted,
                 ref: viewRef,
             }));
@@ -3459,7 +3459,7 @@ const RouterView = RouterViewImpl;
 // warn against deprecated usage with <transition> & <keep-alive>
 // due to functional component being no longer eager in Vue 3
 function warnDeprecatedUsage() {
-    const instance = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* getCurrentInstance */ "m"])();
+    const instance = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* getCurrentInstance */ "n"])();
     const parentName = instance.parent && instance.parent.type.name;
     const parentSubTreeType = instance.parent && instance.parent.subTree && instance.parent.subTree.type;
     if (parentName &&
@@ -3573,7 +3573,7 @@ function addDevtools(app, router, matcher) {
                 });
             }
         });
-        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* watch */ "G"])(router.currentRoute, () => {
+        Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* watch */ "H"])(router.currentRoute, () => {
             // refresh active state
             refreshRoutesView();
             api.notifyComponentUpdate();
@@ -3939,7 +3939,7 @@ function createRouter(options) {
     const beforeGuards = useCallbacks();
     const beforeResolveGuards = useCallbacks();
     const afterGuards = useCallbacks();
-    const currentRoute = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* shallowRef */ "D"])(START_LOCATION_NORMALIZED);
+    const currentRoute = Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* shallowRef */ "E"])(START_LOCATION_NORMALIZED);
     let pendingLocation = START_LOCATION_NORMALIZED;
     // leave the scrollRestoration if no scrollBehavior is provided
     if (isBrowser && options.scrollBehavior && 'scrollRestoration' in history) {
@@ -4437,7 +4437,7 @@ function createRouter(options) {
                 history.state &&
                 history.state.scroll) ||
             null;
-        return Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* nextTick */ "q"])()
+        return Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* nextTick */ "r"])()
             .then(() => scrollBehavior(to, from, scrollPosition))
             .then(position => position && scrollToPosition(position))
             .catch(err => triggerError(err, to, from));
@@ -4471,7 +4471,7 @@ function createRouter(options) {
             app.config.globalProperties.$router = router;
             Object.defineProperty(app.config.globalProperties, '$route', {
                 enumerable: true,
-                get: () => Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "F"])(currentRoute),
+                get: () => Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* unref */ "G"])(currentRoute),
             });
             // this initial navigation is only necessary on client, on server it doesn't
             // make sense because it will create an extra unnecessary navigation and could
@@ -4496,7 +4496,7 @@ function createRouter(options) {
                 });
             }
             app.provide(routerKey, router);
-            app.provide(routeLocationKey, Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* shallowReactive */ "C"])(reactiveRoute));
+            app.provide(routeLocationKey, Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* shallowReactive */ "D"])(reactiveRoute));
             app.provide(routerViewLocationKey, currentRoute);
             const unmountApp = app.unmount;
             installedApps.add(app);
@@ -4553,14 +4553,14 @@ function extractChangingRecords(to, from) {
  * templates.
  */
 function useRouter() {
-    return Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(routerKey);
+    return Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(routerKey);
 }
 /**
  * Returns the current route location. Equivalent to using `$route` inside
  * templates.
  */
 function useRoute() {
-    return Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "o"])(routeLocationKey);
+    return Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* inject */ "p"])(routeLocationKey);
 }
 
 
@@ -6131,42 +6131,43 @@ module.exports = ['constructor', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsE
 "use strict";
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "l", function() { return /* reexport */ effectScope; });
-__webpack_require__.d(__webpack_exports__, "p", function() { return /* reexport */ isRef; });
-__webpack_require__.d(__webpack_exports__, "y", function() { return /* reexport */ reactive; });
-__webpack_require__.d(__webpack_exports__, "z", function() { return /* reexport */ reactivity_esm_bundler_ref; });
-__webpack_require__.d(__webpack_exports__, "C", function() { return /* reexport */ shallowReactive; });
-__webpack_require__.d(__webpack_exports__, "D", function() { return /* reexport */ shallowRef; });
-__webpack_require__.d(__webpack_exports__, "F", function() { return /* reexport */ unref; });
-__webpack_require__.d(__webpack_exports__, "E", function() { return /* reexport */ shared_esm_bundler["O" /* toDisplayString */]; });
+__webpack_require__.d(__webpack_exports__, "m", function() { return /* reexport */ effectScope; });
+__webpack_require__.d(__webpack_exports__, "q", function() { return /* reexport */ isRef; });
+__webpack_require__.d(__webpack_exports__, "z", function() { return /* reexport */ reactive; });
+__webpack_require__.d(__webpack_exports__, "A", function() { return /* reexport */ reactivity_esm_bundler_ref; });
+__webpack_require__.d(__webpack_exports__, "D", function() { return /* reexport */ shallowReactive; });
+__webpack_require__.d(__webpack_exports__, "E", function() { return /* reexport */ shallowRef; });
+__webpack_require__.d(__webpack_exports__, "G", function() { return /* reexport */ unref; });
+__webpack_require__.d(__webpack_exports__, "F", function() { return /* reexport */ shared_esm_bundler["O" /* toDisplayString */]; });
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* reexport */ Fragment; });
 __webpack_require__.d(__webpack_exports__, "b", function() { return /* reexport */ Text; });
 __webpack_require__.d(__webpack_exports__, "c", function() { return /* reexport */ runtime_core_esm_bundler_computed; });
 __webpack_require__.d(__webpack_exports__, "e", function() { return /* reexport */ createBlock; });
-__webpack_require__.d(__webpack_exports__, "f", function() { return /* reexport */ createElementBlock; });
-__webpack_require__.d(__webpack_exports__, "g", function() { return /* reexport */ createBaseVNode; });
-__webpack_require__.d(__webpack_exports__, "h", function() { return /* reexport */ createStaticVNode; });
-__webpack_require__.d(__webpack_exports__, "i", function() { return /* reexport */ createTextVNode; });
-__webpack_require__.d(__webpack_exports__, "j", function() { return /* reexport */ createVNode; });
-__webpack_require__.d(__webpack_exports__, "k", function() { return /* reexport */ defineComponent; });
-__webpack_require__.d(__webpack_exports__, "m", function() { return /* reexport */ getCurrentInstance; });
-__webpack_require__.d(__webpack_exports__, "n", function() { return /* reexport */ h; });
-__webpack_require__.d(__webpack_exports__, "o", function() { return /* reexport */ inject; });
-__webpack_require__.d(__webpack_exports__, "q", function() { return /* reexport */ nextTick; });
-__webpack_require__.d(__webpack_exports__, "r", function() { return /* reexport */ onActivated; });
-__webpack_require__.d(__webpack_exports__, "s", function() { return /* reexport */ onBeforeMount; });
-__webpack_require__.d(__webpack_exports__, "t", function() { return /* reexport */ onDeactivated; });
-__webpack_require__.d(__webpack_exports__, "u", function() { return /* reexport */ onMounted; });
-__webpack_require__.d(__webpack_exports__, "v", function() { return /* reexport */ onUnmounted; });
-__webpack_require__.d(__webpack_exports__, "w", function() { return /* reexport */ openBlock; });
-__webpack_require__.d(__webpack_exports__, "x", function() { return /* reexport */ provide; });
-__webpack_require__.d(__webpack_exports__, "A", function() { return /* reexport */ renderSlot; });
-__webpack_require__.d(__webpack_exports__, "B", function() { return /* reexport */ resolveComponent; });
-__webpack_require__.d(__webpack_exports__, "G", function() { return /* reexport */ watch; });
-__webpack_require__.d(__webpack_exports__, "H", function() { return /* reexport */ withCtx; });
+__webpack_require__.d(__webpack_exports__, "f", function() { return /* reexport */ createCommentVNode; });
+__webpack_require__.d(__webpack_exports__, "g", function() { return /* reexport */ createElementBlock; });
+__webpack_require__.d(__webpack_exports__, "h", function() { return /* reexport */ createBaseVNode; });
+__webpack_require__.d(__webpack_exports__, "i", function() { return /* reexport */ createStaticVNode; });
+__webpack_require__.d(__webpack_exports__, "j", function() { return /* reexport */ createTextVNode; });
+__webpack_require__.d(__webpack_exports__, "k", function() { return /* reexport */ createVNode; });
+__webpack_require__.d(__webpack_exports__, "l", function() { return /* reexport */ defineComponent; });
+__webpack_require__.d(__webpack_exports__, "n", function() { return /* reexport */ getCurrentInstance; });
+__webpack_require__.d(__webpack_exports__, "o", function() { return /* reexport */ h; });
+__webpack_require__.d(__webpack_exports__, "p", function() { return /* reexport */ inject; });
+__webpack_require__.d(__webpack_exports__, "r", function() { return /* reexport */ nextTick; });
+__webpack_require__.d(__webpack_exports__, "s", function() { return /* reexport */ onActivated; });
+__webpack_require__.d(__webpack_exports__, "t", function() { return /* reexport */ onBeforeMount; });
+__webpack_require__.d(__webpack_exports__, "u", function() { return /* reexport */ onDeactivated; });
+__webpack_require__.d(__webpack_exports__, "v", function() { return /* reexport */ onMounted; });
+__webpack_require__.d(__webpack_exports__, "w", function() { return /* reexport */ onUnmounted; });
+__webpack_require__.d(__webpack_exports__, "x", function() { return /* reexport */ openBlock; });
+__webpack_require__.d(__webpack_exports__, "y", function() { return /* reexport */ provide; });
+__webpack_require__.d(__webpack_exports__, "B", function() { return /* reexport */ renderSlot; });
+__webpack_require__.d(__webpack_exports__, "C", function() { return /* reexport */ resolveComponent; });
+__webpack_require__.d(__webpack_exports__, "H", function() { return /* reexport */ watch; });
+__webpack_require__.d(__webpack_exports__, "I", function() { return /* reexport */ withCtx; });
 __webpack_require__.d(__webpack_exports__, "d", function() { return /* reexport */ runtime_dom_esm_bundler_createApp; });
 
-// UNUSED EXPORTS: EffectScope, ReactiveEffect, customRef, effect, getCurrentScope, isProxy, isReactive, isReadonly, isShallow, markRaw, onScopeDispose, proxyRefs, readonly, shallowReadonly, stop, toRaw, toRef, toRefs, toValue, triggerRef, camelize, capitalize, normalizeClass, normalizeProps, normalizeStyle, toHandlerKey, BaseTransition, BaseTransitionPropsValidators, Comment, KeepAlive, Static, Suspense, Teleport, assertNumber, callWithAsyncErrorHandling, callWithErrorHandling, cloneVNode, compatUtils, createCommentVNode, createHydrationRenderer, createPropsRestProxy, createRenderer, createSlots, defineAsyncComponent, defineEmits, defineExpose, defineModel, defineOptions, defineProps, defineSlots, devtools, getTransitionRawChildren, guardReactiveProps, handleError, hasInjectionContext, initCustomFormatter, isMemoSame, isRuntimeOnly, isVNode, mergeDefaults, mergeModels, mergeProps, onBeforeUnmount, onBeforeUpdate, onErrorCaptured, onRenderTracked, onRenderTriggered, onServerPrefetch, onUpdated, popScopeId, pushScopeId, queuePostFlushCb, registerRuntimeCompiler, renderList, resolveDirective, resolveDynamicComponent, resolveFilter, resolveTransitionHooks, setBlockTracking, setDevtoolsHook, setTransitionHooks, ssrContextKey, ssrUtils, toHandlers, transformVNodeArgs, useAttrs, useModel, useSSRContext, useSlots, useTransitionState, version, warn, watchEffect, watchPostEffect, watchSyncEffect, withAsyncContext, withDefaults, withDirectives, withMemo, withScopeId, Transition, TransitionGroup, VueElement, createSSRApp, defineCustomElement, defineSSRCustomElement, hydrate, initDirectivesForSSR, render, useCssModule, useCssVars, vModelCheckbox, vModelDynamic, vModelRadio, vModelSelect, vModelText, vShow, withKeys, withModifiers, compile
+// UNUSED EXPORTS: EffectScope, ReactiveEffect, customRef, effect, getCurrentScope, isProxy, isReactive, isReadonly, isShallow, markRaw, onScopeDispose, proxyRefs, readonly, shallowReadonly, stop, toRaw, toRef, toRefs, toValue, triggerRef, camelize, capitalize, normalizeClass, normalizeProps, normalizeStyle, toHandlerKey, BaseTransition, BaseTransitionPropsValidators, Comment, KeepAlive, Static, Suspense, Teleport, assertNumber, callWithAsyncErrorHandling, callWithErrorHandling, cloneVNode, compatUtils, createHydrationRenderer, createPropsRestProxy, createRenderer, createSlots, defineAsyncComponent, defineEmits, defineExpose, defineModel, defineOptions, defineProps, defineSlots, devtools, getTransitionRawChildren, guardReactiveProps, handleError, hasInjectionContext, initCustomFormatter, isMemoSame, isRuntimeOnly, isVNode, mergeDefaults, mergeModels, mergeProps, onBeforeUnmount, onBeforeUpdate, onErrorCaptured, onRenderTracked, onRenderTriggered, onServerPrefetch, onUpdated, popScopeId, pushScopeId, queuePostFlushCb, registerRuntimeCompiler, renderList, resolveDirective, resolveDynamicComponent, resolveFilter, resolveTransitionHooks, setBlockTracking, setDevtoolsHook, setTransitionHooks, ssrContextKey, ssrUtils, toHandlers, transformVNodeArgs, useAttrs, useModel, useSSRContext, useSlots, useTransitionState, version, warn, watchEffect, watchPostEffect, watchSyncEffect, withAsyncContext, withDefaults, withDirectives, withMemo, withScopeId, Transition, TransitionGroup, VueElement, createSSRApp, defineCustomElement, defineSSRCustomElement, hydrate, initDirectivesForSSR, render, useCssModule, useCssVars, vModelCheckbox, vModelDynamic, vModelRadio, vModelSelect, vModelText, vShow, withKeys, withModifiers, compile
 
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__("9ff4");
@@ -15659,7 +15660,7 @@ function adjustI18nResources(gl, options, componentOptions // eslint-disable-lin
     }
 }
 function createTextNode(key) {
-    return Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* createVNode */ "j"])(vue__WEBPACK_IMPORTED_MODULE_2__[/* Text */ "b"], null, key, 0)
+    return Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* createVNode */ "k"])(vue__WEBPACK_IMPORTED_MODULE_2__[/* Text */ "b"], null, key, 0)
         ;
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
@@ -15670,12 +15671,12 @@ const DEVTOOLS_META = '__INTLIFY_META__';
 let composerID = 0;
 function defineCoreMissingHandler(missing) {
     return ((ctx, locale, key, type) => {
-        return missing(locale, key, Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "m"])() || undefined, type);
+        return missing(locale, key, Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "n"])() || undefined, type);
     });
 }
 // for Intlify DevTools
 const getMetaInfo = /* #__PURE__*/ () => {
-    const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "m"])();
+    const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "n"])();
     let meta = null; // eslint-disable-line @typescript-eslint/no-explicit-any
     return instance && (meta = getComponentOptions(instance)[DEVTOOLS_META])
         ? { [DEVTOOLS_META]: meta } // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -15693,14 +15694,14 @@ function createComposer(options = {}, VueI18nLegacy) {
     let _inheritLocale = Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isBoolean"])(options.inheritLocale)
         ? options.inheritLocale
         : true;
-    const _locale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(
+    const _locale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(
     // prettier-ignore
     __root && _inheritLocale
         ? __root.locale.value
         : Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isString"])(options.locale)
             ? options.locale
             : _intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["DEFAULT_LOCALE"]);
-    const _fallbackLocale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(
+    const _fallbackLocale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(
     // prettier-ignore
     __root && _inheritLocale
         ? __root.fallbackLocale.value
@@ -15710,14 +15711,14 @@ function createComposer(options = {}, VueI18nLegacy) {
             options.fallbackLocale === false
             ? options.fallbackLocale
             : _locale.value);
-    const _messages = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(getLocaleMessages(_locale.value, options));
+    const _messages = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(getLocaleMessages(_locale.value, options));
     // prettier-ignore
-    const _datetimeFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.datetimeFormats)
+    const _datetimeFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.datetimeFormats)
             ? options.datetimeFormats
             : { [_locale.value]: {} })
         ;
     // prettier-ignore
-    const _numberFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.numberFormats)
+    const _numberFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.numberFormats)
             ? options.numberFormats
             : { [_locale.value]: {} })
         ;
@@ -16052,14 +16053,14 @@ function createComposer(options = {}, VueI18nLegacy) {
     composerID++;
     // watch root locale & fallbackLocale
     if (__root && _intlify_shared__WEBPACK_IMPORTED_MODULE_0__["inBrowser"]) {
-        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* watch */ "G"])(__root.locale, (val) => {
+        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* watch */ "H"])(__root.locale, (val) => {
             if (_inheritLocale) {
                 _locale.value = val;
                 _context.locale = val;
                 Object(_intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["updateFallbackLocale"])(_context, _locale.value, _fallbackLocale.value);
             }
         });
-        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* watch */ "G"])(__root.fallbackLocale, (val) => {
+        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* watch */ "H"])(__root.fallbackLocale, (val) => {
             if (_inheritLocale) {
                 _fallbackLocale.value = val;
                 _context.fallbackLocale = val;
@@ -16578,7 +16579,7 @@ function getFragmentableTag(tag) {
     return vue__WEBPACK_IMPORTED_MODULE_2__[/* Fragment */ "a"] ;
 }
 
-const TranslationImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* defineComponent */ "k"])({
+const TranslationImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* defineComponent */ "l"])({
     /* eslint-disable */
     name: 'i18n-t',
     props: Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["assign"])({
@@ -16618,7 +16619,7 @@ const TranslationImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/*
             const tag = Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isString"])(props.tag) || Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isObject"])(props.tag)
                 ? props.tag
                 : getFragmentableTag();
-            return Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* h */ "n"])(tag, assignedAttrs, children);
+            return Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* h */ "o"])(tag, assignedAttrs, children);
         };
     }
 });
@@ -16726,11 +16727,11 @@ function renderFormatter(props, context, slotKeys, partFormatter) {
         const tag = Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isString"])(props.tag) || Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isObject"])(props.tag)
             ? props.tag
             : getFragmentableTag();
-        return Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* h */ "n"])(tag, assignedAttrs, children);
+        return Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* h */ "o"])(tag, assignedAttrs, children);
     };
 }
 
-const NumberFormatImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* defineComponent */ "k"])({
+const NumberFormatImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* defineComponent */ "l"])({
     /* eslint-disable */
     name: 'i18n-n',
     props: Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["assign"])({
@@ -16779,7 +16780,7 @@ const NumberFormatImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/
 const NumberFormat = NumberFormatImpl;
 const I18nN = NumberFormat;
 
-const DatetimeFormatImpl = /* #__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* defineComponent */ "k"])({
+const DatetimeFormatImpl = /* #__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* defineComponent */ "l"])({
     /* eslint-disable */
     name: 'i18n-d',
     props: Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["assign"])({
@@ -16855,7 +16856,7 @@ function vTDirective(i18n) {
         const [textContent, composer] = _process(binding);
         if (_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["inBrowser"] && i18n.global === composer) {
             // global scope only
-            el.__i18nWatcher = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* watch */ "G"])(composer.locale, () => {
+            el.__i18nWatcher = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* watch */ "H"])(composer.locale, () => {
                 binding.instance && binding.instance.$forceUpdate();
             });
         }
@@ -17333,7 +17334,7 @@ function editScope(payload, i18n) {
 function defineMixin(vuei18n, composer, i18n) {
     return {
         beforeCreate() {
-            const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "m"])();
+            const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "n"])();
             /* istanbul ignore if */
             if (!instance) {
                 throw createI18nError(I18nErrorCodes.UNEXPECTED_ERROR);
@@ -17403,7 +17404,7 @@ function defineMixin(vuei18n, composer, i18n) {
             if (false) {}
         },
         unmounted() {
-            const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "m"])();
+            const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "n"])();
             /* istanbul ignore if */
             if (!instance) {
                 throw createI18nError(I18nErrorCodes.UNEXPECTED_ERROR);
@@ -17564,7 +17565,7 @@ function createI18n(options = {}, VueI18nLegacy) {
 }
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function useI18n(options = {}) {
-    const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "m"])();
+    const instance = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* getCurrentInstance */ "n"])();
     if (instance == null) {
         throw createI18nError(I18nErrorCodes.MUST_BE_CALL_SETUP_TOP);
     }
@@ -17645,7 +17646,7 @@ const castToVueI18n = /* #__PURE__*/ (i18n
 };
 function createGlobal(options, legacyMode, VueI18nLegacy // eslint-disable-line @typescript-eslint/no-explicit-any
 ) {
-    const scope = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* effectScope */ "l"])();
+    const scope = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* effectScope */ "m"])();
     {
         const obj = __VUE_I18N_LEGACY_API__ && legacyMode
             ? scope.run(() => createVueI18n(options))
@@ -17658,7 +17659,7 @@ function createGlobal(options, legacyMode, VueI18nLegacy // eslint-disable-line 
 }
 function getI18nInstance(instance) {
     {
-        const i18n = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* inject */ "o"])(!instance.isCE
+        const i18n = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* inject */ "p"])(!instance.isCE
             ? instance.appContext.app.__VUE_I18N_SYMBOL__
             : I18nInjectionKey);
         /* istanbul ignore if */
@@ -17736,11 +17737,11 @@ function getParentComponentInstance(target, useComponent = false) {
 function setupLifeCycle(i18n, target, composer) {
     let emitter = null;
     {
-        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* onMounted */ "u"])(() => {
+        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* onMounted */ "v"])(() => {
             // inject composer instance to DOM for intlify-devtools
             if (false) {}
         }, target);
-        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* onUnmounted */ "v"])(() => {
+        Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* onUnmounted */ "w"])(() => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const _composer = composer;
             // remove composer instance from DOM for intlify-devtools
@@ -17758,7 +17759,7 @@ function setupLifeCycle(i18n, target, composer) {
 function useI18nForLegacy(instance, scope, root, options = {} // eslint-disable-line @typescript-eslint/no-explicit-any
 ) {
     const isLocalScope = scope === 'local';
-    const _composer = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* shallowRef */ "D"])(null);
+    const _composer = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* shallowRef */ "E"])(null);
     if (isLocalScope &&
         instance.proxy &&
         !(instance.proxy.$options.i18n || instance.proxy.$options.__i18n)) {
@@ -17767,14 +17768,14 @@ function useI18nForLegacy(instance, scope, root, options = {} // eslint-disable-
     const _inheritLocale = Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isBoolean"])(options.inheritLocale)
         ? options.inheritLocale
         : !Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isString"])(options.locale);
-    const _locale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(
+    const _locale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(
     // prettier-ignore
     !isLocalScope || _inheritLocale
         ? root.locale.value
         : Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isString"])(options.locale)
             ? options.locale
             : _intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["DEFAULT_LOCALE"]);
-    const _fallbackLocale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(
+    const _fallbackLocale = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(
     // prettier-ignore
     !isLocalScope || _inheritLocale
         ? root.fallbackLocale.value
@@ -17784,13 +17785,13 @@ function useI18nForLegacy(instance, scope, root, options = {} // eslint-disable-
             options.fallbackLocale === false
             ? options.fallbackLocale
             : _locale.value);
-    const _messages = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(getLocaleMessages(_locale.value, options));
+    const _messages = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(getLocaleMessages(_locale.value, options));
     // prettier-ignore
-    const _datetimeFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.datetimeFormats)
+    const _datetimeFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.datetimeFormats)
         ? options.datetimeFormats
         : { [_locale.value]: {} });
     // prettier-ignore
-    const _numberFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "z"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.numberFormats)
+    const _numberFormats = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* ref */ "A"])(Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isPlainObject"])(options.numberFormats)
         ? options.numberFormats
         : { [_locale.value]: {} });
     // prettier-ignore
@@ -18095,7 +18096,7 @@ function useI18nForLegacy(instance, scope, root, options = {} // eslint-disable-
         composer.missingWarn = _missingWarn;
         composer.warnHtmlMessage = _warnHtmlMessage;
     }
-    Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* onBeforeMount */ "s"])(() => {
+    Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* onBeforeMount */ "t"])(() => {
         if (instance.proxy == null || instance.proxy.$i18n == null) {
             throw createI18nError(I18nErrorCodes.NOT_AVAILABLE_COMPOSITION_IN_LEGACY);
         }
@@ -18129,7 +18130,7 @@ function injectGlobalFields(app, composer) {
         if (!desc) {
             throw createI18nError(I18nErrorCodes.UNEXPECTED_ERROR);
         }
-        const wrap = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* isRef */ "p"])(desc.value) // check computed props
+        const wrap = Object(vue__WEBPACK_IMPORTED_MODULE_2__[/* isRef */ "q"])(desc.value) // check computed props
             ? {
                 get() {
                     return desc.value.value;
@@ -21631,4 +21632,4 @@ module.exports = NATIVE_SYMBOL && !Symbol.sham && typeof Symbol.iterator == 'sym
 /***/ })
 
 }]);
-//# sourceMappingURL=chunk-vendors.de2cd8eb.js.map
+//# sourceMappingURL=chunk-vendors.0b23f8a0.js.map

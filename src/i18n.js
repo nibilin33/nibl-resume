@@ -33,7 +33,7 @@ export const message = {
       university: 'Minnan Normal University',
       profession: 'Software Engineering Major',
       graduate: "Bachelor's Degree / Graduated June 2017",
-      gender: 'female',
+      gender: 'Female',
       school: 'Internships'
     },
   },
