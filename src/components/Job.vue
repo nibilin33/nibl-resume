@@ -55,7 +55,7 @@
           <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
             <li class="project-1">
               <h3 class="project-name">
-                <a href="#" target="_blank" title="Horizons"
+                <a href="https://app.joinhorizons.com/login" target="_blank" title="Horizons"
                   >
                   Join
                   </a>
@@ -66,8 +66,8 @@
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
-                        提供一站式雇佣解决方案，同时负责薪酬发放的人力资源SaaS平台(<a href="https://app.joinhorizons.com/login">joinhorizons</a>)
-                        
+                        提供一站式雇佣解决方案，同时负责薪酬发放的人力资源SaaS平台
+                        <!-- (<a href="https://app.joinhorizons.com/login">joinhorizons</a>) -->
                       </p>
                     </div>
                  
@@ -75,7 +75,8 @@
                       <h3 class="project-des">【工作方向】</h3>
                       <ul class="section-content">
                         <li>
-                          <a href="https://join-ui.joinhorizons.com/">Join-UI</a> 组件库开发维护
+                          <!-- <a href="https://join-ui.joinhorizons.com/">Join-UI</a>  -->
+                          Join-UI组件库开发维护
                         </li>
                         <li>Join 管理端&用户端重构</li>
                       </ul>
