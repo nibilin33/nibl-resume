@@ -272,12 +272,12 @@
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
-                        UC:企业统一通讯的解决方案，主要有设备管理，会议预约，PBX，短信网关，话题等功能<br />
-                        <img
+                        企业统一通讯的解决方案，主要有设备管理，会议预约，PBX，短信网关，话题等功能<br />
+                        <!-- <img
                             style="width: 400px"
                             @click="openImg"
                             src="https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
-                        />
+                        /> -->
                         <!-- 管理端主要使用vue做前端，node做BFF层，
                         redis做缓存，nginx做反向代理服务器。<br /> -->
                         <!-- 用户端主要采用内嵌webview方式，主要有投票，问卷调查，公告，会议预约，PBX，短信网关，话题等功能 -->
