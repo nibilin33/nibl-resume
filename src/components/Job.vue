@@ -21,28 +21,27 @@
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
-                      <h3 class="project-des">【项目简介】</h3>
+                      <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
                         为海马体集团旗下所有品牌提供线上预约系统，下单，在线看片，直播等服务        
                       </p>
                     </div>
                  
                     <div class="div-item">
-                      <h3 class="project-des">【工作内容】</h3>
+                      <h3 class="project-des">【工作方向】</h3>
                       <ul class="section-content">
-                        <li>维护&重构海马体小程序（多端）</li>
-                        <li>完善基础建设（CICD等），制定规范</li>
-                        <li>技术创新，选型与设计，优化现有业务方案</li>
+                        <li>海马体小程序的日常维护（多端）</li>
+                        <li>负责团队工程效能，制定和优化研发流程规范，提升团队的开发效率</li>
+                        <li>结合AI技术创新，根据业务需求，提供AI技术解决方案，提升产品的智能化水平</li>
                       </ul>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
-                        <li> 小程序微应用方案（基于uniapp2）</li>
-                        <li> 多端组件库，支持多品牌主题定制 </li>
-                        <li> 营销场景化（3D）</li>
-                        <li> 测试覆盖率</li>  
-                        <li> 设计协作工具（adobe插件）</li>   
+                        <li> 小程序微应用方案</li>
+                        <li> 多端小程序组件库，支持多品牌主题定制 </li>
+                        <li> 设计助理（ps插件）</li>   
+                        <li> 前端中台，统一门户，提供底层能力</li>  
                       </ul>
                     </div>
                   </div>
@@ -65,7 +64,7 @@
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
-                      <h3 class="project-des">【项目简介】</h3>
+                      <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
                         提供一站式雇佣解决方案，同时负责薪酬发放的人力资源SaaS平台(<a href="https://app.joinhorizons.com/login">joinhorizons</a>)
                         
@@ -135,7 +134,7 @@
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
-                      <h3 class="project-des">【业务概况】</h3>
+                      <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
                         分为直充<span class="alias_light">（充值中心）</span
                         >，非充<span class="alias_light">（号卡，流量包）</span
@@ -260,7 +259,7 @@
         <div class="section-bd">
           <JobItem
             company="厦门亿联网络技术股份有限公司"
-            time="2017.06 至 2020.2.21"
+            time="2016.12.16 至 2020.2.21"
           >
           <!-- 研发中心二部 -->
             <li class="project-1">
@@ -271,7 +270,7 @@
                 <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
-                      <h3 class="project-des">【项目简介】</h3>
+                      <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
                         UC:企业统一通讯的解决方案，主要有设备管理，会议预约，PBX，短信网关，话题等功能<br />
                         <img
@@ -294,9 +293,14 @@
                     <div class="div-item">
                       <h3 class="project-des">【主要业绩】</h3>
                       <p class="item-project-des">
-                        - 主导项目重构和输出规范<br />
+                        <ul class="section-content">
+                        <li>主导项目重构和输出规范</li>
+                        <li>多彩、自动化测试解决方案</li>
+                        <li>利用Electron作为模拟工具，优化开发链，提高效率</li>
+                      </ul>
+                        <!-- - 主导项目重构和输出规范<br />
                         - 多彩、自动化测试解决方案<br />
-                        - 利用Electron作为模拟工具，优化开发链，提高效率<br />
+                        - 利用Electron作为模拟工具，优化开发链，提高效率<br /> -->
                         <!-- 在支撑正常的需求开发的同时，主导UC项目的重构。<br />
                         可以看到各种各样的编码风格，同时技术债务高台。<br />
                         于是我做了重构的整体考虑，输出规范，多彩解决方案，<br />
@@ -308,7 +312,7 @@
                       </p>
                     </div>
                     <div class="div-item">
-                      <h3 class="project-des">【碰到过的问题】</h3>
+                      <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li>
                           性能优化<br />
@@ -327,23 +331,22 @@
             </li>
           </JobItem>
           <!--经历:在校-->
-          <div class="item">
+          <!-- <div class="item">
             <header class="item-hd">
               <h3 class="item-name">厦门亿联网络技术股份有限公司</h3>
               <span class="item-time">2016.12.16 ~ 2017.04</span>
               <a class="btn item-more" href="" title="">在校</a>
             </header>
             <div class="item-bd"></div>
-          </div>
+          </div> -->
         </div>
       </section>
-      <section class="skill">
+      <!-- <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
           <h2 class="section-title">自我介绍</h2>
           <span class="section-title-r"></span>
         </header>
-        <!--技能:WEB端开发-->
         <div class="section-bd">
           <div class="item">
             <a href="https://nibilin33.github.io/nibl-resume/static/work.webp">
@@ -355,7 +358,7 @@
           
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
@@ -367,7 +370,7 @@
           <div class="item">
             <div class="item-bd">
               <ul class="section-content">
-                <li>Javascript,Typescript,Html5,CSS</li>
+                <li>Javascript,Typescript,Html5,CSS,Actionscript</li>
                 <li>React,Vue,小程序,Uniapp,Tailwindcss</li>
                 <li>Webpack,Rollup,Vite</li>
                 <li>Python,Node,Shell,Serverless</li>

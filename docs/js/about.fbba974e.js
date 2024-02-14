@@ -211,9 +211,7 @@ function EnJobvue_type_template_id_fd6d59d2_render(_ctx, _cache, $props, $setup,
       style: {
         "width": "200px"
       },
-      onClick: _cache[0] || (_cache[0] = function () {
-        return $options.openImg && $options.openImg(...arguments);
-      }),
+      onClick: _cache[0] || (_cache[0] = (...args) => $options.openImg && $options.openImg(...args)),
       src: "https://nibilin33.github.io/nibl-resume/static/lique.webp"
     })]), _hoisted_17])])])])])])]),
     _: 1
@@ -225,9 +223,7 @@ function EnJobvue_type_template_id_fd6d59d2_render(_ctx, _cache, $props, $setup,
       style: {
         "width": "400px"
       },
-      onClick: _cache[1] || (_cache[1] = function () {
-        return $options.openImg && $options.openImg(...arguments);
-      }),
+      onClick: _cache[1] || (_cache[1] = (...args) => $options.openImg && $options.openImg(...args)),
       src: "https://nibilin33.github.io/nibl-resume/static/uc_2x.webp"
     })])]), _hoisted_32, _hoisted_33, _hoisted_34])])])])]),
     _: 1
@@ -763,4 +759,4 @@ const EnCV_exports_ = /*#__PURE__*/exportHelper_default()(views_EnCVvue_type_scr
 /***/ })
 
 }]);
-//# sourceMappingURL=about.ecf50ebf.js.map
+//# sourceMappingURL=about.fbba974e.js.map
