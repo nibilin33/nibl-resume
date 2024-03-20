@@ -37,13 +37,23 @@
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
+                      <div class="tag-wrapper">
+                        <span>uni小程序</span>
+                        <span>chrome 插件</span>
+                        <span>webpack 插件</span>
+                        <span>vite 插件</span>
+                        <span>脚手架</span>
+                        <span>serverless</span>
+                      </div>
                       <ul class="section-content">
-                        <li> 小程序微应用方案</li>
-                        <li> 多端小程序组件库，支持多品牌主题定制 </li>
-                        <li> 设计助理:帮助设计师们提高工作效率和质量，加快设计制图的过程，促进团队之间的协作和交流，提升整体设计水平和用户体验</li>   
+                        <li> Uniapp 微应用方案</li>
+                        <li> 多端小程序组件库，支持多品牌主题定制 </li> 
                         <li> 基于行为驱动的自动化测试</li>
-                        <li> 前端测试覆盖率平台</li>
-                        <li> AI赋能研发流程，提升效率</li>
+                        <li> 前端测试覆盖率</li>
+                        <li> Uniapp 渐进式迁移</li>
+                        <li> 分支管理优化</li>
+                        <li> 前端工作台</li>
+                        <li> AI赋能研发流程</li>
                       </ul>
                     </div>
                   </div>

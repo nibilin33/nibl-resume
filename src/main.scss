@@ -573,3 +573,17 @@ img:hover {
   box-sizing: border-box;
   margin-bottom: 5px;
 }
+.tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 10px;
+  line-height: 12px;
+  span {
+    background-image: linear-gradient(to top, #c4bbda91 0%, #e4c8dc 100%);
+    padding: 0 5px;
+    margin: 0;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+}
