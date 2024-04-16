@@ -34,6 +34,7 @@
                         <span>webpack 插件</span>
                         <span>photoshop 插件</span>
                         <span>vite 插件</span>
+                        <span>nodejs</span>
                         <span>脚手架</span>
                         <span>serverless</span>
                         <span>canvas</span>
@@ -286,6 +287,7 @@
                       <h3 class="project-des">【简介】</h3>
                       <div class="tag-wrapper">
                           <span>vue</span>
+                          <span>nodejs</span>
                           <span>python</span>
                           <span>electron</span>
                           <span>nginx</span>
