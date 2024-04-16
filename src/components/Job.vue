@@ -9,13 +9,12 @@
         </header>
         <div class="section-bd">
           <JobItem company="缦图集团" time="2023.3 - now">
-          <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
+            <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
             <li class="project-1">
               <h3 class="project-name">
-                <a href="#" target="_blank" title="海马体预约端"
-                  >
-                    海马体预约端
-                  </a>
+                <a href="#" target="_blank" title="海马体预约端">
+                  海马体预约端
+                </a>
               </h3>
               <ol>
                 <li class="project-2">
@@ -23,37 +22,39 @@
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
-                        为海马体集团旗下所有品牌提供线上预约系统，下单，在线看片，直播等服务        
+                        为海马体集团旗下所有品牌提供线上预约系统，下单，在线看片，直播等服务
                       </p>
                     </div>
-                 
+
                     <div class="div-item">
                       <h3 class="project-des">【工作方向】</h3>
+                      <div class="tag-wrapper">
+                        <span>uniapp</span>
+                        <span>chrome 插件</span>
+                        <span>webpack 插件</span>
+                        <span>photoshop 插件</span>
+                        <span>vite 插件</span>
+                        <span>脚手架</span>
+                        <span>serverless</span>
+                        <span>canvas</span>
+                        <span>CI/CD</span>
+                      </div>
                       <ul class="section-content">
-                        <li>海马体小程序的日常维护（多端）</li>
+                        <li>负责前端架构搭建，制定技术方案，性能优化等攻坚克难问题</li>
                         <li>负责团队工程效能，制定和优化研发流程规范，提升团队的开发效率</li>
                         <li>结合AI技术创新，根据业务需求，提供AI技术解决方案，提升产品的智能化水平</li>
                       </ul>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
-                      <div class="tag-wrapper">
-                        <span>uni小程序</span>
-                        <span>chrome 插件</span>
-                        <span>webpack 插件</span>
-                        <span>vite 插件</span>
-                        <span>脚手架</span>
-                        <span>serverless</span>
-                      </div>
                       <ul class="section-content">
                         <li> Uniapp 微应用方案</li>
-                        <li> 多端小程序组件库，支持多品牌主题定制 </li> 
+                        <li> 多端小程序组件库，支持多品牌主题定制 </li>
                         <li> 基于行为驱动的自动化测试</li>
                         <li> 前端测试覆盖率</li>
-                        <li> Uniapp 渐进式迁移</li>
-                        <li> 分支管理优化</li>
+                        <li> 分支管理CI部署优化</li>
                         <li> 前端工作台</li>
-                        <li> AI赋能研发流程</li>
+                        <li> Uniapp 渐进式迁移</li>
                       </ul>
                     </div>
                   </div>
@@ -64,13 +65,12 @@
         </div>
         <div class="section-bd">
           <JobItem company="Horizons" status="remote" time="2022.11 - 2023.3">
-          <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
+            <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
             <li class="project-1">
               <h3 class="project-name">
-                <a href="https://app.joinhorizons.com/login" target="_blank" title="Horizons"
-                  >
+                <a href="https://app.joinhorizons.com/login" target="_blank" title="Horizons">
                   Join
-                  </a>
+                </a>
               </h3>
               <ol>
                 <li class="project-2">
@@ -82,9 +82,16 @@
                         <!-- (<a href="https://app.joinhorizons.com/login">joinhorizons</a>) -->
                       </p>
                     </div>
-                 
+
                     <div class="div-item">
                       <h3 class="project-des">【工作方向】</h3>
+                      <div class="tag-wrapper">
+                        <span>react</span>
+                        <span>vite</span>
+                        <span>tailwindcss</span>
+                        <span>turborepo</span>
+                        <span>i18n</span>
+                      </div>
                       <ul class="section-content">
                         <li>
                           <!-- <a href="https://join-ui.joinhorizons.com/">Join-UI</a>  -->
@@ -97,14 +104,14 @@
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li>微前端集成，完成阶段性重构结果上线
-                            <!-- <p class="item-project-des">
+                          <!-- <p class="item-project-des">
                             问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
                             <br />
                             解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
                           </p> -->
                         </li>
                         <li>i18n一站式解决方案
-                            <!-- <p class="item-project-des">
+                          <!-- <p class="item-project-des">
                             问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
                             <br />
                             解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
@@ -125,21 +132,19 @@
           <JobItem company="开源社区" status="open">
             <li class="project-1">
               <h3 class="project-name">
-                <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod"
-                  >
+                <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod">
                   Codepod
-                  </a>
+                </a>
               </h3>
             </li>
           </JobItem>
         </div>
         <div class="section-bd">
           <JobItem company="阿里巴巴集团" time="2020.06 至 2022.05">
-          <!-- <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20"> -->
+            <!-- <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20"> -->
             <li class="project-1">
               <h3 class="project-name">
-                <a href="" target="_blank" title=""
-                  >淘宝数字虚拟
+                <a href="" target="_blank" title="">淘宝数字虚拟
                   <!-- （2022.03 - 2022.05） -->
                 </a>
               </h3>
@@ -149,17 +154,21 @@
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
-                        分为直充<span class="alias_light">（充值中心）</span
-                        >，非充<span class="alias_light">（号卡，流量包）</span
-                        >，互动<span class="alias_light">（薅羊毛）</span
-                        >，B端侧商家运营平台，内部运营平台并且通过A/B实验助力用户增长   
+                        分为直充<span class="alias_light">（充值中心）</span>，非充<span class="alias_light">（号卡，流量包）</span>，互动<span
+                          class="alias_light">（薅羊毛）</span>，B端侧商家运营平台，内部运营平台并且通过A/B实验助力用户增长
                       </p>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【工作方向】</h3>
+                      <div class="tag-wrapper">
+                          <span>react</span>
+                          <span>weex</span>
+                          <span>ssr</span>
+                          <span>serverless</span>
+                        </div>
                       <ul class="section-content">
                         <li>
-                           淘宝移动端充值中心相关业务
+                          淘宝移动端充值中心相关业务
                         </li>
                       </ul>
                     </div>
@@ -167,14 +176,14 @@
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li>H5全链路日志
-                            <!-- <p class="item-project-des">
+                          <!-- <p class="item-project-des">
                             问题：线上问题都是通过问题描述单点排查，无法有效复现问题就无法定位问题    
                             <br />
                             解决方式: 利用indexDB存储日志同时通过边缘脚本获取请求的traceid作为日志轨迹关联依据<br />
                           </p> -->
                         </li>
                         <li>基于边缘计算的个性化SSR
-                            <!-- <p class="item-project-des">
+                          <!-- <p class="item-project-des">
                               问题：不同的人群标签对应不同的展示效果，SSR服务器压力大，导致白屏时间偏长  
                                <br />
                               解决方式: 通过边缘计算实现CDN动态策略缓存HTML，加速输出内容页面<br />
@@ -188,10 +197,8 @@
             </li>
             <li class="project-1">
               <h3 class="project-name">
-                <a href="" target="_blank" title=""
-                  >蚂蚁IoT
-                  </a
-                >
+                <a href="" target="_blank" title="">蚂蚁IoT
+                </a>
               </h3>
               <ol>
                 <li class="project-2">
@@ -205,14 +212,17 @@
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【工作方向】</h3>
+                      <div class="tag-wrapper">
+                          <span>react</span>
+                          <span>python</span>
+                          <span>vscode 插件</span>
+                          <span>canvas</span>
+                        </div>
                       <ul class="section-content">
                         <li>
-                          日常IoT C端 动态化业务场景<span class="alias_light"
-                            >（营销+会员）</span
-                          >
+                          日常IoT C端 动态化业务场景<span class="alias_light">（营销+会员）</span>
                         </li>
-                        <li>IoT营销类UIPaaS<span class="alias_light"
-                            >（low-code）</span></li>
+                        <li>IoT营销类UIPaaS<span class="alias_light">（low-code）</span></li>
                         <li>刷脸相关的小程序应用/插件</li>
                         <li>多媒体：音视频通话，OCR小程序插件等</li>
                       </ul>
@@ -224,9 +234,7 @@
                           工程效能
                           <p class="item-project-des">
                             实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br />
-                            提供了桌面版本<span class="alias_light"
-                              >（用python开发）</span
-                            >和 vscode插件版本
+                            提供了桌面版本<span class="alias_light">（用python开发）</span>和 vscode插件版本
                             <!-- 问题：整个开发调试排查流程更多依赖文档步骤和重复地命令行执行，效率低
                             <br />
                             解决方式: 实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化<br />
@@ -234,16 +242,11 @@
                               >（用python开发）</span
                             >和 vscode插件版本 -->
                           </p>
-                          <img
-                            style="width: 200px"
-                            @click="openImg"
-                            src="https://nibilin33.github.io/nibl-resume/static/lique.webp"
-                          />
+                          <img style="width: 200px" @click="openImg"
+                            src="https://nibilin33.github.io/nibl-resume/static/lique.webp" />
                         </li>
                         <li>
-                          IoT前端优化<span class="alias_light"
-                            >（离线包->内部自研跨端容器）</span
-                          >
+                          IoT前端优化<span class="alias_light">（离线包->内部自研跨端容器）</span>
                           <p class="item-project-des">
                             基于IoT内部的自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级
                             <!-- 背景：IoT设备种类多，配置参差不齐，很多设备无法达到秒开的诉求<span
@@ -264,17 +267,14 @@
             </li>
           </JobItem>
         </div>
-       
+
       </section>
     </div>
     <div class="content-right">
       <section class="practice">
         <div class="section-bd">
-          <JobItem
-            company="厦门亿联网络技术股份有限公司"
-            time="2016.12.16 至 2020.2.21"
-          >
-          <!-- 研发中心二部 -->
+          <JobItem company="厦门亿联网络技术股份有限公司" time="2016.12.16 至 2020.2.21">
+            <!-- 研发中心二部 -->
             <li class="project-1">
               <h3 class="project-name">
                 <a href="" target="_blank" title="">UC</a>
@@ -284,6 +284,13 @@
                   <div class="item-bd">
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
+                      <div class="tag-wrapper">
+                          <span>vue</span>
+                          <span>python</span>
+                          <span>electron</span>
+                          <span>nginx</span>
+                          <span>shell</span>
+                        </div>
                       <p class="item-project-des">
                         企业统一通讯的解决方案，主要有设备管理，会议预约，PBX，短信网关，话题等功能<br />
                         <!-- <img
@@ -306,15 +313,15 @@
                     <div class="div-item">
                       <h3 class="project-des">【主要业绩】</h3>
                       <p class="item-project-des">
-                        <ul class="section-content">
+                      <ul class="section-content">
                         <li>主导项目重构和输出规范</li>
                         <li>多彩、自动化测试解决方案</li>
                         <li>利用Electron作为模拟工具，优化开发链，提高效率</li>
                       </ul>
-                        <!-- - 主导项目重构和输出规范<br />
+                      <!-- - 主导项目重构和输出规范<br />
                         - 多彩、自动化测试解决方案<br />
                         - 利用Electron作为模拟工具，优化开发链，提高效率<br /> -->
-                        <!-- 在支撑正常的需求开发的同时，主导UC项目的重构。<br />
+                      <!-- 在支撑正常的需求开发的同时，主导UC项目的重构。<br />
                         可以看到各种各样的编码风格，同时技术债务高台。<br />
                         于是我做了重构的整体考虑，输出规范，多彩解决方案，<br />
                         内嵌web优化方案，PC,移动逻辑UI抽离代码，<br />

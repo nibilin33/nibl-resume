@@ -579,9 +579,10 @@ img:hover {
   font-size: 10px;
   line-height: 12px;
   span {
-    background-image: linear-gradient(to top, #c4bbda91 0%, #e4c8dc 100%);
+    background-image: linear-gradient(to top, rgba(196, 187, 218, 0.568627451) 0%, #eadce6 100%);
     padding: 0 5px;
     margin: 0;
+    margin-bottom: 5px;
     display: inline-block;
     margin-right: 5px;
     border-radius: 5px;
