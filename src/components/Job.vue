@@ -140,6 +140,12 @@
             </li>
           </JobItem>
         </div>
+   
+
+      </section>
+    </div>
+    <div class="content-right">
+      <section class="practice">
         <div class="section-bd">
           <JobItem company="阿里巴巴集团" time="2020.06 至 2022.05">
             <!-- <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20"> -->
@@ -268,11 +274,6 @@
             </li>
           </JobItem>
         </div>
-
-      </section>
-    </div>
-    <div class="content-right">
-      <section class="practice">
         <div class="section-bd">
           <JobItem company="厦门亿联网络技术股份有限公司" time="2016.12.16 至 2020.2.21">
             <!-- 研发中心二部 -->
@@ -343,7 +344,7 @@
                           3. 内嵌webview加载慢: 离线资源包<br />
                         </li>
                         <li>内存泄漏 : 去循环引用，主动触发GC</li>
-                        <li>高并发NG502: 压测分析，参数调优</li>
+                        <!-- <li>高并发NG502: 压测分析，参数调优</li> -->
                         <li>H5混合开发跨部门联调效率低: electron 做模拟工具</li>
                       </ul>
                     </div>
@@ -381,13 +382,12 @@
           </div>
         </div>
       </section> -->
-      <section class="skill">
+      <!-- <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
           <h2 class="section-title">技能</h2>
           <span class="section-title-r"></span>
         </header>
-        <!--技能:WEB端开发-->
         <div class="section-bd">
           <div class="item">
             <div class="item-bd">
@@ -400,7 +400,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!--奖项/证书-->
       <section class="prize">
         <header class="section-hd">
@@ -412,9 +412,7 @@
           <div class="item">
             <div class="item-bd">
               <ul class="section-content">
-                <li>获得过国家奖学金</li>
-                <li>多次获院一等奖学金</li>
-                <li>专业排名均在前三</li>
+                <li>获得过国家奖学金一等奖学金</li>
                 <li>CET6</li>
                 <li>英语水平良好,雅思成绩7.0（2022.10的成绩）</li>
               </ul>
