@@ -313,12 +313,13 @@
                       </ul>
                     </div> -->
                     <div class="div-item">
-                      <h3 class="project-des">【主要业绩】</h3>
+                      <h3 class="project-des">【工作方向】</h3>
                       <p class="item-project-des">
                       <ul class="section-content">
-                        <li>主导项目重构和输出规范</li>
-                        <li>多彩、自动化测试解决方案</li>
-                        <li>利用Electron作为模拟工具，优化开发链，提高效率</li>
+                        <li>项目管理与团队协作（需求评审，任务分配，技术支持, 功能开发）</li>
+                        <li>UC项目重构和输出规范</li>
+                        <li>前端项目优化与性能提升</li>
+                        <!-- <li>多彩、自动化测试解决方案</li> -->
                       </ul>
                       <!-- - 主导项目重构和输出规范<br />
                         - 多彩、自动化测试解决方案<br />
@@ -343,8 +344,9 @@
                           3. 内嵌webview加载慢: 离线资源包<br />
                         </li>
                         <li>内存泄漏 : 去循环引用，主动触发GC</li>
+                        <li>多彩、自动化测试解决方案</li>
                         <!-- <li>高并发NG502: 压测分析，参数调优</li> -->
-                        <li>H5混合开发跨部门联调效率低: electron 做模拟工具</li>
+                        <li>H5混合开发跨部门联调效率低: 利用Electron作为模拟工具，优化开发链，提高效率</li>
                       </ul>
                     </div>
                   </div>
