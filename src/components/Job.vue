@@ -8,7 +8,7 @@
           <span class="section-title-r"></span>
         </header>
         <div class="section-bd">
-          <JobItem company="缦图集团" time="2023.3 - now">
+          <JobItem company="海马体集团" time="2023.3 - now">
             <!-- <JobItem company="Horizons" status="remote" time="2022.11.25 - now"> -->
             <li class="project-1">
               <h3 class="project-name">
