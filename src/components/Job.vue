@@ -23,6 +23,7 @@
                       <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
                         为海马体集团旗下所有品牌提供线上预约系统，下单，在线看片，直播等服务
+                        涉及微信，支付宝，抖音等多个平台
                       </p>
                     </div>
 
@@ -50,11 +51,11 @@
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li> Uniapp 微应用方案</li>
-                        <li> 多端小程序组件库，支持多品牌主题定制 </li>
                         <li> 基于行为驱动的自动化测试</li>
                         <li> 前端测试覆盖率</li>
                         <li> 分支管理CI部署优化</li>
                         <li> Uniapp 渐进式迁移</li>
+                        <li> 素材合成服务</li>
                       </ul>
                     </div>
                   </div>
@@ -91,6 +92,7 @@
                         <span>tailwindcss</span>
                         <span>turborepo</span>
                         <span>i18n</span>
+                        <span>微前端</span>
                       </div>
                       <ul class="section-content">
                         <li>
@@ -287,6 +289,7 @@
                       <h3 class="project-des">【简介】</h3>
                       <div class="tag-wrapper">
                           <span>vue</span>
+                          <span>jquery</span>
                           <span>nodejs</span>
                           <span>python</span>
                           <span>electron</span>
@@ -383,7 +386,7 @@
           </div>
         </div>
       </section> -->
-      <!-- <section class="skill">
+      <section class="skill">
         <header class="section-hd">
           <span class="section-title-l"></span>
           <h2 class="section-title">技能</h2>
@@ -393,15 +396,15 @@
           <div class="item">
             <div class="item-bd">
               <ul class="section-content">
-                <li>Javascript,Typescript,Html5,CSS,Actionscript</li>
-                <li>React,Vue,小程序,Uniapp,Tailwindcss</li>
-                <li>Webpack,Rollup,Vite</li>
+                <li>Javascript,Typescript,Html5,CSS</li>
+                <li>React,Vue,Uniapp,Tailwindcss,Jquery</li>
+                <li>Webpack,Rollup,Vite,Babel</li>
                 <li>Python,Node,Shell,Serverless</li>
               </ul>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!--奖项/证书-->
       <section class="prize">
         <header class="section-hd">
