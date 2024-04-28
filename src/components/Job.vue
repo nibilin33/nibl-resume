@@ -139,6 +139,16 @@
                 </a>
               </h3>
             </li>
+            <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【简介】</h3>
+                      <p class="item-project-des">
+                        可扩展的交互式编程,可实时地观察代码的运行结果(类似Jupyter Notebook)
+                      </p>
+                    </div>
+                    </div>
+                </li>
           </JobItem>
         </div>
    

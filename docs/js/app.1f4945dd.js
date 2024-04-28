@@ -310,15 +310,15 @@ function Resumevue_type_template_id_78b75337_render(_ctx, _cache, $props, $setup
 // EXTERNAL MODULE: ./src/components/BaseInfo.vue + 4 modules
 var BaseInfo = __webpack_require__("8b3d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=47cf3ad7
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=b4014a38
 
-const Jobvue_type_template_id_47cf3ad7_hoisted_1 = {
+const Jobvue_type_template_id_b4014a38_hoisted_1 = {
   class: "content-bd"
 };
-const Jobvue_type_template_id_47cf3ad7_hoisted_2 = {
+const Jobvue_type_template_id_b4014a38_hoisted_2 = {
   class: "content-left"
 };
-const Jobvue_type_template_id_47cf3ad7_hoisted_3 = {
+const Jobvue_type_template_id_b4014a38_hoisted_3 = {
   class: "practice"
 };
 const _hoisted_4 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
@@ -414,16 +414,27 @@ const _hoisted_10 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createEle
   target: "_blank",
   title: "codepod"
 }, " Codepod ")])], -1);
-const _hoisted_11 = {
+const _hoisted_11 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+  class: "project-2"
+}, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+  class: "item-bd"
+}, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+  class: "div-item"
+}, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+  class: "project-des"
+}, "【简介】"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
+  class: "item-project-des"
+}, " 可扩展的交互式编程,可实时地观察代码的运行结果(类似Jupyter Notebook) ")])])], -1);
+const _hoisted_12 = {
   class: "content-right"
 };
-const _hoisted_12 = {
+const _hoisted_13 = {
   class: "practice"
 };
-const _hoisted_13 = {
+const _hoisted_14 = {
   class: "section-bd"
 };
-const _hoisted_14 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+const _hoisted_15 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
   class: "project-1"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
   class: "project-name"
@@ -462,30 +473,30 @@ const _hoisted_14 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createEle
 }, "【技术】"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
   class: "section-content"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "H5全链路日志 "), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "基于边缘计算的个性化SSR ")])])])])])], -1);
-const _hoisted_15 = {
+const _hoisted_16 = {
   class: "project-1"
 };
-const _hoisted_16 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+const _hoisted_17 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
   class: "project-name"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("a", {
   href: "",
   target: "_blank",
   title: ""
 }, "蚂蚁IoT ")], -1);
-const _hoisted_17 = {
+const _hoisted_18 = {
   class: "project-2"
 };
-const _hoisted_18 = {
+const _hoisted_19 = {
   class: "item-bd"
 };
-const _hoisted_19 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+const _hoisted_20 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
   class: "div-item"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
   class: "project-des"
 }, "【简介】"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
   class: "item-project-des"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 涵盖所有蚂蚁线下支付设备，中小商家里的支付宝盒，大型商场里的自助点餐机，扫脸付款设备等等"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), /*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 支付设备的切入点是为了解决支付问题，除了支付场景之外，也有很多和内容运营相关的事情 ")])], -1);
-const _hoisted_20 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+const _hoisted_21 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
   class: "div-item"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
   class: "project-des"
@@ -498,29 +509,29 @@ const _hoisted_20 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createEle
 }, "（营销+会员）")]), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [/*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])("IoT营销类UIPaaS"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
   class: "alias_light"
 }, "（low-code）")]), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "刷脸相关的小程序应用/插件"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "多媒体：音视频通话，OCR小程序插件等")])], -1);
-const _hoisted_21 = {
+const _hoisted_22 = {
   class: "div-item"
 };
-const _hoisted_22 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+const _hoisted_23 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
   class: "project-des"
 }, "【技术】", -1);
-const _hoisted_23 = {
+const _hoisted_24 = {
   class: "section-content"
 };
-const _hoisted_24 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
+const _hoisted_25 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
   class: "item-project-des"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 实现了对端调试工具，可视化操作，繁琐重复的手工流程自动化"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), /*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 提供了桌面版本"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
   class: "alias_light"
 }, "（用python开发）"), /*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])("和 vscode插件版本 ")], -1);
-const _hoisted_25 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [/*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" IoT前端优化"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
+const _hoisted_26 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [/*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" IoT前端优化"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
   class: "alias_light"
 }, "（离线包->内部自研跨端容器）"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
   class: "item-project-des"
 }, " 基于IoT内部的自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级 ")], -1);
-const _hoisted_26 = {
+const _hoisted_27 = {
   class: "section-bd"
 };
-const _hoisted_27 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+const _hoisted_28 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
   class: "project-1"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
   class: "project-name"
@@ -555,10 +566,10 @@ const _hoisted_27 = /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createEle
 }, "【技术】"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
   class: "section-content"
 }, [/*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [/*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 性能优化"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), /*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 1. 会议预约组件：从打开奔溃到秒开"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), /*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 2. 组织架构树:4+s -> 1+s"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), /*#__PURE__*/Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 3. 内嵌webview加载慢: 离线资源包"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br")]), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "内存泄漏 : 去循环引用，主动触发GC"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "多彩、自动化测试解决方案"), /*#__PURE__*/Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "H5混合开发跨部门联调效率低: 利用Electron作为模拟工具，优化开发链，提高效率")])])])])])], -1);
-const _hoisted_28 = /*#__PURE__*/Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"skill\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">技能</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>Javascript,Typescript,Html5,CSS</li><li>React,Vue,Uniapp,Tailwindcss,Jquery</li><li>Webpack,Rollup,Vite,Babel</li><li>Python,Node,Shell,Serverless</li></ul></div></div></div></section><section class=\"prize\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">奖项/证书</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>获得过国家奖学金一等奖学金</li><li>CET6</li><li>英语水平良好,雅思成绩7.0（2022.10的成绩）</li></ul></div></div></div></section><section class=\"thanks\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">致谢</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><h2 style=\"font-weight:bold;line-height:24px;margin-top:10px;\"> 感谢在百忙之中阅读这份履历 </h2></div></div></section>", 3);
-function Jobvue_type_template_id_47cf3ad7_render(_ctx, _cache, $props, $setup, $data, $options) {
+const _hoisted_29 = /*#__PURE__*/Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"skill\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">技能</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>Javascript,Typescript,Html5,CSS</li><li>React,Vue,Uniapp,Tailwindcss,Jquery</li><li>Webpack,Rollup,Vite,Babel</li><li>Python,Node,Shell,Serverless</li></ul></div></div></div></section><section class=\"prize\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">奖项/证书</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>获得过国家奖学金一等奖学金</li><li>CET6</li><li>英语水平良好,雅思成绩7.0（2022.10的成绩）</li></ul></div></div></div></section><section class=\"thanks\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">致谢</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><h2 style=\"font-weight:bold;line-height:24px;margin-top:10px;\"> 感谢在百忙之中阅读这份履历 </h2></div></div></section>", 3);
+function Jobvue_type_template_id_b4014a38_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_JobItem = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("JobItem");
-  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_47cf3ad7_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", Jobvue_type_template_id_47cf3ad7_hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", Jobvue_type_template_id_47cf3ad7_hoisted_3, [_hoisted_4, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_5, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
+  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_b4014a38_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", Jobvue_type_template_id_b4014a38_hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", Jobvue_type_template_id_b4014a38_hoisted_3, [_hoisted_4, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_5, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "海马体集团",
     time: "2023.3 - now"
   }, {
@@ -575,29 +586,29 @@ function Jobvue_type_template_id_47cf3ad7_render(_ctx, _cache, $props, $setup, $
     company: "开源社区",
     status: "open"
   }, {
-    default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => [_hoisted_10]),
+    default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => [_hoisted_10, _hoisted_11]),
     _: 1
-  })])])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_11, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_12, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_13, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
+  })])])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_12, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_13, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_14, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "阿里巴巴集团",
     time: "2020.06 至 2022.05"
   }, {
-    default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => [_hoisted_14, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", _hoisted_15, [_hoisted_16, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ol", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", _hoisted_17, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_18, [_hoisted_19, _hoisted_20, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_21, [_hoisted_22, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", _hoisted_23, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 工程效能 "), _hoisted_24, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("img", {
+    default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => [_hoisted_15, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", _hoisted_16, [_hoisted_17, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ol", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", _hoisted_18, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_19, [_hoisted_20, _hoisted_21, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_22, [_hoisted_23, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", _hoisted_24, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 工程效能 "), _hoisted_25, Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("img", {
       style: {
         "width": "200px"
       },
       onClick: _cache[0] || (_cache[0] = (...args) => $options.openImg && $options.openImg(...args)),
       src: "https://nibilin33.github.io/nibl-resume/static/lique.webp"
-    })]), _hoisted_25])])])])])])]),
+    })]), _hoisted_26])])])])])])]),
     _: 1
-  })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_26, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
+  })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_27, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "厦门亿联网络技术股份有限公司",
     time: "2016.12.16 至 2020.2.21"
   }, {
-    default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => [_hoisted_27]),
+    default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => [_hoisted_28]),
     _: 1
-  })])]), _hoisted_28])]);
+  })])]), _hoisted_29])]);
 }
-// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=47cf3ad7
+// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=b4014a38
 
 // EXTERNAL MODULE: ./src/components/JobItem.vue + 4 modules
 var JobItem = __webpack_require__("ce46");
@@ -628,7 +639,7 @@ var JobItem = __webpack_require__("ce46");
 
 
 
-const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_47cf3ad7_render]])
+const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_b4014a38_render]])
 
 /* harmony default export */ var Job = (Job_exports_);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Resume.vue?vue&type=script&lang=js
@@ -934,4 +945,4 @@ const __exports__ = /*#__PURE__*/exportHelper_default()(JobItemvue_type_script_l
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.36890c37.js.map
+//# sourceMappingURL=app.1f4945dd.js.map
