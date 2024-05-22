@@ -56,6 +56,7 @@
                         <li> 分支管理规范&CI部署优化</li>
                         <li> Uniapp 渐进式迁移</li>
                         <li> 素材合成服务</li>
+                        <li> 小程序转APP</li>
                       </ul>
                     </div>
                   </div>
