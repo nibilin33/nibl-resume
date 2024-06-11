@@ -34,6 +34,7 @@
                         <span>chrome 插件</span>
                         <span>webpack 插件</span>
                         <span>photoshop 插件</span>
+                        <span>babel 插件</span>
                         <span>vite 插件</span>
                         <span>nodejs</span>
                         <span>脚手架</span>
@@ -55,7 +56,7 @@
                         <li> 前端测试覆盖率</li>
                         <li> 分支管理规范&CI部署优化</li>
                         <li> Uniapp 渐进式迁移</li>
-                        <li> 素材合成服务</li>
+                        <li> 素材合成服务(canvas dsl)</li>
                         <li> 小程序转APP</li>
                       </ul>
                     </div>
