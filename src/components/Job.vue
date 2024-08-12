@@ -40,24 +40,25 @@
                         <span>脚手架</span>
                         <span>serverless</span>
                         <span>canvas</span>
+                        <span>webassembly</span>
                         <span>CI/CD</span>
                       </div>
                       <ul class="section-content">
                         <li>负责前端架构搭建，制定技术方案，性能优化等攻坚克难问题</li>
                         <li>负责团队工程效能，制定和优化研发流程规范，提升团队的开发效率</li>
-                        <li>结合AI技术创新，提升产研效率</li>
+                        <li>结合AI技术创新，降本增效和提升产研效率</li>
                       </ul>
                     </div>
                     <div class="div-item">
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li> Uniapp 微应用方案</li>
-                        <li> 基于行为驱动的自动化测试</li>
-                        <li> 前端测试覆盖率</li>
+                        <li> 结合AI基于行为驱动的自动化测试</li>
                         <li> 分支管理规范&CI部署优化</li>
                         <li> Uniapp 渐进式迁移</li>
                         <li> 素材合成服务(canvas dsl)</li>
                         <li> 小程序转APP</li>
+                        <li> 使用 ONNX Runtime 将 C++ 识别逻辑和模型移植到 Web 和 Electron 端 </li>
                       </ul>
                     </div>
                   </div>
