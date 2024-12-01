@@ -826,7 +826,7 @@ const message = {
       work: 'work',
       myname: '倪必磷',
       englishName: 'Iris',
-      jobtitle: '资深前端工程师',
+      jobtitle: '前端架构',
       university: '闽南师范大学',
       profession: '软件工程',
       graduate: '本科 / 2017年6月毕业',
@@ -945,4 +945,4 @@ const __exports__ = /*#__PURE__*/exportHelper_default()(JobItemvue_type_script_l
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.26621513.js.map
+//# sourceMappingURL=app.8b1a5f79.js.map
