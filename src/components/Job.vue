@@ -40,7 +40,8 @@
                         <span>脚手架</span>
                         <span>serverless</span>
                         <span>canvas</span>
-                        <span>webassembly</span>
+                        <span>Webassembly</span>
+                        <span>C++/Cmake</span>
                         <span>CI/CD</span>
                       </div>
                       <ul class="section-content">
@@ -58,7 +59,8 @@
                         <li> Uniapp 渐进式迁移</li>
                         <li> 素材合成服务(canvas dsl)</li>
                         <li> 小程序转APP</li>
-                        <li> 使用 ONNX Runtime 将 C++ 识别逻辑和模型移植到 Web 和 Electron 端 </li>
+                        <li> ONNX Runtime 进行推理相关任务 </li>
+                        <li> 将C++ AI工程使用Emscripten封装成SDK，供前端使用 </li>
                       </ul>
                     </div>
                   </div>
