@@ -420,7 +420,7 @@
             </div> -->
             <a href="https://nibilin33.github.io/nibl-resume/static/skill.png">
               <img
-              style="width: 200px"
+              style="width: 100%"
               src="https://nibilin33.github.io/nibl-resume/static/skill.png"
             />
             </a>
