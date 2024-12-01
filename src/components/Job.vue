@@ -409,14 +409,20 @@
         </header>
         <div class="section-bd">
           <div class="item">
-            <div class="item-bd">
+            <!-- <div class="item-bd">
               <ul class="section-content">
                 <li>Javascript,Typescript,Html5,CSS</li>
                 <li>React,Vue,Uniapp,Tailwindcss,Jquery</li>
                 <li>Webpack,Rollup,Vite,Babel</li>
                 <li>Python,Node,Shell,Serverless</li>
               </ul>
-            </div>
+            </div> -->
+            <a href="https://nibilin33.github.io/nibl-resume/static/skill.png">
+              <img
+              style="width: 200px"
+              src="https://nibilin33.github.io/nibl-resume/static/skill.webp"
+            />
+            </a>
           </div>
         </div>
       </section>
