@@ -54,11 +54,12 @@
                       <h3 class="project-des">【技术】</h3>
                       <ul class="section-content">
                         <li> Uniapp 微应用方案</li>
-                        <li> 结合AI基于行为驱动的自动化测试</li>
+                        <li> 结合AI的自动化测试</li>
                         <li> 分支管理规范&CI部署优化</li>
                         <li> Uniapp 渐进式迁移</li>
                         <li> 素材合成服务(canvas dsl)</li>
                         <li> 小程序转APP</li>
+                        <li> morjs框架支持小红书</li>
                         <li> ONNX Runtime 进行推理相关任务 </li>
                         <li> 将C++ AI工程使用Emscripten封装成SDK，供前端使用 </li>
                       </ul>
