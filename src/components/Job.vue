@@ -421,7 +421,7 @@
             <a href="https://nibilin33.github.io/nibl-resume/static/skill.png">
               <img
               style="width: 200px"
-              src="https://nibilin33.github.io/nibl-resume/static/skill.webp"
+              src="https://nibilin33.github.io/nibl-resume/static/skill.png"
             />
             </a>
           </div>
