@@ -62,6 +62,7 @@
                         <li> morjs框架支持小红书</li>
                         <li> ONNX Runtime 进行推理相关任务 </li>
                         <li> 将C++ AI工程使用Emscripten封装成SDK，供前端使用 </li>
+                        <li> 自动化日志监控和异常检测服务 </li>
                       </ul>
                     </div>
                   </div>
