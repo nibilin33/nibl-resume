@@ -7,7 +7,7 @@
         >
         <router-link to="/en">English Verison</router-link>
       </div>
-      <p class="last-modified">最后更新于2023年10月</p>
+      <p class="last-modified">最后更新于2025年1月</p>
     </div>
     <main>
       <BaseInfo />
