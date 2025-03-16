@@ -308,9 +308,9 @@ function Resumevue_type_template_id_e092b8ca_render(_ctx, _cache, $props, $setup
 // EXTERNAL MODULE: ./src/components/BaseInfo.vue + 4 modules
 var BaseInfo = __webpack_require__("8b3d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=fc8d9f86
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=be10e250
 
-const Jobvue_type_template_id_fc8d9f86_hoisted_1 = {
+const Jobvue_type_template_id_be10e250_hoisted_1 = {
   class: "content-bd"
 };
 const _hoisted_2 = {
@@ -355,9 +355,9 @@ const _hoisted_14 = {
 const _hoisted_15 = {
   class: "section-bd"
 };
-function Jobvue_type_template_id_fc8d9f86_render(_ctx, _cache, $props, $setup, $data, $options) {
+function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_JobItem = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("JobItem");
-  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_fc8d9f86_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_3, [_cache[4] || (_cache[4] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
+  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_be10e250_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_3, [_cache[4] || (_cache[4] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
     class: "section-hd"
   }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
     class: "section-title-l"
@@ -401,7 +401,7 @@ function Jobvue_type_template_id_fc8d9f86_render(_ctx, _cache, $props, $setup, $
       class: "project-des"
     }, "【技术】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
-    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Uniapp 微应用方案"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 分支管理规范&CI部署优化"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Uniapp 渐进式迁移"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 素材合成服务(canvas dsl)"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 小程序转APP"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " morjs框架支持小红书"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 结合AI的低代码自动化测试"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " ONNX Runtime 进行推理相关任务 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 将C++ AI工程使用Emscripten封装成SDK，供前端使用 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 自动化日志监控和异常检测服务 ")])])])])])], -1)])),
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Uniapp 微应用方案"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 分支管理规范&CI部署优化"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Uniapp 渐进式迁移"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 素材合成服务(canvas dsl)"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " morjs框架支持小红书"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 结合AI的低代码自动化测试"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 将C++ AI工程使用Emscripten封装成SDK，供前端使用 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 自动化日志监控和异常检测服务 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " AI导购 ")])])])])])], -1)])),
     _: 1
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_5, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Horizons",
@@ -592,7 +592,7 @@ function Jobvue_type_template_id_fc8d9f86_render(_ctx, _cache, $props, $setup, $
     _: 1
   })])]), _cache[14] || (_cache[14] = Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"skill\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">技能</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><a href=\"https://nibilin33.github.io/nibl-resume/static/skill.png\"><img style=\"width:100%;\" src=\"https://nibilin33.github.io/nibl-resume/static/skill.png\"></a></div></div></section><section class=\"prize\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">奖项/证书</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>获得过国家奖学金一等奖学金</li><li>CET6</li><li>英语水平良好,雅思成绩7.0（2022.10的成绩）</li></ul></div></div></div></section><section class=\"thanks\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">致谢</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><h2 style=\"font-weight:bold;line-height:24px;margin-top:10px;\"> 感谢在百忙之中阅读这份履历 </h2></div></div></section>", 3))])]);
 }
-// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=fc8d9f86
+// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=be10e250
 
 // EXTERNAL MODULE: ./src/components/JobItem.vue + 4 modules
 var JobItem = __webpack_require__("ce46");
@@ -623,7 +623,7 @@ var JobItem = __webpack_require__("ce46");
 
 
 
-const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_fc8d9f86_render]])
+const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_be10e250_render]])
 
 /* harmony default export */ var Job = (Job_exports_);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Resume.vue?vue&type=script&lang=js
@@ -928,4 +928,4 @@ const __exports__ = /*#__PURE__*/exportHelper_default()(JobItemvue_type_script_l
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.bd42d92b.js.map
+//# sourceMappingURL=app.d5de935d.js.map
