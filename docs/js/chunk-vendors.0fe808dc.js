@@ -62,17 +62,6 @@ module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
 
 /***/ }),
 
-/***/ "0643":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// TODO: Remove from `core-js@4`
-__webpack_require__("e9f5");
-
-/***/ }),
-
 /***/ "06cf":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -477,7 +466,9 @@ module.exports = function (it) {
 
 var $ = __webpack_require__("23e7");
 var symmetricDifference = __webpack_require__("9961");
+var setMethodGetKeysBeforeCloning = __webpack_require__("5320");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
+var FORCED = !setMethodAcceptSetLike('symmetricDifference') || !setMethodGetKeysBeforeCloning('symmetricDifference');
 
 // `Set.prototype.symmetricDifference` method
 // https://tc39.es/ecma262/#sec-set.prototype.symmetricdifference
@@ -485,7 +476,7 @@ $({
   target: 'Set',
   proto: true,
   real: true,
-  forced: !setMethodAcceptSetLike('symmetricDifference')
+  forced: FORCED
 }, {
   symmetricDifference: symmetricDifference
 });
@@ -500,7 +491,37 @@ $({
 
 var $ = __webpack_require__("23e7");
 var difference = __webpack_require__("a5f7");
+var fails = __webpack_require__("d039");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
+var SET_LIKE_INCORRECT_BEHAVIOR = !setMethodAcceptSetLike('difference', function (result) {
+  return result.size === 0;
+});
+var FORCED = SET_LIKE_INCORRECT_BEHAVIOR || fails(function () {
+  // https://bugs.webkit.org/show_bug.cgi?id=288595
+  var setLike = {
+    size: 1,
+    has: function () {
+      return true;
+    },
+    keys: function () {
+      var index = 0;
+      return {
+        next: function () {
+          var done = index++ > 1;
+          if (baseSet.has(1)) baseSet.clear();
+          return {
+            done: done,
+            value: 2
+          };
+        }
+      };
+    }
+  };
+  // eslint-disable-next-line es/no-set -- testing
+  var baseSet = new Set([1, 2, 3, 4]);
+  // eslint-disable-next-line es/no-set-prototype-difference -- testing
+  return baseSet.difference(setLike).size !== 3;
+});
 
 // `Set.prototype.difference` method
 // https://tc39.es/ecma262/#sec-set.prototype.difference
@@ -508,7 +529,7 @@ $({
   target: 'Set',
   proto: true,
   real: true,
-  forced: !setMethodAcceptSetLike('difference')
+  forced: FORCED
 }, {
   difference: difference
 });
@@ -546,7 +567,7 @@ module.exports = function (iterable, unboundFunction, options) {
   var fn = bind(unboundFunction, that);
   var iterator, iterFn, index, length, result, next, step;
   var stop = function (condition) {
-    if (iterator) iteratorClose(iterator, 'normal', condition);
+    if (iterator) iteratorClose(iterator, 'normal');
     return new Result(true, condition);
   };
   var callFn = function (value) {
@@ -743,10 +764,32 @@ var FunctionPrototype = Function.prototype;
 var apply = FunctionPrototype.apply;
 var call = FunctionPrototype.call;
 
-// eslint-disable-next-line es/no-reflect -- safe
+// eslint-disable-next-line es/no-function-prototype-bind, es/no-reflect -- safe
 module.exports = typeof Reflect == 'object' && Reflect.apply || (NATIVE_BIND ? call.bind(apply) : function () {
   return call.apply(apply, arguments);
 });
+
+/***/ }),
+
+/***/ "2baa":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Should throw an error on invalid iterator
+// https://issues.chromium.org/issues/336839115
+module.exports = function (methodName, argument) {
+  // eslint-disable-next-line es/no-iterator -- required for testing
+  var method = typeof Iterator == 'function' && Iterator.prototype[methodName];
+  if (method) try {
+    method.call({
+      next: null
+    }, argument).next();
+  } catch (error) {
+    return true;
+  }
+};
 
 /***/ }),
 
@@ -1268,17 +1311,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "4e3e":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// TODO: Remove from `core-js@4`
-__webpack_require__("7d54");
-
-/***/ }),
-
 /***/ "50c4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1297,62 +1329,44 @@ module.exports = function (argument) {
 
 /***/ }),
 
-/***/ "5377":
+/***/ "5320":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var globalThis = __webpack_require__("cfe9");
-var DESCRIPTORS = __webpack_require__("83ab");
-var defineBuiltInAccessor = __webpack_require__("edd0");
-var regExpFlags = __webpack_require__("ad6d");
-var fails = __webpack_require__("d039");
-
-// babel-minify and Closure Compiler transpiles RegExp('.', 'd') -> /./d and it causes SyntaxError
-var RegExp = globalThis.RegExp;
-var RegExpPrototype = RegExp.prototype;
-var FORCED = DESCRIPTORS && fails(function () {
-  var INDICES_SUPPORT = true;
+// Should get iterator record of a set-like object before cloning this
+// https://bugs.webkit.org/show_bug.cgi?id=289430
+module.exports = function (METHOD_NAME) {
   try {
-    RegExp('.', 'd');
-  } catch (error) {
-    INDICES_SUPPORT = false;
-  }
-  var O = {};
-  // modern V8 bug
-  var calls = '';
-  var expected = INDICES_SUPPORT ? 'dgimsy' : 'gimsy';
-  var addGetter = function (key, chr) {
-    // eslint-disable-next-line es/no-object-defineproperty -- safe
-    Object.defineProperty(O, key, {
-      get: function () {
-        calls += chr;
+    // eslint-disable-next-line es/no-set -- needed for test
+    var baseSet = new Set();
+    var setLike = {
+      size: 0,
+      has: function () {
         return true;
+      },
+      keys: function () {
+        // eslint-disable-next-line es/no-object-defineproperty -- needed for test
+        return Object.defineProperty({}, 'next', {
+          get: function () {
+            baseSet.clear();
+            baseSet.add(4);
+            return function () {
+              return {
+                done: true
+              };
+            };
+          }
+        });
       }
-    });
-  };
-  var pairs = {
-    dotAll: 's',
-    global: 'g',
-    ignoreCase: 'i',
-    multiline: 'm',
-    sticky: 'y'
-  };
-  if (INDICES_SUPPORT) pairs.hasIndices = 'd';
-  for (var key in pairs) addGetter(key, pairs[key]);
-
-  // eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
-  var result = Object.getOwnPropertyDescriptor(RegExpPrototype, 'flags').get.call(O);
-  return result !== expected || calls !== expected;
-});
-
-// `RegExp.prototype.flags` getter
-// https://tc39.es/ecma262/#sec-get-regexp.prototype.flags
-if (FORCED) defineBuiltInAccessor(RegExpPrototype, 'flags', {
-  configurable: true,
-  get: regExpFlags
-});
+    };
+    var result = baseSet[METHOD_NAME](setLike);
+    return result.size !== 1 || result.values().next().value !== 4;
+  } catch (error) {
+    return false;
+  }
+};
 
 /***/ }),
 
@@ -1556,8 +1570,8 @@ module.exports = function (key, value) {
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("7a23");
 /* harmony import */ var _vue_devtools_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("3f4e");
 /*!
-  * vue-router v4.5.0
-  * (c) 2024 Eduardo San Martin Morote
+  * vue-router v4.5.1
+  * (c) 2025 Eduardo San Martin Morote
   * @license MIT
   */
 
@@ -2322,16 +2336,16 @@ function createWebHistory(base) {
  */
 function createMemoryHistory(base = '') {
     let listeners = [];
-    let queue = [START];
+    let queue = [[START, {}]];
     let position = 0;
     base = normalizeBase(base);
-    function setLocation(location) {
+    function setLocation(location, state = {}) {
         position++;
         if (position !== queue.length) {
             // we are in the middle, we remove everything from here in the queue
             queue.splice(position);
         }
-        queue.push(location);
+        queue.push([location, state]);
     }
     function triggerListeners(to, from, { direction, delta }) {
         const info = {
@@ -2346,17 +2360,17 @@ function createMemoryHistory(base = '') {
     const routerHistory = {
         // rewritten by Object.defineProperty
         location: START,
-        // TODO: should be kept in queue
+        // rewritten by Object.defineProperty
         state: {},
         base,
         createHref: createHref.bind(null, base),
-        replace(to) {
+        replace(to, state) {
             // remove current entry and decrement position
             queue.splice(position--, 1);
-            setLocation(to);
+            setLocation(to, state);
         },
-        push(to, data) {
-            setLocation(to);
+        push(to, state) {
+            setLocation(to, state);
         },
         listen(callback) {
             listeners.push(callback);
@@ -2368,7 +2382,7 @@ function createMemoryHistory(base = '') {
         },
         destroy() {
             listeners = [];
-            queue = [START];
+            queue = [[START, {}]];
             position = 0;
         },
         go(delta, shouldTrigger = true) {
@@ -2389,7 +2403,11 @@ function createMemoryHistory(base = '') {
     };
     Object.defineProperty(routerHistory, 'location', {
         enumerable: true,
-        get: () => queue[position],
+        get: () => queue[position][0],
+    });
+    Object.defineProperty(routerHistory, 'state', {
+        enumerable: true,
+        get: () => queue[position][1],
     });
     return routerHistory;
 }
@@ -3779,6 +3797,7 @@ const RouterLinkImpl = /*#__PURE__*/ Object(vue__WEBPACK_IMPORTED_MODULE_0__[/* 
             type: String,
             default: 'page',
         },
+        viewTransition: Boolean,
     },
     useLink,
     setup(props, { slots }) {
@@ -5259,8 +5278,8 @@ exports.default = (sfc, props) => {
 
 "use strict";
 /*!
-  * core-base v9.14.2
-  * (c) 2024 kazuya kawaguchi
+  * core-base v9.14.4
+  * (c) 2025 kazuya kawaguchi
   * Released under the MIT License.
   */
 
@@ -5268,6 +5287,10 @@ exports.default = (sfc, props) => {
 __webpack_require__("d9e2");
 __webpack_require__("14d9");
 __webpack_require__("13d5");
+__webpack_require__("e9f5");
+__webpack_require__("7d54");
+__webpack_require__("ab43");
+__webpack_require__("9485");
 __webpack_require__("1e70");
 __webpack_require__("79a4");
 __webpack_require__("c1a1");
@@ -5275,12 +5298,68 @@ __webpack_require__("8b00");
 __webpack_require__("a4e7");
 __webpack_require__("1e5a");
 __webpack_require__("72c3");
-__webpack_require__("0643");
-__webpack_require__("4e3e");
-__webpack_require__("a573");
-__webpack_require__("9d4a");
 var messageCompiler = __webpack_require__("f4eb");
 var shared = __webpack_require__("b090");
+function isMessageAST(val) {
+  return shared.isObject(val) && resolveType(val) === 0 && (shared.hasOwn(val, 'b') || shared.hasOwn(val, 'body'));
+}
+const PROPS_BODY = ['b', 'body'];
+function resolveBody(node) {
+  return resolveProps(node, PROPS_BODY);
+}
+const PROPS_CASES = ['c', 'cases'];
+function resolveCases(node) {
+  return resolveProps(node, PROPS_CASES, []);
+}
+const PROPS_STATIC = ['s', 'static'];
+function resolveStatic(node) {
+  return resolveProps(node, PROPS_STATIC);
+}
+const PROPS_ITEMS = ['i', 'items'];
+function resolveItems(node) {
+  return resolveProps(node, PROPS_ITEMS, []);
+}
+const PROPS_TYPE = ['t', 'type'];
+function resolveType(node) {
+  return resolveProps(node, PROPS_TYPE);
+}
+const PROPS_VALUE = ['v', 'value'];
+function resolveValue$1(node, type) {
+  const resolved = resolveProps(node, PROPS_VALUE);
+  if (resolved != null) {
+    return resolved;
+  } else {
+    throw createUnhandleNodeError(type);
+  }
+}
+const PROPS_MODIFIER = ['m', 'modifier'];
+function resolveLinkedModifier(node) {
+  return resolveProps(node, PROPS_MODIFIER);
+}
+const PROPS_KEY = ['k', 'key'];
+function resolveLinkedKey(node) {
+  const resolved = resolveProps(node, PROPS_KEY);
+  if (resolved) {
+    return resolved;
+  } else {
+    throw createUnhandleNodeError(6 /* NodeTypes.Linked */);
+  }
+}
+function resolveProps(node, props, defaultValue) {
+  for (let i = 0; i < props.length; i++) {
+    const prop = props[i];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if (shared.hasOwn(node, prop) && node[prop] != null) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      return node[prop];
+    }
+  }
+  return defaultValue;
+}
+const AST_NODE_PROPS_KEYS = [...PROPS_BODY, ...PROPS_CASES, ...PROPS_STATIC, ...PROPS_ITEMS, ...PROPS_KEY, ...PROPS_MODIFIER, ...PROPS_VALUE, ...PROPS_TYPE];
+function createUnhandleNodeError(type) {
+  return new Error(`unhandled node type: ${type}`);
+}
 const pathStateMachine = [];
 pathStateMachine[0 /* States.BEFORE_PATH */] = {
   ["w" /* PathCharTypes.WORKSPACE */]: [0 /* States.BEFORE_PATH */],
@@ -5506,7 +5585,7 @@ function resolveWithKeyValue(obj, path) {
  *
  * @VueI18nGeneral
  */
-function resolveValue$1(obj, path) {
+function resolveValue(obj, path) {
   // check object
   if (!shared.isObject(obj)) {
     return null;
@@ -5528,7 +5607,16 @@ function resolveValue$1(obj, path) {
   let last = obj;
   let i = 0;
   while (i < len) {
-    const val = last[hit[i]];
+    const key = hit[i];
+    /**
+     * NOTE:
+     * if `key` is intlify message format AST node key and `last` is intlify message format AST, skip it.
+     * because the AST node is not a key-value structure.
+     */
+    if (AST_NODE_PROPS_KEYS.includes(key) && isMessageAST(last)) {
+      return null;
+    }
+    const val = last[key];
     if (val === undefined) {
       return null;
     }
@@ -5848,7 +5936,7 @@ function appendItemToChain(chain, target, blocks) {
  * Intlify core-base version
  * @internal
  */
-const VERSION = '9.14.2';
+const VERSION = '9.14.4';
 const NOT_REOSLVED = -1;
 const DEFAULT_LOCALE = 'en-US';
 const MISSING_RESOLVE_VALUE = '';
@@ -6041,14 +6129,6 @@ function formatParts(ctx, ast) {
     return formatMessageParts(ctx, body);
   }
 }
-const PROPS_BODY = ['b', 'body'];
-function resolveBody(node) {
-  return resolveProps(node, PROPS_BODY);
-}
-const PROPS_CASES = ['c', 'cases'];
-function resolveCases(node) {
-  return resolveProps(node, PROPS_CASES, []);
-}
 function formatMessageParts(ctx, node) {
   const static_ = resolveStatic(node);
   if (static_ != null) {
@@ -6058,24 +6138,16 @@ function formatMessageParts(ctx, node) {
     return ctx.normalize(messages);
   }
 }
-const PROPS_STATIC = ['s', 'static'];
-function resolveStatic(node) {
-  return resolveProps(node, PROPS_STATIC);
-}
-const PROPS_ITEMS = ['i', 'items'];
-function resolveItems(node) {
-  return resolveProps(node, PROPS_ITEMS, []);
-}
 function formatMessagePart(ctx, node) {
   const type = resolveType(node);
   switch (type) {
     case 3 /* NodeTypes.Text */:
       {
-        return resolveValue(node, type);
+        return resolveValue$1(node, type);
       }
     case 9 /* NodeTypes.Literal */:
       {
-        return resolveValue(node, type);
+        return resolveValue$1(node, type);
       }
     case 4 /* NodeTypes.Named */:
       {
@@ -6108,63 +6180,20 @@ function formatMessagePart(ctx, node) {
       }
     case 7 /* NodeTypes.LinkedKey */:
       {
-        return resolveValue(node, type);
+        return resolveValue$1(node, type);
       }
     case 8 /* NodeTypes.LinkedModifier */:
       {
-        return resolveValue(node, type);
+        return resolveValue$1(node, type);
       }
     default:
       throw new Error(`unhandled node on format message part: ${type}`);
   }
 }
-const PROPS_TYPE = ['t', 'type'];
-function resolveType(node) {
-  return resolveProps(node, PROPS_TYPE);
-}
-const PROPS_VALUE = ['v', 'value'];
-function resolveValue(node, type) {
-  const resolved = resolveProps(node, PROPS_VALUE);
-  if (resolved) {
-    return resolved;
-  } else {
-    throw createUnhandleNodeError(type);
-  }
-}
-const PROPS_MODIFIER = ['m', 'modifier'];
-function resolveLinkedModifier(node) {
-  return resolveProps(node, PROPS_MODIFIER);
-}
-const PROPS_KEY = ['k', 'key'];
-function resolveLinkedKey(node) {
-  const resolved = resolveProps(node, PROPS_KEY);
-  if (resolved) {
-    return resolved;
-  } else {
-    throw createUnhandleNodeError(6 /* NodeTypes.Linked */);
-  }
-}
-function resolveProps(node, props, defaultValue) {
-  for (let i = 0; i < props.length; i++) {
-    const prop = props[i];
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if (shared.hasOwn(node, prop) && node[prop] != null) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      return node[prop];
-    }
-  }
-  return defaultValue;
-}
-function createUnhandleNodeError(type) {
-  return new Error(`unhandled node type: ${type}`);
-}
 const defaultOnCacheKey = message => message;
 let compileCache = shared.create();
 function clearCompileCache() {
   compileCache = shared.create();
-}
-function isMessageAST(val) {
-  return shared.isObject(val) && resolveType(val) === 0 && (shared.hasOwn(val, 'b') || shared.hasOwn(val, 'body'));
 }
 function baseCompile(message, options = {}) {
   // error detecting on compile
@@ -6687,6 +6716,7 @@ function clearNumberFormat(ctx, locale, format) {
 }
 exports.CompileErrorCodes = messageCompiler.CompileErrorCodes;
 exports.createCompileError = messageCompiler.createCompileError;
+exports.AST_NODE_PROPS_KEYS = AST_NODE_PROPS_KEYS;
 exports.CoreErrorCodes = CoreErrorCodes;
 exports.CoreWarnCodes = CoreWarnCodes;
 exports.DATETIME_FORMAT_OPTIONS_KEYS = DATETIME_FORMAT_OPTIONS_KEYS;
@@ -6729,7 +6759,7 @@ exports.registerLocaleFallbacker = registerLocaleFallbacker;
 exports.registerMessageCompiler = registerMessageCompiler;
 exports.registerMessageResolver = registerMessageResolver;
 exports.resolveLocale = resolveLocale;
-exports.resolveValue = resolveValue$1;
+exports.resolveValue = resolveValue;
 exports.resolveWithKeyValue = resolveWithKeyValue;
 exports.setAdditionalMeta = setAdditionalMeta;
 exports.setDevToolsHook = setDevToolsHook;
@@ -6751,6 +6781,7 @@ var clearErrorStack = __webpack_require__("0d26");
 var ERROR_STACK_INSTALLABLE = __webpack_require__("b980");
 
 // non-standard V8
+// eslint-disable-next-line es/no-nonstandard-error-properties -- safe
 var captureStackTrace = Error.captureStackTrace;
 module.exports = function (error, C, stack, dropEntries) {
   if (ERROR_STACK_INSTALLABLE) {
@@ -6822,7 +6853,9 @@ module.exports = function (object, key, method) {
 
 var $ = __webpack_require__("23e7");
 var union = __webpack_require__("e9bc");
+var setMethodGetKeysBeforeCloning = __webpack_require__("5320");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
+var FORCED = !setMethodAcceptSetLike('union') || !setMethodGetKeysBeforeCloning('union');
 
 // `Set.prototype.union` method
 // https://tc39.es/ecma262/#sec-set.prototype.union
@@ -6830,7 +6863,7 @@ $({
   target: 'Set',
   proto: true,
   real: true,
-  forced: !setMethodAcceptSetLike('union')
+  forced: FORCED
 }, {
   union: union
 });
@@ -6869,8 +6902,10 @@ var $ = __webpack_require__("23e7");
 var fails = __webpack_require__("d039");
 var intersection = __webpack_require__("953b");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
-var INCORRECT = !setMethodAcceptSetLike('intersection') || fails(function () {
-  // eslint-disable-next-line es/no-array-from, es/no-set -- testing
+var INCORRECT = !setMethodAcceptSetLike('intersection', function (result) {
+  return result.size === 2 && result.has(1) && result.has(2);
+}) || fails(function () {
+  // eslint-disable-next-line es/no-array-from, es/no-set, es/no-set-prototype-intersection -- testing
   return String(Array.from(new Set([1, 2, 3]).intersection(new Set([3, 2])))) !== '3,2';
 });
 
@@ -6931,16 +6966,12 @@ __webpack_require__.d(__webpack_exports__, "d", function() { return /* reexport 
 
 // UNUSED EXPORTS: EffectScope, ReactiveEffect, TrackOpTypes, TriggerOpTypes, customRef, effect, getCurrentScope, getCurrentWatcher, isProxy, isReactive, isReadonly, isShallow, markRaw, onScopeDispose, onWatcherCleanup, proxyRefs, readonly, shallowReadonly, stop, toRaw, toRef, toRefs, toValue, triggerRef, camelize, capitalize, normalizeClass, normalizeProps, normalizeStyle, toHandlerKey, BaseTransition, BaseTransitionPropsValidators, Comment, DeprecationTypes, ErrorCodes, ErrorTypeStrings, KeepAlive, Static, Suspense, Teleport, assertNumber, callWithAsyncErrorHandling, callWithErrorHandling, cloneVNode, compatUtils, createHydrationRenderer, createPropsRestProxy, createRenderer, createSlots, defineAsyncComponent, defineEmits, defineExpose, defineModel, defineOptions, defineProps, defineSlots, devtools, getTransitionRawChildren, guardReactiveProps, handleError, hasInjectionContext, hydrateOnIdle, hydrateOnInteraction, hydrateOnMediaQuery, hydrateOnVisible, initCustomFormatter, isMemoSame, isRuntimeOnly, isVNode, mergeDefaults, mergeModels, mergeProps, onBeforeUnmount, onBeforeUpdate, onErrorCaptured, onRenderTracked, onRenderTriggered, onServerPrefetch, onUpdated, popScopeId, pushScopeId, queuePostFlushCb, registerRuntimeCompiler, renderList, resolveDirective, resolveDynamicComponent, resolveFilter, resolveTransitionHooks, setBlockTracking, setDevtoolsHook, setTransitionHooks, ssrContextKey, ssrUtils, toHandlers, transformVNodeArgs, useAttrs, useId, useModel, useSSRContext, useSlots, useTemplateRef, useTransitionState, version, warn, watchEffect, watchPostEffect, watchSyncEffect, withAsyncContext, withDefaults, withDirectives, withMemo, withScopeId, Transition, TransitionGroup, VueElement, createSSRApp, defineCustomElement, defineSSRCustomElement, hydrate, initDirectivesForSSR, render, useCssModule, useCssVars, useHost, useShadowRoot, vModelCheckbox, vModelDynamic, vModelRadio, vModelSelect, vModelText, vShow, withKeys, withModifiers, compile
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.flags.js
-var es_regexp_flags = __webpack_require__("5377");
-
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__("9ff4");
 
 // CONCATENATED MODULE: ./node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js
-
 /**
-* @vue/reactivity v3.5.13
+* @vue/reactivity v3.5.17
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -6956,6 +6987,10 @@ class EffectScope {
      * @internal
      */
     this._active = true;
+    /**
+     * @internal track `on` calls, allow `on` call multiple times
+     */
+    this._on = 0;
     /**
      * @internal
      */
@@ -7022,14 +7057,20 @@ class EffectScope {
    * @internal
    */
   on() {
-    activeEffectScope = this;
+    if (++this._on === 1) {
+      this.prevScope = activeEffectScope;
+      activeEffectScope = this;
+    }
   }
   /**
    * This should only be called on non-detached scopes
    * @internal
    */
   off() {
-    activeEffectScope = this.parent;
+    if (this._on > 0 && --this._on === 0) {
+      activeEffectScope = this.prevScope;
+      this.prevScope = void 0;
+    }
   }
   stop(fromParent) {
     if (this._active) {
@@ -7086,7 +7127,9 @@ const EffectFlags = {
   "ALLOW_RECURSE": 32,
   "32": "ALLOW_RECURSE",
   "PAUSED": 64,
-  "64": "PAUSED"
+  "64": "PAUSED",
+  "EVALUATED": 128,
+  "128": "EVALUATED"
 };
 const pausedQueueEffects = /* @__PURE__ */new WeakSet();
 class ReactiveEffect {
@@ -7122,7 +7165,7 @@ class ReactiveEffect {
   }
   resume() {
     if (this.flags & 64) {
-      this.flags &= ~64;
+      this.flags &= -65;
       if (pausedQueueEffects.has(this)) {
         pausedQueueEffects.delete(this);
         this.trigger();
@@ -7158,7 +7201,7 @@ class ReactiveEffect {
       cleanupDeps(this);
       activeSub = prevEffect;
       shouldTrack = prevShouldTrack;
-      this.flags &= ~2;
+      this.flags &= -3;
     }
   }
   stop() {
@@ -7169,7 +7212,7 @@ class ReactiveEffect {
       this.deps = this.depsTail = void 0;
       cleanupEffect(this);
       this.onStop && this.onStop();
-      this.flags &= ~1;
+      this.flags &= -2;
     }
   }
   trigger() {
@@ -7219,7 +7262,7 @@ function endBatch() {
     while (e) {
       const next = e.next;
       e.next = void 0;
-      e.flags &= ~8;
+      e.flags &= -9;
       e = next;
     }
   }
@@ -7230,7 +7273,7 @@ function endBatch() {
     while (e) {
       const next = e.next;
       e.next = void 0;
-      e.flags &= ~8;
+      e.flags &= -9;
       if (e.flags & 1) {
         try {
           ;
@@ -7286,17 +7329,16 @@ function refreshComputed(computed) {
   if (computed.flags & 4 && !(computed.flags & 16)) {
     return;
   }
-  computed.flags &= ~16;
+  computed.flags &= -17;
   if (computed.globalVersion === globalVersion) {
     return;
   }
   computed.globalVersion = globalVersion;
-  const dep = computed.dep;
-  computed.flags |= 2;
-  if (dep.version > 0 && !computed.isSSR && computed.deps && !isDirty(computed)) {
-    computed.flags &= ~2;
+  if (!computed.isSSR && computed.flags & 128 && (!computed.deps && !computed._dirty || !isDirty(computed))) {
     return;
   }
+  computed.flags |= 2;
+  const dep = computed.dep;
   const prevSub = activeSub;
   const prevShouldTrack = shouldTrack;
   activeSub = computed;
@@ -7305,6 +7347,7 @@ function refreshComputed(computed) {
     prepareDeps(computed);
     const value = computed.fn(computed._value);
     if (dep.version === 0 || Object(shared_esm_bundler["k" /* hasChanged */])(value, computed._value)) {
+      computed.flags |= 128;
       computed._value = value;
       dep.version++;
     }
@@ -7315,7 +7358,7 @@ function refreshComputed(computed) {
     activeSub = prevSub;
     shouldTrack = prevShouldTrack;
     cleanupDeps(computed);
-    computed.flags &= ~2;
+    computed.flags &= -3;
   }
 }
 function removeSub(link, soft = false) {
@@ -7336,7 +7379,7 @@ function removeSub(link, soft = false) {
   if (dep.subs === link) {
     dep.subs = prevSub;
     if (!prevSub && dep.computed) {
-      dep.computed.flags &= ~4;
+      dep.computed.flags &= -5;
       for (let l = dep.computed.deps; l; l = l.nextDep) {
         removeSub(l, true);
       }
@@ -7425,6 +7468,7 @@ class Link {
   }
 }
 class Dep {
+  // TODO isolatedDeclarations "__v_skip"
   constructor(computed) {
     this.computed = computed;
     this.version = 0;
@@ -7445,6 +7489,10 @@ class Dep {
      * Subscriber counter
      */
     this.sc = 0;
+    /**
+     * @internal
+     */
+    this.__v_skip = true;
     if (false) {}
   }
   track(debugInfo) {
@@ -8161,13 +8209,13 @@ function createReactiveObject(target, isReadonly2, baseHandlers, collectionHandl
   if (target["__v_raw"] && !(isReadonly2 && target["__v_isReactive"])) {
     return target;
   }
-  const existingProxy = proxyMap.get(target);
-  if (existingProxy) {
-    return existingProxy;
-  }
   const targetType = getTargetType(target);
   if (targetType === 0 /* INVALID */) {
     return target;
+  }
+  const existingProxy = proxyMap.get(target);
+  if (existingProxy) {
+    return existingProxy;
   }
   const proxy = new Proxy(target, targetType === 2 /* COLLECTION */ ? collectionHandlers : baseHandlers);
   proxyMap.set(target, proxy);
@@ -8573,10 +8621,10 @@ function watch(source, cb, options = shared_esm_bundler["b" /* EMPTY_OBJ */]) {
           const args = [newValue,
           // pass undefined as the old value when it's changed for the first time
           oldValue === INITIAL_WATCHER_VALUE ? void 0 : isMultiSource && oldValue[0] === INITIAL_WATCHER_VALUE ? [] : oldValue, boundCleanup];
+          oldValue = newValue;
           call ? call(cb, 3, args) :
           // @ts-expect-error
           cb(...args);
-          oldValue = newValue;
         } finally {
           activeWatcher = currentWatcher;
         }
@@ -8653,9 +8701,8 @@ function traverse(value, depth = Infinity, seen) {
 }
 
 // CONCATENATED MODULE: ./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
-
 /**
-* @vue/runtime-core v3.5.13
+* @vue/runtime-core v3.5.17
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -8973,11 +9020,11 @@ function flushPreFlushCbs(instance, seen, i = flushIndex + 1) {
       queue.splice(i, 1);
       i--;
       if (cb.flags & 4) {
-        cb.flags &= ~1;
+        cb.flags &= -2;
       }
       cb();
       if (!(cb.flags & 4)) {
-        cb.flags &= ~1;
+        cb.flags &= -2;
       }
     }
   }
@@ -8996,10 +9043,10 @@ function flushPostFlushCbs(seen) {
       const cb = activePostFlushCbs[postFlushIndex];
       if (false) {}
       if (cb.flags & 4) {
-        cb.flags &= ~1;
+        cb.flags &= -2;
       }
       if (!(cb.flags & 8)) cb();
-      cb.flags &= ~1;
+      cb.flags &= -2;
     }
     activePostFlushCbs = null;
     postFlushIndex = 0;
@@ -9027,7 +9074,7 @@ function flushJobs(seen) {
     for (; flushIndex < queue.length; flushIndex++) {
       const job = queue[flushIndex];
       if (job) {
-        job.flags &= ~1;
+        job.flags &= -2;
       }
     }
     flushIndex = -1;
@@ -9418,18 +9465,18 @@ const TeleportImpl = {
         updateCssVars(n2, true);
       }
       if (isTeleportDeferred(n2.props)) {
+        n2.el.__isMounted = false;
         queuePostRenderEffect(() => {
           mountToTarget();
-          n2.el.__isMounted = true;
+          delete n2.el.__isMounted;
         }, parentSuspense);
       } else {
         mountToTarget();
       }
     } else {
-      if (isTeleportDeferred(n2.props) && !n1.el.__isMounted) {
+      if (isTeleportDeferred(n2.props) && n1.el.__isMounted === false) {
         queuePostRenderEffect(() => {
           TeleportImpl.process(n1, n2, container, anchor, parentComponent, parentSuspense, namespace, slotScopeIds, optimized, internals);
-          delete n1.el.__isMounted;
         }, parentSuspense);
         return;
       }
@@ -9448,7 +9495,7 @@ const TeleportImpl = {
       }
       if (dynamicChildren) {
         patchBlockChildren(n1.dynamicChildren, dynamicChildren, currentContainer, parentComponent, parentSuspense, namespace, slotScopeIds);
-        traverseStaticChildren(n1, n2, true);
+        traverseStaticChildren(n1, n2, !!!("production" !== "production"));
       } else if (!optimized) {
         patchChildren(n1, n2, currentContainer, currentAnchor, parentComponent, parentSuspense, namespace, slotScopeIds, false);
       }
@@ -9890,7 +9937,9 @@ function getInnerChild$1(vnode) {
     }
     return vnode;
   }
-  if (false) {}
+  if (vnode.component) {
+    return vnode.component.subTree;
+  }
   const {
     shapeFlag,
     children
@@ -10247,6 +10296,8 @@ function createHydrationFunctions(rendererInternals) {
         transition) && parentComponent && parentComponent.vnode.props && parentComponent.vnode.props.appear;
         const content = el.content.firstChild;
         if (needCallTransitionHooks) {
+          const cls = content.getAttribute("class");
+          if (cls) content.$cls = cls;
           transition.beforeEnter(content);
         }
         replaceNode(content, el, parentComponent);
@@ -10443,7 +10494,12 @@ function propHasMismatch(el, key, clientValue, vnode, instance) {
   let actual;
   let expected;
   if (key === "class") {
-    actual = el.getAttribute("class");
+    if (el.$cls) {
+      actual = el.$cls;
+      delete el.$cls;
+    } else {
+      actual = el.getAttribute("class");
+    }
     expected = Object(shared_esm_bundler["R" /* normalizeClass */])(clientValue);
     if (!isSetEqual(toClassSet(actual || ""), toClassSet(expected))) {
       mismatchType = 2 /* CLASS */;
@@ -10581,7 +10637,7 @@ function isMismatchAllowed(el, allowedType) {
     if (allowedType === 0 /* TEXT */ && list.includes("children")) {
       return true;
     }
-    return allowedAttr.split(",").includes(MismatchTypeString[allowedType]);
+    return list.includes(MismatchTypeString[allowedType]);
   }
 }
 const requestIdleCallback = Object(shared_esm_bundler["j" /* getGlobalThis */])().requestIdleCallback || (cb => setTimeout(cb, 1));
@@ -10746,11 +10802,17 @@ function defineAsyncComponent(source) {
     name: "AsyncComponentWrapper",
     __asyncLoader: load,
     __asyncHydrate(el, instance, hydrate) {
+      let patched = false;
       const doHydrate = hydrateStrategy ? () => {
-        const teardown = hydrateStrategy(hydrate, cb => forEachElement(el, cb));
+        const performHydrate = () => {
+          if (false) {}
+          hydrate();
+        };
+        const teardown = hydrateStrategy(performHydrate, cb => forEachElement(el, cb));
         if (teardown) {
           (instance.bum || (instance.bum = [])).push(teardown);
         }
+        (instance.u || (instance.u = [])).push(() => patched = true);
       } : hydrate;
       if (resolvedComp) {
         doHydrate();
@@ -10905,6 +10967,7 @@ const KeepAliveImpl = {
         instance2.isDeactivated = true;
       }, parentSuspense);
       if (false) {}
+      if (false) {}
     };
     function unmount(vnode) {
       resetShapeFlag(vnode);
@@ -10995,7 +11058,7 @@ const KeepAliveImpl = {
         max
       } = props;
       if (include && (!name || !matches(include, name)) || exclude && name && matches(exclude, name)) {
-        vnode.shapeFlag &= ~256;
+        vnode.shapeFlag &= -257;
         current = vnode;
         return rawVNode;
       }
@@ -11077,8 +11140,8 @@ function injectToKeepAliveRoot(hook, type, target, keepAliveRoot) {
   }, target);
 }
 function resetShapeFlag(vnode) {
-  vnode.shapeFlag &= ~256;
-  vnode.shapeFlag &= ~512;
+  vnode.shapeFlag &= -257;
+  vnode.shapeFlag &= -513;
 }
 function getInnerChild(vnode) {
   return vnode.shapeFlag & 128 ? vnode.ssContent : vnode;
@@ -11168,13 +11231,15 @@ function renderList(source, renderItem, cache, index) {
   if (sourceIsArray || Object(shared_esm_bundler["L" /* isString */])(source)) {
     const sourceIsReactiveArray = sourceIsArray && isReactive(source);
     let needsWrap = false;
+    let isReadonlySource = false;
     if (sourceIsReactiveArray) {
       needsWrap = !isShallow(source);
+      isReadonlySource = isReadonly(source);
       source = shallowReadArray(source);
     }
     ret = new Array(source.length);
     for (let i = 0, l = source.length; i < l; i++) {
-      ret[i] = renderItem(needsWrap ? toReactive(source[i]) : source[i], i, void 0, cached && cached[i]);
+      ret[i] = renderItem(needsWrap ? isReadonlySource ? toReadonly(toReactive(source[i])) : toReactive(source[i]) : source[i], i, void 0, cached && cached[i]);
     }
   } else if (typeof source === "number") {
     if (false) {}
@@ -12083,7 +12148,7 @@ function provide(key, value) {
 function inject(key, defaultValue, treatDefaultAsFactory = false) {
   const instance = currentInstance || currentRenderingInstance;
   if (instance || currentApp) {
-    const provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
+    let provides = currentApp ? currentApp._context.provides : instance ? instance.parent == null || instance.ce ? instance.vnode.appContext && instance.vnode.appContext.provides : instance.parent.provides : void 0;
     if (provides && key in provides) {
       return provides[key];
     } else if (arguments.length > 1) {
@@ -12512,7 +12577,7 @@ const normalizeVNodeSlots = (instance, children) => {
 };
 const assignSlots = (slots, children, optimized) => {
   for (const key in children) {
-    if (optimized || key !== "_") {
+    if (optimized || !isInternalKey(key)) {
       slots[key] = children[key];
     }
   }
@@ -12520,6 +12585,8 @@ const assignSlots = (slots, children, optimized) => {
 const initSlots = (instance, children, optimized) => {
   const slots = instance.slots = createInternalObject();
   if (instance.vnode.shapeFlag & 32) {
+    const cacheIndexes = children.__;
+    if (cacheIndexes) Object(shared_esm_bundler["g" /* def */])(slots, "__", cacheIndexes, true);
     const type = children._;
     if (type) {
       assignSlots(slots, children, optimized);
@@ -12682,6 +12749,8 @@ function baseCreateRenderer(options, createHydrationFns) {
     }
     if (ref != null && parentComponent) {
       setRef(ref, n1 && n1.ref, parentSuspense, n2 || n1, !n2);
+    } else if (ref == null && n1 && n1.ref != null) {
+      setRef(n1.ref, null, parentSuspense, n1, true);
     }
   };
   const processText = (n1, n2, container, anchor) => {
@@ -12907,7 +12976,7 @@ function baseCreateRenderer(options, createHydrationFns) {
       // which also requires the correct parent container
       !isSameVNodeType(oldVNode, newVNode) ||
       // - In the case of a component, it could contain anything.
-      oldVNode.shapeFlag & (6 | 64)) ? hostParentNode(oldVNode.el) :
+      oldVNode.shapeFlag & (6 | 64 | 128)) ? hostParentNode(oldVNode.el) :
       // In other cases, the parent container is not actually used so we
       // just pass the block element here to avoid a DOM parentNode call.
       fallbackContainer;
@@ -13001,8 +13070,8 @@ function baseCreateRenderer(options, createHydrationFns) {
       setupComponent(instance, false, optimized);
       if (false) {}
     }
+    if (false) {}
     if (instance.asyncDep) {
-      if (false) {}
       parentSuspense && parentSuspense.registerDep(instance, setupRenderEffect, optimized);
       if (!initialVNode.el) {
         const placeholder = instance.subTree = createVNode(Comment);
@@ -13069,7 +13138,9 @@ function baseCreateRenderer(options, createHydrationFns) {
             hydrateSubTree();
           }
         } else {
-          if (root.ce) {
+          if (root.ce &&
+          // @ts-expect-error _def is private
+          root.ce._def.shadowRoot !== false) {
             root.ce._injectChildStyle(type);
           }
           if (false) {}
@@ -13390,7 +13461,13 @@ function baseCreateRenderer(options, createHydrationFns) {
           delayLeave,
           afterLeave
         } = transition;
-        const remove2 = () => hostInsert(el, container, anchor);
+        const remove2 = () => {
+          if (vnode.ctx.isUnmounted) {
+            hostRemove(el);
+          } else {
+            hostInsert(el, container, anchor);
+          }
+        };
         const performLeave = () => {
           leave(el, () => {
             remove2();
@@ -13423,7 +13500,9 @@ function baseCreateRenderer(options, createHydrationFns) {
       optimized = false;
     }
     if (ref != null) {
+      pauseTracking();
       setRef(ref, null, parentSuspense, vnode, true);
+      resetTracking();
     }
     if (cacheIndex != null) {
       parentComponent.renderCache[cacheIndex] = void 0;
@@ -13530,12 +13609,21 @@ function baseCreateRenderer(options, createHydrationFns) {
       subTree,
       um,
       m,
-      a
+      a,
+      parent,
+      slots: {
+        __: slotCacheKeys
+      }
     } = instance;
     invalidateMount(m);
     invalidateMount(a);
     if (bum) {
       Object(shared_esm_bundler["o" /* invokeArrayFns */])(bum);
+    }
+    if (parent && Object(shared_esm_bundler["p" /* isArray */])(slotCacheKeys)) {
+      slotCacheKeys.forEach(v => {
+        parent.renderCache[v] = void 0;
+      });
     }
     scope.stop();
     if (job) {
@@ -13626,8 +13714,8 @@ function toggleRecurse({
     effect.flags |= 32;
     job.flags |= 4;
   } else {
-    effect.flags &= ~32;
-    job.flags &= ~4;
+    effect.flags &= -33;
+    job.flags &= -5;
   }
 }
 function needTransition(parentSuspense, transition) {
@@ -13648,6 +13736,9 @@ function traverseStaticChildren(n1, n2, shallow = false) {
         if (!shallow && c2.patchFlag !== -2) traverseStaticChildren(c1, c2);
       }
       if (c2.type === Text) {
+        c2.el = c1.el;
+      }
+      if (c2.type === Comment && !c2.el) {
         c2.el = c1.el;
       }
       if (false) {}
@@ -15102,7 +15193,7 @@ function setupComponent(instance, isSSR = false, optimized = false) {
   } = instance.vnode;
   const isStateful = isStatefulComponent(instance);
   initProps(instance, props, isStateful, isSSR);
-  initSlots(instance, children, optimized);
+  initSlots(instance, children, optimized || isSSR);
   const setupResult = isStateful ? setupStatefulComponent(instance, isSSR) : void 0;
   isSSR && setInSSRSetupState(false);
   return setupResult;
@@ -15337,9 +15428,10 @@ function initCustomFormatter() {
       if (obj.__isVue) {
         return ["div", vueStyle, `VueInstance`];
       } else if (isRef(obj)) {
-        return ["div", {}, ["span", vueStyle, genRefFlag(obj)], "<",
-        // avoid debugger accessing value affecting behavior
-        formatValue("_value" in obj ? obj._value : obj), `>`];
+        pauseTracking();
+        const value = obj.value;
+        resetTracking();
+        return ["div", {}, ["span", vueStyle, genRefFlag(obj)], "<", formatValue(value), `>`];
       } else if (isReactive(obj)) {
         return ["div", {}, ["span", vueStyle, isShallow(obj) ? "ShallowReactive" : "Reactive"], "<", formatValue(obj), `>${isReadonly(obj) ? ` (readonly)` : ``}`];
       } else if (isReadonly(obj)) {
@@ -15477,7 +15569,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-const version = "3.5.13";
+const version = "3.5.17";
 const runtime_core_esm_bundler_warn =  false ? undefined : shared_esm_bundler["d" /* NOOP */];
 const ErrorTypeStrings = ErrorTypeStrings$1;
 const devtools =  true ? devtools$1 : undefined;
@@ -15501,7 +15593,7 @@ const DeprecationTypes = null;
 
 // CONCATENATED MODULE: ./node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
 /**
-* @vue/runtime-dom v3.5.13
+* @vue/runtime-dom v3.5.17
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -16282,7 +16374,7 @@ function shouldSetAsProp(el, key, value, isSVG) {
     }
     return false;
   }
-  if (key === "spellcheck" || key === "draggable" || key === "translate") {
+  if (key === "spellcheck" || key === "draggable" || key === "translate" || key === "autocorrect") {
     return false;
   }
   if (key === "form") {
@@ -16361,13 +16453,10 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
         this._root = this;
       }
     }
-    if (!this._def.__asyncLoader) {
-      this._resolveProps(this._def);
-    }
   }
   connectedCallback() {
     if (!this.isConnected) return;
-    if (!this.shadowRoot) {
+    if (!this.shadowRoot && !this._resolved) {
       this._parseSlots();
     }
     this._connected = true;
@@ -16380,8 +16469,7 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
     }
     if (!this._instance) {
       if (this._resolved) {
-        this._setParent();
-        this._update();
+        this._mount(this._def);
       } else {
         if (parent && parent._pendingResolve) {
           this._pendingResolve = parent._pendingResolve.then(() => {
@@ -16397,7 +16485,12 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
   _setParent(parent = this._parent) {
     if (parent) {
       this._instance.parent = parent._instance;
-      this._instance.provides = parent._instance.provides;
+      this._inheritParentContext(parent);
+    }
+  }
+  _inheritParentContext(parent = this._parent) {
+    if (parent && this._app) {
+      Object.setPrototypeOf(this._app._context.provides, parent._instance.provides);
     }
   }
   disconnectedCallback() {
@@ -16452,9 +16545,7 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
         }
       }
       this._numberProps = numberProps;
-      if (isAsync) {
-        this._resolveProps(def);
-      }
+      this._resolveProps(def);
       if (this.shadowRoot) {
         this._applyStyles(styles);
       } else if (false) {}
@@ -16462,7 +16553,10 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
     };
     const asyncDef = this._def.__asyncLoader;
     if (asyncDef) {
-      this._pendingResolve = asyncDef().then(def => resolve(this._def = def, true));
+      this._pendingResolve = asyncDef().then(def => {
+        def.configureApp = this._def.configureApp;
+        resolve(this._def = def, true);
+      });
     } else {
       resolve(this._def);
     }
@@ -16470,6 +16564,7 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
   _mount(def) {
     if (false) {}
     this._app = this._createApp(def);
+    this._inheritParentContext();
     if (def.configureApp) {
       def.configureApp(this._app);
     }
@@ -16556,7 +16651,9 @@ class runtime_dom_esm_bundler_VueElement extends BaseClass {
     }
   }
   _update() {
-    runtime_dom_esm_bundler_render(this._createVNode(), this._root);
+    const vnode = this._createVNode();
+    if (this._app) vnode.appContext = this._app._context;
+    runtime_dom_esm_bundler_render(vnode, this._root);
   }
   _createVNode() {
     const baseProps = {};
@@ -16719,6 +16816,7 @@ const TransitionGroupImpl = /* @__PURE__ */decorate({
       }
       const moveClass = props.moveClass || `${props.name || "v"}-move`;
       if (!hasCSSTransform(prevChildren[0].el, instance.vnode.el, moveClass)) {
+        prevChildren = [];
         return;
       }
       prevChildren.forEach(callPendingCbs);
@@ -16742,6 +16840,7 @@ const TransitionGroupImpl = /* @__PURE__ */decorate({
         };
         el.addEventListener("transitionend", cb);
       });
+      prevChildren = [];
     });
     return () => {
       const rawProps = toRaw(props);
@@ -17295,7 +17394,7 @@ const initDirectivesForSSR = () => {
 
 // CONCATENATED MODULE: ./node_modules/vue/dist/vue.runtime.esm-bundler.js
 /**
-* vue v3.5.13
+* vue v3.5.17
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -17424,21 +17523,31 @@ module.exports = Object.create || function create(O, Properties) {
 
 
 var $ = __webpack_require__("23e7");
+var call = __webpack_require__("c65b");
 var iterate = __webpack_require__("2266");
 var aCallable = __webpack_require__("59ed");
 var anObject = __webpack_require__("825a");
 var getIteratorDirect = __webpack_require__("46c4");
+var iteratorClose = __webpack_require__("2a62");
+var iteratorHelperWithoutClosingOnEarlyError = __webpack_require__("f99f");
+var forEachWithoutClosingOnEarlyError = iteratorHelperWithoutClosingOnEarlyError('forEach', TypeError);
 
 // `Iterator.prototype.forEach` method
 // https://tc39.es/ecma262/#sec-iterator.prototype.foreach
 $({
   target: 'Iterator',
   proto: true,
-  real: true
+  real: true,
+  forced: forEachWithoutClosingOnEarlyError
 }, {
   forEach: function forEach(fn) {
     anObject(this);
-    aCallable(fn);
+    try {
+      aCallable(fn);
+    } catch (error) {
+      iteratorClose(this, 'throw', error);
+    }
+    if (forEachWithoutClosingOnEarlyError) return call(forEachWithoutClosingOnEarlyError, this, fn);
     var record = getIteratorDirect(this);
     var counter = 0;
     iterate(record, function (value) {
@@ -17639,6 +17748,9 @@ module.exports = store.inspectSource;
 var $ = __webpack_require__("23e7");
 var isSubsetOf = __webpack_require__("68df");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
+var INCORRECT = !setMethodAcceptSetLike('isSubsetOf', function (result) {
+  return result;
+});
 
 // `Set.prototype.isSubsetOf` method
 // https://tc39.es/ecma262/#sec-set.prototype.issubsetof
@@ -17646,7 +17758,7 @@ $({
   target: 'Set',
   proto: true,
   real: true,
-  forced: !setMethodAcceptSetLike('isSubsetOf')
+  forced: INCORRECT
 }, {
   isSubsetOf: isSubsetOf
 });
@@ -17676,7 +17788,7 @@ module.exports = uncurryThisAccessor(SetHelpers.proto, 'size', 'get') || functio
 var uncurryThis = __webpack_require__("e330");
 var id = 0;
 var postfix = Math.random();
-var toString = uncurryThis(1.0.toString);
+var toString = uncurryThis(1.1.toString);
 module.exports = function (key) {
   return 'Symbol(' + (key === undefined ? '' : key) + ')_' + toString(++id + postfix, 36);
 };
@@ -17712,21 +17824,40 @@ var iterate = __webpack_require__("2266");
 var aCallable = __webpack_require__("59ed");
 var anObject = __webpack_require__("825a");
 var getIteratorDirect = __webpack_require__("46c4");
+var iteratorClose = __webpack_require__("2a62");
+var iteratorHelperWithoutClosingOnEarlyError = __webpack_require__("f99f");
+var apply = __webpack_require__("2ba4");
+var fails = __webpack_require__("d039");
 var $TypeError = TypeError;
+
+// https://bugs.webkit.org/show_bug.cgi?id=291651
+var FAILS_ON_INITIAL_UNDEFINED = fails(function () {
+  // eslint-disable-next-line es/no-iterator-prototype-reduce, es/no-array-prototype-keys, array-callback-return -- required for testing
+  [].keys().reduce(function () {/* empty */}, undefined);
+});
+var reduceWithoutClosingOnEarlyError = !FAILS_ON_INITIAL_UNDEFINED && iteratorHelperWithoutClosingOnEarlyError('reduce', $TypeError);
 
 // `Iterator.prototype.reduce` method
 // https://tc39.es/ecma262/#sec-iterator.prototype.reduce
 $({
   target: 'Iterator',
   proto: true,
-  real: true
+  real: true,
+  forced: FAILS_ON_INITIAL_UNDEFINED || reduceWithoutClosingOnEarlyError
 }, {
   reduce: function reduce(reducer /* , initialValue */) {
     anObject(this);
-    aCallable(reducer);
-    var record = getIteratorDirect(this);
+    try {
+      aCallable(reducer);
+    } catch (error) {
+      iteratorClose(this, 'throw', error);
+    }
     var noInitial = arguments.length < 2;
     var accumulator = noInitial ? undefined : arguments[1];
+    if (reduceWithoutClosingOnEarlyError) {
+      return apply(reduceWithoutClosingOnEarlyError, this, noInitial ? [reducer] : [reducer, accumulator]);
+    }
+    var record = getIteratorDirect(this);
     var counter = 0;
     iterate(record, function (value) {
       if (noInitial) {
@@ -17960,8 +18091,8 @@ exports.f = DESCRIPTORS ? V8_PROTOTYPE_DEFINE_BUG ? function defineProperty(O, P
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("7a23");
 /* harmony import */ var _vue_devtools_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("3f4e");
 /*!
-  * vue-i18n v9.14.2
-  * (c) 2024 kazuya kawaguchi
+  * vue-i18n v9.14.4
+  * (c) 2025 kazuya kawaguchi
   * Released under the MIT License.
   */
 
@@ -17977,7 +18108,7 @@ exports.f = DESCRIPTORS ? V8_PROTOTYPE_DEFINE_BUG ? function defineProperty(O, P
  *
  * @VueI18nGeneral
  */
-const VERSION = '9.14.2';
+const VERSION = '9.14.4';
 /**
  * This is only called in esm-bundler builds.
  * istanbul-ignore-next
@@ -18102,6 +18233,9 @@ function handleFlatJson(obj) {
     if (!Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isObject"])(obj)) {
         return obj;
     }
+    if (Object(_intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["isMessageAST"])(obj)) {
+        return obj;
+    }
     for (const key in obj) {
         // check key
         if (!Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["hasOwn"])(obj, key)) {
@@ -18122,6 +18256,9 @@ function handleFlatJson(obj) {
             let currentObj = obj;
             let hasStringValue = false;
             for (let i = 0; i < lastIndex; i++) {
+                if (subKeys[i] === '__proto__') {
+                    throw new Error(`unsafe key: ${subKeys[i]}`);
+                }
                 if (!(subKeys[i] in currentObj)) {
                     currentObj[subKeys[i]] = Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["create"])();
                 }
@@ -18135,12 +18272,26 @@ function handleFlatJson(obj) {
             }
             // update last object value, delete old property
             if (!hasStringValue) {
-                currentObj[subKeys[lastIndex]] = obj[key];
-                delete obj[key];
+                if (!Object(_intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["isMessageAST"])(currentObj)) {
+                    currentObj[subKeys[lastIndex]] = obj[key];
+                    delete obj[key];
+                }
+                else {
+                    /**
+                     * NOTE:
+                     * if the last object is a message AST and subKeys[lastIndex] has message AST prop key, ignore to copy and key deletion
+                     */
+                    if (!_intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["AST_NODE_PROPS_KEYS"].includes(subKeys[lastIndex])) {
+                        delete obj[key];
+                    }
+                }
             }
             // recursive process value if value is also a object
-            if (Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isObject"])(currentObj[subKeys[lastIndex]])) {
-                handleFlatJson(currentObj[subKeys[lastIndex]]);
+            if (!Object(_intlify_core_base__WEBPACK_IMPORTED_MODULE_1__["isMessageAST"])(currentObj)) {
+                const target = currentObj[subKeys[lastIndex]];
+                if (Object(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__["isObject"])(target)) {
+                    handleFlatJson(target);
+                }
             }
         }
     }
@@ -20802,17 +20953,6 @@ if ((false)) {}
 
 /***/ }),
 
-/***/ "9d4a":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// TODO: Remove from `core-js@4`
-__webpack_require__("9485");
-
-/***/ }),
-
 /***/ "9ff4":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -20890,7 +21030,7 @@ __webpack_require__("9485");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return toRawType; });
 /* unused harmony export toTypeString */
 /**
-* @vue/shared v3.5.13
+* @vue/shared v3.5.17
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
@@ -21037,7 +21177,7 @@ const PatchFlagNames = {
   [512]: `NEED_PATCH`,
   [1024]: `DYNAMIC_SLOTS`,
   [2048]: `DEV_ROOT_FRAGMENT`,
-  [-1]: `HOISTED`,
+  [-1]: `CACHED`,
   [-2]: `BAIL`
 };
 const ShapeFlags = {
@@ -21398,6 +21538,9 @@ module.exports = function (argument) {
 var $ = __webpack_require__("23e7");
 var isSupersetOf = __webpack_require__("395e");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
+var INCORRECT = !setMethodAcceptSetLike('isSupersetOf', function (result) {
+  return !result;
+});
 
 // `Set.prototype.isSupersetOf` method
 // https://tc39.es/ecma262/#sec-set.prototype.issupersetof
@@ -21405,21 +21548,10 @@ $({
   target: 'Set',
   proto: true,
   real: true,
-  forced: !setMethodAcceptSetLike('isSupersetOf')
+  forced: INCORRECT
 }, {
   isSupersetOf: isSupersetOf
 });
-
-/***/ }),
-
-/***/ "a573":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// TODO: Remove from `core-js@4`
-__webpack_require__("ab43");
 
 /***/ }),
 
@@ -21448,7 +21580,7 @@ module.exports = function difference(other) {
   if (size(O) <= otherRec.size) iterateSet(O, function (e) {
     if (otherRec.includes(e)) remove(result, e);
   });else iterateSimple(otherRec.getIterator(), function (e) {
-    if (has(O, e)) remove(result, e);
+    if (has(result, e)) remove(result, e);
   });
   return result;
 };
@@ -21500,8 +21632,25 @@ module.exports = function (O, options) {
 
 
 var $ = __webpack_require__("23e7");
-var map = __webpack_require__("d024");
+var call = __webpack_require__("c65b");
+var aCallable = __webpack_require__("59ed");
+var anObject = __webpack_require__("825a");
+var getIteratorDirect = __webpack_require__("46c4");
+var createIteratorProxy = __webpack_require__("c5cc");
+var callWithSafeIterationClosing = __webpack_require__("9bdd");
+var iteratorClose = __webpack_require__("2a62");
+var iteratorHelperThrowsOnInvalidIterator = __webpack_require__("2baa");
+var iteratorHelperWithoutClosingOnEarlyError = __webpack_require__("f99f");
 var IS_PURE = __webpack_require__("c430");
+var MAP_WITHOUT_THROWING_ON_INVALID_ITERATOR = !IS_PURE && !iteratorHelperThrowsOnInvalidIterator('map', function () {/* empty */});
+var mapWithoutClosingOnEarlyError = !IS_PURE && !MAP_WITHOUT_THROWING_ON_INVALID_ITERATOR && iteratorHelperWithoutClosingOnEarlyError('map', TypeError);
+var FORCED = IS_PURE || MAP_WITHOUT_THROWING_ON_INVALID_ITERATOR || mapWithoutClosingOnEarlyError;
+var IteratorProxy = createIteratorProxy(function () {
+  var iterator = this.iterator;
+  var result = anObject(call(this.next, iterator));
+  var done = this.done = !!result.done;
+  if (!done) return callWithSafeIterationClosing(iterator, this.mapper, [result.value, this.counter++], true);
+});
 
 // `Iterator.prototype.map` method
 // https://tc39.es/ecma262/#sec-iterator.prototype.map
@@ -21509,36 +21658,21 @@ $({
   target: 'Iterator',
   proto: true,
   real: true,
-  forced: IS_PURE
+  forced: FORCED
 }, {
-  map: map
+  map: function map(mapper) {
+    anObject(this);
+    try {
+      aCallable(mapper);
+    } catch (error) {
+      iteratorClose(this, 'throw', error);
+    }
+    if (mapWithoutClosingOnEarlyError) return call(mapWithoutClosingOnEarlyError, this, mapper);
+    return new IteratorProxy(getIteratorDirect(this), {
+      mapper: mapper
+    });
+  }
 });
-
-/***/ }),
-
-/***/ "ad6d":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var anObject = __webpack_require__("825a");
-
-// `RegExp.prototype.flags` getter implementation
-// https://tc39.es/ecma262/#sec-get-regexp.prototype.flags
-module.exports = function () {
-  var that = anObject(this);
-  var result = '';
-  if (that.hasIndices) result += 'd';
-  if (that.global) result += 'g';
-  if (that.ignoreCase) result += 'i';
-  if (that.multiline) result += 'm';
-  if (that.dotAll) result += 's';
-  if (that.unicode) result += 'u';
-  if (that.unicodeSets) result += 'v';
-  if (that.sticky) result += 'y';
-  return result;
-};
 
 /***/ }),
 
@@ -21675,8 +21809,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "warn", function() { return warn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "warnOnce", function() { return warnOnce; });
 /*!
-  * shared v9.14.2
-  * (c) 2024 kazuya kawaguchi
+  * shared v9.14.4
+  * (c) 2025 kazuya kawaguchi
   * Released under the MIT License.
   */
 /**
@@ -21999,6 +22133,29 @@ module.exports = function (name) {
 
 /***/ }),
 
+/***/ "b64e":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var iteratorClose = __webpack_require__("2a62");
+module.exports = function (iters, kind, value) {
+  for (var i = iters.length - 1; i >= 0; i--) {
+    if (iters[i] === undefined) continue;
+    try {
+      value = iteratorClose(iters[i].iterator, kind, value);
+    } catch (error) {
+      kind = 'throw';
+      value = error;
+    }
+  }
+  if (kind === 'throw') throw value;
+  return value;
+};
+
+/***/ }),
+
 /***/ "b980":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22059,6 +22216,9 @@ module.exports = function (input, pref) {
 var $ = __webpack_require__("23e7");
 var isDisjointFrom = __webpack_require__("b4bc");
 var setMethodAcceptSetLike = __webpack_require__("dad2");
+var INCORRECT = !setMethodAcceptSetLike('isDisjointFrom', function (result) {
+  return !result;
+});
 
 // `Set.prototype.isDisjointFrom` method
 // https://tc39.es/ecma262/#sec-set.prototype.isdisjointfrom
@@ -22066,7 +22226,7 @@ $({
   target: 'Set',
   proto: true,
   real: true,
-  forced: !setMethodAcceptSetLike('isDisjointFrom')
+  forced: INCORRECT
 }, {
   isDisjointFrom: isDisjointFrom
 });
@@ -22078,8 +22238,8 @@ $({
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/*!
-  * shared v9.14.2
-  * (c) 2024 kazuya kawaguchi
+  * shared v9.14.4
+  * (c) 2025 kazuya kawaguchi
   * Released under the MIT License.
   */
 
@@ -22091,10 +22251,10 @@ $({
 __webpack_require__("d9e2");
 __webpack_require__("14d9");
 __webpack_require__("13d5");
-__webpack_require__("0643");
-__webpack_require__("4e3e");
-__webpack_require__("a573");
-__webpack_require__("9d4a");
+__webpack_require__("e9f5");
+__webpack_require__("7d54");
+__webpack_require__("ab43");
+__webpack_require__("9485");
 __webpack_require__("c73d");
 const inBrowser = typeof window !== 'undefined';
 let mark;
@@ -22364,9 +22524,12 @@ var getMethod = __webpack_require__("dc4a");
 var IteratorPrototype = __webpack_require__("ae93").IteratorPrototype;
 var createIterResultObject = __webpack_require__("4754");
 var iteratorClose = __webpack_require__("2a62");
+var iteratorCloseAll = __webpack_require__("b64e");
 var TO_STRING_TAG = wellKnownSymbol('toStringTag');
 var ITERATOR_HELPER = 'IteratorHelper';
 var WRAP_FOR_VALID_ITERATOR = 'WrapForValidIterator';
+var NORMAL = 'normal';
+var THROW = 'throw';
 var setInternalState = InternalStateModule.set;
 var createIteratorProxyPrototype = function (IS_ITERATOR) {
   var getInternalState = InternalStateModule.getterFor(IS_ITERATOR ? WRAP_FOR_VALID_ITERATOR : ITERATOR_HELPER);
@@ -22374,12 +22537,13 @@ var createIteratorProxyPrototype = function (IS_ITERATOR) {
     next: function next() {
       var state = getInternalState(this);
       // for simplification:
-      //   for `%WrapForValidIteratorPrototype%.next` our `nextHandler` returns `IterResultObject`
+      //   for `%WrapForValidIteratorPrototype%.next` or with `state.returnHandlerResult` our `nextHandler` returns `IterResultObject`
       //   for `%IteratorHelperPrototype%.next` - just a value
       if (IS_ITERATOR) return state.nextHandler();
+      if (state.done) return createIterResultObject(undefined, true);
       try {
-        var result = state.done ? undefined : state.nextHandler();
-        return createIterResultObject(result, state.done);
+        var result = state.nextHandler();
+        return state.returnHandlerResult ? result : createIterResultObject(result, state.done);
       } catch (error) {
         state.done = true;
         throw error;
@@ -22394,11 +22558,16 @@ var createIteratorProxyPrototype = function (IS_ITERATOR) {
         return returnMethod ? call(returnMethod, iterator) : createIterResultObject(undefined, true);
       }
       if (state.inner) try {
-        iteratorClose(state.inner.iterator, 'normal');
+        iteratorClose(state.inner.iterator, NORMAL);
       } catch (error) {
-        return iteratorClose(iterator, 'throw', error);
+        return iteratorClose(iterator, THROW, error);
       }
-      if (iterator) iteratorClose(iterator, 'normal');
+      if (state.openIters) try {
+        iteratorCloseAll(state.openIters, NORMAL);
+      } catch (error) {
+        return iteratorClose(iterator, THROW, error);
+      }
+      if (iterator) iteratorClose(iterator, NORMAL);
       return createIterResultObject(undefined, true);
     }
   });
@@ -22406,13 +22575,14 @@ var createIteratorProxyPrototype = function (IS_ITERATOR) {
 var WrapForValidIteratorPrototype = createIteratorProxyPrototype(true);
 var IteratorHelperPrototype = createIteratorProxyPrototype(false);
 createNonEnumerableProperty(IteratorHelperPrototype, TO_STRING_TAG, 'Iterator Helper');
-module.exports = function (nextHandler, IS_ITERATOR) {
+module.exports = function (nextHandler, IS_ITERATOR, RETURN_HANDLER_RESULT) {
   var IteratorProxy = function Iterator(record, state) {
     if (state) {
       state.iterator = record.iterator;
       state.next = record.next;
     } else state = record;
     state.type = IS_ITERATOR ? WRAP_FOR_VALID_ITERATOR : ITERATOR_HELPER;
+    state.returnHandlerResult = !!RETURN_HANDLER_RESULT;
     state.nextHandler = nextHandler;
     state.counter = 0;
     state.done = false;
@@ -22432,6 +22602,7 @@ module.exports = function (nextHandler, IS_ITERATOR) {
 
 var NATIVE_BIND = __webpack_require__("40d5");
 var call = Function.prototype.call;
+// eslint-disable-next-line es/no-function-prototype-bind -- safe
 module.exports = NATIVE_BIND ? call.bind(call) : function () {
   return call.apply(call, arguments);
 };
@@ -22465,10 +22636,10 @@ var defineGlobalProperty = __webpack_require__("6374");
 var SHARED = '__core-js_shared__';
 var store = module.exports = globalThis[SHARED] || defineGlobalProperty(SHARED, {});
 (store.versions || (store.versions = [])).push({
-  version: '3.39.0',
+  version: '3.43.0',
   mode: IS_PURE ? 'pure' : 'global',
-  copyright: '© 2014-2024 Denis Pushkarev (zloirock.ru)',
-  license: 'https://github.com/zloirock/core-js/blob/v3.39.0/LICENSE',
+  copyright: '© 2014-2025 Denis Pushkarev (zloirock.ru)',
+  license: 'https://github.com/zloirock/core-js/blob/v3.43.0/LICENSE',
   source: 'https://github.com/zloirock/core-js'
 });
 
@@ -22693,37 +22864,6 @@ function () {
 
 
 module.exports = {};
-
-/***/ }),
-
-/***/ "d024":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var call = __webpack_require__("c65b");
-var aCallable = __webpack_require__("59ed");
-var anObject = __webpack_require__("825a");
-var getIteratorDirect = __webpack_require__("46c4");
-var createIteratorProxy = __webpack_require__("c5cc");
-var callWithSafeIterationClosing = __webpack_require__("9bdd");
-var IteratorProxy = createIteratorProxy(function () {
-  var iterator = this.iterator;
-  var result = anObject(call(this.next, iterator));
-  var done = this.done = !!result.done;
-  if (!done) return callWithSafeIterationClosing(iterator, this.mapper, [result.value, this.counter++], true);
-});
-
-// `Iterator.prototype.map` method
-// https://github.com/tc39/proposal-iterator-helpers
-module.exports = function map(mapper) {
-  anObject(this);
-  aCallable(mapper);
-  return new IteratorProxy(getIteratorDirect(this), {
-    mapper: mapper
-  });
-};
 
 /***/ }),
 
@@ -23011,17 +23151,41 @@ var createSetLike = function (size) {
     }
   };
 };
-module.exports = function (name) {
+var createSetLikeWithInfinitySize = function (size) {
+  return {
+    size: size,
+    has: function () {
+      return true;
+    },
+    keys: function () {
+      throw new Error('e');
+    }
+  };
+};
+module.exports = function (name, callback) {
   var Set = getBuiltIn('Set');
   try {
     new Set()[name](createSetLike(0));
     try {
-      // late spec change, early WebKit ~ Safari 17.0 beta implementation does not pass it
+      // late spec change, early WebKit ~ Safari 17 implementation does not pass it
       // https://github.com/tc39/proposal-set-methods/pull/88
+      // also covered engines with
+      // https://bugs.webkit.org/show_bug.cgi?id=272679
       new Set()[name](createSetLike(-1));
       return false;
     } catch (error2) {
-      return true;
+      if (!callback) return true;
+      // early V8 implementation bug
+      // https://issues.chromium.org/issues/351332634
+      try {
+        new Set()[name](createSetLikeWithInfinitySize(-Infinity));
+        return false;
+      } catch (error) {
+        var set = new Set();
+        set.add(1);
+        set.add(2);
+        return callback(set[name](createSetLikeWithInfinitySize(Infinity)));
+      }
     }
   } catch (error) {
     return false;
@@ -23137,6 +23301,7 @@ module.exports = !fails(function () {
 var NATIVE_BIND = __webpack_require__("40d5");
 var FunctionPrototype = Function.prototype;
 var call = FunctionPrototype.call;
+// eslint-disable-next-line es/no-function-prototype-bind -- safe
 var uncurryThisWithBind = NATIVE_BIND && FunctionPrototype.bind.bind(call, call);
 module.exports = NATIVE_BIND ? uncurryThisWithBind : function (fn) {
   return function () {
@@ -23430,8 +23595,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _intlify_shared__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("25de");
 /* harmony import */ var _intlify_shared__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_intlify_shared__WEBPACK_IMPORTED_MODULE_0__);
 /*!
-  * message-compiler v9.14.2
-  * (c) 2024 kazuya kawaguchi
+  * message-compiler v9.14.4
+  * (c) 2025 kazuya kawaguchi
   * Released under the MIT License.
   */
 
@@ -25080,6 +25245,40 @@ module.exports = function (key) {
 
 /***/ }),
 
+/***/ "f99f":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var globalThis = __webpack_require__("cfe9");
+
+// https://github.com/tc39/ecma262/pull/3467
+module.exports = function (METHOD_NAME, ExpectedError) {
+  var Iterator = globalThis.Iterator;
+  var IteratorPrototype = Iterator && Iterator.prototype;
+  var method = IteratorPrototype && IteratorPrototype[METHOD_NAME];
+  var CLOSED = false;
+  if (method) try {
+    method.call({
+      next: function () {
+        return {
+          done: true
+        };
+      },
+      'return': function () {
+        CLOSED = true;
+      }
+    }, -1);
+  } catch (error) {
+    // https://bugs.webkit.org/show_bug.cgi?id=291195
+    if (!(error instanceof ExpectedError)) CLOSED = false;
+  }
+  if (!CLOSED) return method;
+};
+
+/***/ }),
+
 /***/ "fc6a":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -25108,4 +25307,4 @@ module.exports = NATIVE_SYMBOL && !Symbol.sham && typeof Symbol.iterator == 'sym
 /***/ })
 
 }]);
-//# sourceMappingURL=chunk-vendors.ba39498e.js.map
+//# sourceMappingURL=chunk-vendors.0fe808dc.js.map

@@ -137,24 +137,86 @@
           </JobItem>
         </div>
         <div class="section-bd">
-          <JobItem company="开源社区" status="open">
+          <JobItem company="开源贡献 & 个人项目" status="open">
             <li class="project-1">
               <h3 class="project-name">
                 <a href="https://github.com/codepod-io/codepod" target="_blank" title="codepod">
                   Codepod
                 </a>
               </h3>
-            </li>
-            <li class="project-2">
+              <ol>
+                <li class="project-2">
                   <div class="item-bd">
                     <div class="div-item">
                       <h3 class="project-des">【简介】</h3>
                       <p class="item-project-des">
-                        可扩展的交互式编程,可实时地观察代码的运行结果(类似Jupyter Notebook)
+                        可扩展的交互式编程，可实时地观察代码的运行结果（类似Jupyter Notebook）
                       </p>
                     </div>
-                    </div>
+                  </div>
                 </li>
+              </ol>
+            </li>
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="#" target="_blank" title="AI雅思备考">
+                  AI雅思备考
+                </a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【简介】</h3>
+                      <p class="item-project-des">
+                        AI定制备考计划系统，基于用户的目标分数、时间投入、语言水平、学习习惯等参数生成个性化每日任务计划。
+                        任务内容涵盖听说读写四项练习、词汇积累、长难句解析、语料训练等模块，支持根据做题表现实时优化学习策略和动态调整学习路径，结合语音识别技术实现发音纠正和智能评分
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="#" target="_blank" title="AI餐饮代运营">
+                  AI餐饮代运营
+                </a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【简介】</h3>
+                      <p class="item-project-des">
+                        智能餐饮运营助手系统，定时爬取店铺后台数据（销售、客流、评价等），通过AI算法进行深度分析，自动生成经营提升策略和具体执行方案。
+                        系统可识别经营痛点，提供菜品优化建议、营销策略制定、库存管理等智能化运营决策，有效代替部分日常运营工作，提升餐饮商家的经营效率和盈利能力
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li class="project-1">
+              <h3 class="project-name">
+                <a href="#" target="_blank" title="AI房地产获客">
+                  AI房地产获客
+                </a>
+              </h3>
+              <ol>
+                <li class="project-2">
+                  <div class="item-bd">
+                    <div class="div-item">
+                      <h3 class="project-des">【简介】</h3>
+                      <p class="item-project-des">
+                        构建内容驱动的智能获客系统，通过AI分析新媒体内容效果与客户转化的关联性，实现从内容创作到线索获取的全链路追踪。
+                        帮助新媒体团队从关注阅读量转向关注实际获客效果，精准识别高转化内容并优化内容策略，最终提升成交转化率
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </li>
           </JobItem>
         </div>
    

@@ -26,7 +26,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     to: "/"
   }, {
     default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => _cache[0] || (_cache[0] = [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])("Chinese Version")])),
-    _: 1
+    _: 1,
+    __: [0]
   })]), _cache[2] || (_cache[2] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
     class: "last-modified"
   }, "last modified 2023.10", -1))]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("main", null, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_BaseInfo), Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobInfo)])]);
@@ -168,7 +169,8 @@ function EnJobvue_type_template_id_fd6d59d2_render(_ctx, _cache, $props, $setup,
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("b", null, "Background:"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" There were many different types of IoT devices with varying configurations, "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" many of which couldnot meet the requirement of second turn-on"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
       class: "alias_light"
     }, "（Offline package）"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("b", null, "Problem:"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" self-developed container was not yet mature, UI level support ability was weak, "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" marketing need to invest double manpower output h5 version and internal application version"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("b", null, "Solution: "), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" realizing a set of code to build multi-end product and automatic H5 downgrade,leading the design of the solution framework "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br")])], -1))])])])])])])]),
-    _: 1
+    _: 1,
+    __: [9]
   })])])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_10, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_11, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_12, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Yealink",
     time: "2017.06 - 2020.2.21"
@@ -309,7 +311,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     to: "/"
   }, {
     default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => _cache[0] || (_cache[0] = [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])("Chinese Version")])),
-    _: 1
+    _: 1,
+    __: [0]
   })]), _cache[2] || (_cache[2] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
     class: "last-modified"
   }, "last modified 2023.10", -1))]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("main", null, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_BaseInfo, {
@@ -386,7 +389,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     to: "/"
   }, {
     default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => _cache[0] || (_cache[0] = [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])("Chinese Version")])),
-    _: 1
+    _: 1,
+    __: [0]
   })]), _cache[2] || (_cache[2] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
     class: "last-modified"
   }, "last modified 2023.10", -1))]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("main", null, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_BaseInfo), Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobInfo)])]);
@@ -476,7 +480,8 @@ function EnCVvue_type_template_id_64997f18_render(_ctx, _cache, $props, $setup, 
     }, "【Techniques】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Mini program micro application solution (based on uniapp2)"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Multi-platform component library that supports customization of multiple brand themes "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Marketing scene creation (3D)"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Test coverage rate"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Design collaboration tool (Adobe plugin)")])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [0]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_5, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Horizons",
     status: "remote",
@@ -515,7 +520,8 @@ function EnCVvue_type_template_id_64997f18_render(_ctx, _cache, $props, $setup, 
     }, "【Techniques】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "Micro front-end integration"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "I18n solution"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "Multi-end Component development enhancement"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "Mock solution enhancement")])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [1]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_6, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Community",
     status: "open"
@@ -529,7 +535,8 @@ function EnCVvue_type_template_id_64997f18_render(_ctx, _cache, $props, $setup, 
       target: "_blank",
       title: "codepod"
     }, " Codepod ")])], -1)])),
-    _: 1
+    _: 1,
+    __: [2]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_7, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Alibaba Group",
     time: "2020.06.18 - 2022.05.20"
@@ -601,7 +608,8 @@ function EnCVvue_type_template_id_64997f18_render(_ctx, _cache, $props, $setup, 
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" Dev tools: end-to-end debugging tools for devices "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" IoT canvas framework"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
       class: "alias_light"
     }, "enhancement for self-developed cross-end container")])])])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [3]
   })])])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_8, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_9, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_10, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Yealink",
     time: "2017.06 - 2020.2.21"
@@ -641,7 +649,8 @@ function EnCVvue_type_template_id_64997f18_render(_ctx, _cache, $props, $setup, 
     }, "【Techniques】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" High Performance"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 1. Conference booking component：From runaway to second open"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 2. Tree components: from 4+seconds to 1+seconds"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 3. Slow loading inline webview: offline package"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Memory leak:De-cyclic references, active GC triggers "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " High concurrency NG502: Compression analysis, parameter tuning ")])])])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [5]
   }), Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Yealink",
     time: "2016.12.16 - 2017.04",
@@ -724,4 +733,4 @@ const EnCV_exports_ = /*#__PURE__*/exportHelper_default()(views_EnCVvue_type_scr
 /***/ })
 
 }]);
-//# sourceMappingURL=about.a0f26566.js.map
+//# sourceMappingURL=about.48398978.js.map

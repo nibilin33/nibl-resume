@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({"about":"about"}[chunkId]||chunkId) + "." + {"about":"a0f26566"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "js/" + ({"about":"about"}[chunkId]||chunkId) + "." + {"about":"48398978"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -282,12 +282,12 @@ function Homevue_type_template_id_9ecc7de0_render(_ctx, _cache, $props, $setup, 
 }
 // CONCATENATED MODULE: ./src/views/Home.vue?vue&type=template&id=9ecc7de0
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Resume.vue?vue&type=template&id=e092b8ca
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Resume.vue?vue&type=template&id=7a679921
 
 const _hoisted_1 = {
   class: "head"
 };
-function Resumevue_type_template_id_e092b8ca_render(_ctx, _cache, $props, $setup, $data, $options) {
+function Resumevue_type_template_id_7a679921_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_link = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("router-link");
   const _component_BaseInfo = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("BaseInfo");
   const _component_JobInfo = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("JobInfo");
@@ -298,19 +298,20 @@ function Resumevue_type_template_id_e092b8ca_render(_ctx, _cache, $props, $setup
     to: "/en"
   }, {
     default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => _cache[0] || (_cache[0] = [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])("English Verison")])),
-    _: 1
+    _: 1,
+    __: [0]
   })]), _cache[2] || (_cache[2] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
     class: "last-modified"
-  }, "最后更新于2025年1月", -1))]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("main", null, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_BaseInfo), Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobInfo)])]);
+  }, "最后更新于2025年7月", -1))]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("main", null, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_BaseInfo), Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobInfo)])]);
 }
-// CONCATENATED MODULE: ./src/components/Resume.vue?vue&type=template&id=e092b8ca
+// CONCATENATED MODULE: ./src/components/Resume.vue?vue&type=template&id=7a679921
 
 // EXTERNAL MODULE: ./src/components/BaseInfo.vue + 4 modules
 var BaseInfo = __webpack_require__("8b3d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=be10e250
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=279757ab
 
-const Jobvue_type_template_id_be10e250_hoisted_1 = {
+const Jobvue_type_template_id_279757ab_hoisted_1 = {
   class: "content-bd"
 };
 const _hoisted_2 = {
@@ -355,9 +356,9 @@ const _hoisted_14 = {
 const _hoisted_15 = {
   class: "section-bd"
 };
-function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $data, $options) {
+function Jobvue_type_template_id_279757ab_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_JobItem = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("JobItem");
-  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_be10e250_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_3, [_cache[4] || (_cache[4] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
+  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_279757ab_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_3, [_cache[4] || (_cache[4] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
     class: "section-hd"
   }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
     class: "section-title-l"
@@ -402,7 +403,8 @@ function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $
     }, "【技术】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Uniapp 微应用方案"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 分支管理规范&CI部署优化"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " Uniapp 渐进式迁移"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 素材合成服务(canvas dsl)"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " morjs框架支持小红书"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 结合AI的低代码自动化测试"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 将C++ AI工程使用Emscripten封装成SDK，供前端使用 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " 自动化日志监控和异常检测服务 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, " AI导购 ")])])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [1]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_5, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "Horizons",
     status: "remote",
@@ -441,9 +443,10 @@ function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $
     }, "【技术】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "微前端集成，完成阶段性重构结果上线 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "i18n一站式解决方案 "), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "制定多端组件开发优化方案"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "Mock方案优化迁移")])])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [2]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_6, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
-    company: "开源社区",
+    company: "开源贡献 & 个人项目",
     status: "open"
   }, {
     default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => _cache[3] || (_cache[3] = [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
@@ -454,7 +457,7 @@ function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $
       href: "https://github.com/codepod-io/codepod",
       target: "_blank",
       title: "codepod"
-    }, " Codepod ")])], -1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+    }, " Codepod ")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ol", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
       class: "project-2"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
       class: "item-bd"
@@ -464,8 +467,63 @@ function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $
       class: "project-des"
     }, "【简介】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
       class: "item-project-des"
-    }, " 可扩展的交互式编程,可实时地观察代码的运行结果(类似Jupyter Notebook) ")])])], -1)])),
-    _: 1
+    }, " 可扩展的交互式编程，可实时地观察代码的运行结果（类似Jupyter Notebook） ")])])])])], -1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+      class: "project-1"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+      class: "project-name"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("a", {
+      href: "#",
+      target: "_blank",
+      title: "AI雅思备考"
+    }, " AI雅思备考 ")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ol", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+      class: "project-2"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+      class: "item-bd"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+      class: "div-item"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+      class: "project-des"
+    }, "【简介】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
+      class: "item-project-des"
+    }, " AI定制备考计划系统，基于用户的目标分数、时间投入、语言水平、学习习惯等参数生成个性化每日任务计划。 任务内容涵盖听说读写四项练习、词汇积累、长难句解析、语料训练等模块，支持根据做题表现实时优化学习策略和动态调整学习路径，结合语音识别技术实现发音纠正和智能评分 ")])])])])], -1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+      class: "project-1"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+      class: "project-name"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("a", {
+      href: "#",
+      target: "_blank",
+      title: "AI餐饮代运营"
+    }, " AI餐饮代运营 ")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ol", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+      class: "project-2"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+      class: "item-bd"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+      class: "div-item"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+      class: "project-des"
+    }, "【简介】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
+      class: "item-project-des"
+    }, " 智能餐饮运营助手系统，定时爬取店铺后台数据（销售、客流、评价等），通过AI算法进行深度分析，自动生成经营提升策略和具体执行方案。 系统可识别经营痛点，提供菜品优化建议、营销策略制定、库存管理等智能化运营决策，有效代替部分日常运营工作，提升餐饮商家的经营效率和盈利能力 ")])])])])], -1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+      class: "project-1"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+      class: "project-name"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("a", {
+      href: "#",
+      target: "_blank",
+      title: "AI房地产获客"
+    }, " AI房地产获客 ")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ol", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
+      class: "project-2"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+      class: "item-bd"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", {
+      class: "div-item"
+    }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h3", {
+      class: "project-des"
+    }, "【简介】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
+      class: "item-project-des"
+    }, " 构建内容驱动的智能获客系统，通过AI分析新媒体内容效果与客户转化的关联性，实现从内容创作到线索获取的全链路追踪。 帮助新媒体团队从关注阅读量转向关注实际获客效果，精准识别高转化内容并优化内容策略，最终提升成交转化率 ")])])])])], -1)])),
+    _: 1,
+    __: [3]
   })])])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_7, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_8, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_9, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "阿里巴巴集团",
     time: "2020.06 至 2022.05"
@@ -549,7 +607,8 @@ function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $
     }, "（离线包->内部自研跨端容器）"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("p", {
       class: "item-project-des"
     }, " 基于IoT内部的自研轻量跨端容器，主导方案框架设计，封装canvas渲染框架，一套代码构建多端产物，自动H5降级 ")], -1))])])])])])])]),
-    _: 1
+    _: 1,
+    __: [12]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_15, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "厦门亿联网络技术股份有限公司",
     time: "2016.12.16 至 2020.2.21"
@@ -589,10 +648,11 @@ function Jobvue_type_template_id_be10e250_render(_ctx, _cache, $props, $setup, $
     }, "【技术】"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", {
       class: "section-content"
     }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 性能优化"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 1. 会议预约组件：从打开奔溃到秒开"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 2. 组织架构树:4+s -> 1+s"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br"), Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(" 3. 内嵌webview加载慢: 离线资源包"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("br")]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "内存泄漏 : 去循环引用，主动触发GC"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "多彩、自动化测试解决方案"), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, "H5混合开发跨部门联调效率低: 利用Electron作为模拟工具，优化开发链，提高效率")])])])])])], -1)])),
-    _: 1
+    _: 1,
+    __: [13]
   })])]), _cache[14] || (_cache[14] = Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"skill\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">技能</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><a href=\"https://nibilin33.github.io/nibl-resume/static/skill.png\"><img style=\"width:100%;\" src=\"https://nibilin33.github.io/nibl-resume/static/skill.png\"></a></div></div></section><section class=\"prize\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">奖项/证书</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>获得过国家奖学金一等奖学金</li><li>CET6</li><li>英语水平良好,雅思成绩7.0（2022.10的成绩）</li></ul></div></div></div></section><section class=\"thanks\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">致谢</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><h2 style=\"font-weight:bold;line-height:24px;margin-top:10px;\"> 感谢在百忙之中阅读这份履历 </h2></div></div></section>", 3))])]);
 }
-// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=be10e250
+// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=279757ab
 
 // EXTERNAL MODULE: ./src/components/JobItem.vue + 4 modules
 var JobItem = __webpack_require__("ce46");
@@ -623,7 +683,7 @@ var JobItem = __webpack_require__("ce46");
 
 
 
-const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_be10e250_render]])
+const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_279757ab_render]])
 
 /* harmony default export */ var Job = (Job_exports_);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Resume.vue?vue&type=script&lang=js
@@ -649,7 +709,7 @@ const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang
 
 
 
-const Resume_exports_ = /*#__PURE__*/exportHelper_default()(Resumevue_type_script_lang_js, [['render',Resumevue_type_template_id_e092b8ca_render]])
+const Resume_exports_ = /*#__PURE__*/exportHelper_default()(Resumevue_type_script_lang_js, [['render',Resumevue_type_template_id_7a679921_render]])
 
 /* harmony default export */ var Resume = (Resume_exports_);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/views/Home.vue?vue&type=script&lang=js
@@ -928,4 +988,4 @@ const __exports__ = /*#__PURE__*/exportHelper_default()(JobItemvue_type_script_l
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.d5de935d.js.map
+//# sourceMappingURL=app.490d94e2.js.map
