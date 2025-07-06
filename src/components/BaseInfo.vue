@@ -19,12 +19,12 @@
     <section class="contact">
       <ul>
         <li>
-          <a href="https://nibilin33.github.io/frontend-blog/" target="_blank">
-            <span class="contact-link">Blog</span>
+          <a href="https://www.zhihu.com/people/nibl" target="_blank">
+            <span class="contact-link">知乎 - nibl</span>
             <span class="iconfont">
               <svg width="16px" height="16px" viewBox="0 0 1024 1024">
                 <path
-                  d="M512 42.581333l-469.333333 469.333333 31.146667 31.146667L170.666667 446.250667l0 438.186667 682.666667 0L853.333333 446.208l96.853333 96.896 31.146667-31.146667L512 42.581333zM426.666667 841.770667l0-298.666667 170.666667 0 0 298.666667L426.666667 841.770667zM810.666667 841.770667l-170.666667 0 0-341.333333L384 500.437333l0 341.333333L213.333333 841.770667 213.333333 403.584l298.666667-298.666667 298.666667 298.666667L810.666667 841.770667z"
+                  d="M544 512h96l-96-96V320h160v-64H544V96h-64v160H320v64h160v96l-96 96h96v320h-96v64h256v-64h-96V512z"
                 ></path>
               </svg>
             </span>
