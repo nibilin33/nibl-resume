@@ -179,7 +179,7 @@
             </li>
             <li class="project-1">
               <h3 class="project-name">
-                <a href="#" target="_blank" title="AI餐饮代运营">
+                <a href="https://github.com/nibilin33/meituan-plugin" target="_blank" title="AI餐饮代运营">
                   AI餐饮代运营
                 </a>
               </h3>
