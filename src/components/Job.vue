@@ -136,7 +136,14 @@
             </li>
           </JobItem>
         </div>
-        <div class="section-bd">
+     
+   
+
+      </section>
+    </div>
+    <div class="content-right">
+      <section class="practice">
+           <div class="section-bd">
           <JobItem company="开源贡献 & 个人项目" status="open">
             <li class="project-1">
               <h3 class="project-name">
@@ -219,12 +226,6 @@
             </li>
           </JobItem>
         </div>
-   
-
-      </section>
-    </div>
-    <div class="content-right">
-      <section class="practice">
         <div class="section-bd">
           <JobItem company="阿里巴巴集团" time="2020.06 至 2022.05">
             <!-- <JobItem company="阿里巴巴集团" time="2020.06.18 至 2022.05.20"> -->
