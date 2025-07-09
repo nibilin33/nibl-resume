@@ -355,7 +355,7 @@
           </JobItem>
         </div>
         <div class="section-bd">
-          <JobItem company="厦门亿联网络技术股份有限公司" time="2016.12.16 至 2020.2.21">
+          <JobItem company="厦门亿联网络技术股份有限公司" time="2017.7 至 2020.2">
             <!-- 研发中心二部 -->
             <li class="project-1">
               <h3 class="project-name">

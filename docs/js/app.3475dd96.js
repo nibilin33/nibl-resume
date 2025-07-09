@@ -232,6 +232,17 @@ module.exports = __webpack_require__("56d7");
 
 /***/ }),
 
+/***/ "2215":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_v16_dist_index_js_ref_1_1_BaseInfo_vue_vue_type_style_index_0_id_ce68e2b2_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("f405");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_v16_dist_index_js_ref_1_1_BaseInfo_vue_vue_type_style_index_0_id_ce68e2b2_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_v16_dist_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_v16_dist_index_js_ref_1_1_BaseInfo_vue_vue_type_style_index_0_id_ce68e2b2_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
 /***/ "56d7":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -309,9 +320,9 @@ function Resumevue_type_template_id_7a679921_render(_ctx, _cache, $props, $setup
 // EXTERNAL MODULE: ./src/components/BaseInfo.vue + 4 modules
 var BaseInfo = __webpack_require__("8b3d");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=2e3f56a5
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Job.vue?vue&type=template&id=66e959dc
 
-const Jobvue_type_template_id_2e3f56a5_hoisted_1 = {
+const Jobvue_type_template_id_66e959dc_hoisted_1 = {
   class: "content-bd"
 };
 const _hoisted_2 = {
@@ -356,9 +367,9 @@ const _hoisted_14 = {
 const _hoisted_15 = {
   class: "section-bd"
 };
-function Jobvue_type_template_id_2e3f56a5_render(_ctx, _cache, $props, $setup, $data, $options) {
+function Jobvue_type_template_id_66e959dc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_JobItem = Object(vue_runtime_esm_bundler["C" /* resolveComponent */])("JobItem");
-  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_2e3f56a5_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_3, [_cache[3] || (_cache[3] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
+  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("div", Jobvue_type_template_id_66e959dc_hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_3, [_cache[3] || (_cache[3] = Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("header", {
     class: "section-hd"
   }, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("span", {
     class: "section-title-l"
@@ -611,7 +622,7 @@ function Jobvue_type_template_id_2e3f56a5_render(_ctx, _cache, $props, $setup, $
     __: [12]
   })]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_15, [Object(vue_runtime_esm_bundler["k" /* createVNode */])(_component_JobItem, {
     company: "厦门亿联网络技术股份有限公司",
-    time: "2016.12.16 至 2020.2.21"
+    time: "2017.7 至 2020.2"
   }, {
     default: Object(vue_runtime_esm_bundler["I" /* withCtx */])(() => _cache[13] || (_cache[13] = [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", {
       class: "project-1"
@@ -652,7 +663,7 @@ function Jobvue_type_template_id_2e3f56a5_render(_ctx, _cache, $props, $setup, $
     __: [13]
   })])]), _cache[14] || (_cache[14] = Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"skill\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">技能</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><a href=\"https://nibilin33.github.io/nibl-resume/static/skill.png\"><img style=\"width:100%;\" src=\"https://nibilin33.github.io/nibl-resume/static/skill.png\"></a></div></div></section><section class=\"prize\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">奖项/证书</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><div class=\"item-bd\"><ul class=\"section-content\"><li>获得过国家奖学金一等奖学金</li><li>CET6</li><li>英语水平良好,雅思成绩7.0（2022.10的成绩）</li></ul></div></div></div></section><section class=\"thanks\"><header class=\"section-hd\"><span class=\"section-title-l\"></span><h2 class=\"section-title\">致谢</h2><span class=\"section-title-r\"></span></header><div class=\"section-bd\"><div class=\"item\"><h2 style=\"font-weight:bold;line-height:24px;margin-top:10px;\"> 感谢在百忙之中阅读这份履历 </h2></div></div></section>", 3))])]);
 }
-// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=2e3f56a5
+// CONCATENATED MODULE: ./src/components/Job.vue?vue&type=template&id=66e959dc
 
 // EXTERNAL MODULE: ./src/components/JobItem.vue + 4 modules
 var JobItem = __webpack_require__("ce46");
@@ -683,7 +694,7 @@ var JobItem = __webpack_require__("ce46");
 
 
 
-const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_2e3f56a5_render]])
+const Job_exports_ = /*#__PURE__*/exportHelper_default()(Jobvue_type_script_lang_js, [['render',Jobvue_type_template_id_66e959dc_render]])
 
 /* harmony default export */ var Job = (Job_exports_);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/Resume.vue?vue&type=script&lang=js
@@ -797,7 +808,7 @@ app.mount("#app");
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm-bundler.js + 3 modules
 var vue_runtime_esm_bundler = __webpack_require__("7a23");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/BaseInfo.vue?vue&type=template&id=a91899ce
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--7!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/BaseInfo.vue?vue&type=template&id=ce68e2b2&scoped=true
 
 const _hoisted_1 = {
   class: "content-hd"
@@ -806,21 +817,27 @@ const _hoisted_2 = {
   class: "title"
 };
 const _hoisted_3 = {
-  class: "name"
+  class: "title-content"
 };
 const _hoisted_4 = {
-  class: "job"
+  class: "title-text"
 };
 const _hoisted_5 = {
-  class: "info"
+  class: "name"
 };
 const _hoisted_6 = {
+  class: "job"
+};
+const _hoisted_7 = {
+  class: "info"
+};
+const _hoisted_8 = {
   key: 0
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("header", _hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_3, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h1", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.myname')), 1)]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_4, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h2", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.jobtitle')), 1)])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_5, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.gender')) + " / 1994.04 / ", 1), $props.isEnglish ? (Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("span", _hoisted_6, "Chinese citizen")) : Object(vue_runtime_esm_bundler["f" /* createCommentVNode */])("", true)]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.university')), 1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.profession')), 1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.graduate')), 1)])]), _cache[0] || (_cache[0] = Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"contact\"><ul><li><a href=\"https://www.zhihu.com/people/nibl\" target=\"_blank\"><span class=\"contact-link\">知乎 - nibl</span><span class=\"iconfont\"><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\"><path d=\"M544 512h96l-96-96V320h160v-64H544V96h-64v160H320v64h160v96l-96 96h96v320h-96v64h256v-64h-96V512z\"></path></svg></span></a></li><li><a href=\"https://github.com/nibilin33\" target=\"_blank\"><span class=\"contact-link\">Github - nibilin33</span><span class=\"iconfont\"><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\"><path d=\"M941.714 512q0 143.433-83.712 258.011t-216.283 158.574q-15.433 2.853-22.565-3.986t-7.131-17.152v-120.576q0-55.442-29.696-81.152 32.585-3.438 58.587-10.277t53.723-22.272 46.299-37.998 30.281-60.014 11.703-86.016q0-69.157-45.129-117.723 21.138-52.005-4.571-116.553-16.018-5.157-46.299 6.29t-52.553 25.161l-21.723 13.714q-53.138-14.848-109.714-14.848t-109.714 14.848q-9.143-6.29-24.283-15.433t-47.726-22.016-49.152-7.717q-25.161 64.585-3.986 116.553-45.129 48.567-45.129 117.723 0 48.567 11.703 85.723t29.989 60.014 46.007 38.29 53.723 22.272 58.587 10.277q-22.857 20.553-28.014 58.843-11.995 5.705-25.71 8.558t-32.585 2.853-37.413-12.288-31.707-35.73q-10.862-18.286-27.721-29.696t-28.27-13.714l-11.447-1.719q-11.995 0-16.567 2.56t-2.853 6.583 5.157 8.009 7.424 6.839l3.986 2.853q12.581 5.705 24.869 21.723t17.993 29.147l5.705 13.129q7.424 21.723 25.161 35.145t38.29 17.152 39.717 3.986 31.707-2.011l13.129-2.304q0 21.723 0.293 50.871t0.293 30.866q0 10.277-7.424 17.152t-22.857 3.986q-132.571-43.995-216.283-158.574t-83.712-258.011q0-119.442 58.843-220.27t159.707-159.707 220.27-58.843 220.27 58.843 159.707 159.707 58.843 220.27z\"></path></svg></span></a></li><li><a href=\"mailto:nibilin33@gmail.com\" target=\"_blank\"><span class=\"contact-link\">nibilin33@gmail.com</span><span class=\"iconfont\"><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\"><path d=\"M903.808 239.04l-818.304 0 0 545.92 852.992 0 0-545.92-34.688 0zM869.664 273.152l-329.536 329.536c-15.04 15.04-41.248 15.04-56.288 0l-329.6-329.536 715.392 0zM119.616 286.752l221.536 221.504-221.536 221.536 0-443.072zM146.848 750.848l218.464-218.432 94.432 94.4c13.952 13.952 32.512 21.664 52.256 21.664s38.304-7.712 52.256-21.664l94.432-94.432 218.432 218.432-730.304 0zM904.384 729.824l-221.536-221.568 221.536-221.568 0 443.136z\"></path></svg></span></a></li><li><a href=\"tel:13960845178\" target=\"_blank\"><span class=\"contact-link\">13960845178</span><span class=\"iconfont\"><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\"><path d=\"M256 1024l512 0c26.464 0 48-21.536 48-48l0-928c0-26.464-21.536-48-48-48l-512 0c-26.464 0-48 21.536-48 48l0 928c0 26.464 21.536 48 48 48zM240 48c0-8.832 7.168-16 16-16l512 0c8.832 0 16 7.168 16 16l0 928c0 8.832-7.168 16-16 16l-512 0c-8.832 0-16-7.168-16-16l0-928zM288 864l448 0c8.832 0 16-7.168 16-16l0-672c0-8.832-7.168-16-16-16l-448 0c-8.832 0-16 7.168-16 16l0 672c0 8.832 7.168 16 16 16zM304 192l416 0 0 640-416 0 0-640zM496 928c0 17.664 14.336 32 32 32s32-14.336 32-32c0-17.664-14.336-32-32-32-17.664 0-32 14.336-32 32zM448 128l128 0c8.832 0 16-7.168 16-16s-7.168-16-16-16l-128 0c-8.832 0-16 7.168-16 16s7.168 16 16 16z\"></path></svg></span></a></li></ul></section>", 1))]);
+  return Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("header", _hoisted_1, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_2, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_3, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_4, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_5, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h1", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.myname')), 1)]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("div", _hoisted_6, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("h2", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.jobtitle')), 1)])])])]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("section", _hoisted_7, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("ul", null, [Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, [Object(vue_runtime_esm_bundler["j" /* createTextVNode */])(Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.gender')) + " / 1994.04 / ", 1), $props.isEnglish ? (Object(vue_runtime_esm_bundler["x" /* openBlock */])(), Object(vue_runtime_esm_bundler["g" /* createElementBlock */])("span", _hoisted_8, "Chinese citizen")) : Object(vue_runtime_esm_bundler["f" /* createCommentVNode */])("", true)]), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.university')), 1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.profession')), 1), Object(vue_runtime_esm_bundler["h" /* createElementVNode */])("li", null, Object(vue_runtime_esm_bundler["F" /* toDisplayString */])(_ctx.$t('message.graduate')), 1)])]), _cache[0] || (_cache[0] = Object(vue_runtime_esm_bundler["i" /* createStaticVNode */])("<section class=\"contact\" data-v-ce68e2b2><ul data-v-ce68e2b2><li data-v-ce68e2b2><a href=\"https://www.zhihu.com/people/nibl\" target=\"_blank\" data-v-ce68e2b2><span class=\"contact-link\" data-v-ce68e2b2>知乎 - nibl</span><span class=\"iconfont\" data-v-ce68e2b2><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\" data-v-ce68e2b2><path d=\"M544 512h96l-96-96V320h160v-64H544V96h-64v160H320v64h160v96l-96 96h96v320h-96v64h256v-64h-96V512z\" data-v-ce68e2b2></path></svg></span></a></li><li data-v-ce68e2b2><a href=\"https://github.com/nibilin33\" target=\"_blank\" data-v-ce68e2b2><span class=\"contact-link\" data-v-ce68e2b2>Github - nibilin33</span><span class=\"iconfont\" data-v-ce68e2b2><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\" data-v-ce68e2b2><path d=\"M941.714 512q0 143.433-83.712 258.011t-216.283 158.574q-15.433 2.853-22.565-3.986t-7.131-17.152v-120.576q0-55.442-29.696-81.152 32.585-3.438 58.587-10.277t53.723-22.272 46.299-37.998 30.281-60.014 11.703-86.016q0-69.157-45.129-117.723 21.138-52.005-4.571-116.553-16.018-5.157-46.299 6.29t-52.553 25.161l-21.723 13.714q-53.138-14.848-109.714-14.848t-109.714 14.848q-9.143-6.29-24.283-15.433t-47.726-22.016-49.152-7.717q-25.161 64.585-3.986 116.553-45.129 48.567-45.129 117.723 0 48.567 11.703 85.723t29.989 60.014 46.007 38.29 53.723 22.272 58.587 10.277q-22.857 20.553-28.014 58.843-11.995 5.705-25.71 8.558t-32.585 2.853-37.413-12.288-31.707-35.73q-10.862-18.286-27.721-29.696t-28.27-13.714l-11.447-1.719q-11.995 0-16.567 2.56t-2.853 6.583 5.157 8.009 7.424 6.839l3.986 2.853q12.581 5.705 24.869 21.723t17.993 29.147l5.705 13.129q7.424 21.723 25.161 35.145t38.29 17.152 39.717 3.986 31.707-2.011l13.129-2.304q0 21.723 0.293 50.871t0.293 30.866q0 10.277-7.424 17.152t-22.857 3.986q-132.571-43.995-216.283-158.574t-83.712-258.011q0-119.442 58.843-220.27t159.707-159.707 220.27-58.843 220.27 58.843 159.707 159.707 58.843 220.27z\" data-v-ce68e2b2></path></svg></span></a></li><li data-v-ce68e2b2><a href=\"mailto:nibilin33@gmail.com\" target=\"_blank\" data-v-ce68e2b2><span class=\"contact-link\" data-v-ce68e2b2>nibilin33@gmail.com</span><span class=\"iconfont\" data-v-ce68e2b2><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\" data-v-ce68e2b2><path d=\"M903.808 239.04l-818.304 0 0 545.92 852.992 0 0-545.92-34.688 0zM869.664 273.152l-329.536 329.536c-15.04 15.04-41.248 15.04-56.288 0l-329.6-329.536 715.392 0zM119.616 286.752l221.536 221.504-221.536 221.536 0-443.072zM146.848 750.848l218.464-218.432 94.432 94.4c13.952 13.952 32.512 21.664 52.256 21.664s38.304-7.712 52.256-21.664l94.432-94.432 218.432 218.432-730.304 0zM904.384 729.824l-221.536-221.568 221.536-221.568 0 443.136z\" data-v-ce68e2b2></path></svg></span></a></li><li data-v-ce68e2b2><a href=\"tel:13960845178\" target=\"_blank\" data-v-ce68e2b2><span class=\"contact-link\" data-v-ce68e2b2>13960845178</span><span class=\"iconfont\" data-v-ce68e2b2><svg width=\"16px\" height=\"16px\" viewBox=\"0 0 1024 1024\" data-v-ce68e2b2><path d=\"M256 1024l512 0c26.464 0 48-21.536 48-48l0-928c0-26.464-21.536-48-48-48l-512 0c-26.464 0-48 21.536-48 48l0 928c0 26.464 21.536 48 48 48zM240 48c0-8.832 7.168-16 16-16l512 0c8.832 0 16 7.168 16 16l0 928c0 8.832-7.168 16-16 16l-512 0c-8.832 0-16-7.168-16-16l0-928zM288 864l448 0c8.832 0 16-7.168 16-16l0-672c0-8.832-7.168-16-16-16l-448 0c-8.832 0-16 7.168-16 16l0 672c0 8.832 7.168 16 16 16zM304 192l416 0 0 640-416 0 0-640zM496 928c0 17.664 14.336 32 32 32s32-14.336 32-32c0-17.664-14.336-32-32-32-17.664 0-32 14.336-32 32zM448 128l128 0c8.832 0 16-7.168 16-16s-7.168-16-16-16l-128 0c-8.832 0-16 7.168-16 16s7.168 16 16 16z\" data-v-ce68e2b2></path></svg></span></a></li></ul></section>", 1))]);
 }
-// CONCATENATED MODULE: ./src/components/BaseInfo.vue?vue&type=template&id=a91899ce
+// CONCATENATED MODULE: ./src/components/BaseInfo.vue?vue&type=template&id=ce68e2b2&scoped=true
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader-v16/dist??ref--1-1!./src/components/BaseInfo.vue?vue&type=script&lang=js
 /* harmony default export */ var BaseInfovue_type_script_lang_js = ({
@@ -831,13 +848,29 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }
   },
   data() {
-    return {};
+    return {
+      // 您可以替换为您的头像图片URL，或者上传头像到static目录
+      avatarUrl: "https://nibilin33.github.io/nibl-resume/static/me.jpg" // 临时使用现有图标，建议替换为您的头像
+    };
   },
   mounted() {},
-  computed: {}
+  computed: {},
+  methods: {
+    openImg(e) {
+      const {
+        target
+      } = e;
+      if (target.currentSrc) {
+        window.open(target.currentSrc);
+      }
+    }
+  }
 });
 // CONCATENATED MODULE: ./src/components/BaseInfo.vue?vue&type=script&lang=js
  
+// EXTERNAL MODULE: ./src/components/BaseInfo.vue?vue&type=style&index=0&id=ce68e2b2&scoped=true&lang=css
+var BaseInfovue_type_style_index_0_id_ce68e2b2_scoped_true_lang_css = __webpack_require__("2215");
+
 // EXTERNAL MODULE: ./node_modules/vue-loader-v16/dist/exportHelper.js
 var exportHelper = __webpack_require__("6b0d");
 var exportHelper_default = /*#__PURE__*/__webpack_require__.n(exportHelper);
@@ -848,7 +881,9 @@ var exportHelper_default = /*#__PURE__*/__webpack_require__.n(exportHelper);
 
 
 
-const __exports__ = /*#__PURE__*/exportHelper_default()(BaseInfovue_type_script_lang_js, [['render',render]])
+
+
+const __exports__ = /*#__PURE__*/exportHelper_default()(BaseInfovue_type_script_lang_js, [['render',render],['__scopeId',"data-v-ce68e2b2"]])
 
 /* harmony default export */ var BaseInfo = __webpack_exports__["a"] = (__exports__);
 
@@ -985,7 +1020,14 @@ const __exports__ = /*#__PURE__*/exportHelper_default()(JobItemvue_type_script_l
 
 /* harmony default export */ var JobItem = __webpack_exports__["a"] = (__exports__);
 
+/***/ }),
+
+/***/ "f405":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.ff709576.js.map
+//# sourceMappingURL=app.3475dd96.js.map

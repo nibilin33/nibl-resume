@@ -1,11 +1,23 @@
 <template>
   <header class="content-hd">
     <section class="title">
-      <div class="name">
-        <h1>{{$t('message.myname')}}</h1>
-      </div>
-      <div class="job">
-        <h2>{{$t('message.jobtitle')}}</h2>
+      <div class="title-content">
+        <div class="title-text">
+          <div class="name">
+            <h1>{{$t('message.myname')}}</h1>
+          </div>
+          <div class="job">
+            <h2>{{$t('message.jobtitle')}}</h2>
+          </div>
+        </div>
+        <!-- <div class="avatar">
+          <img 
+            :src="avatarUrl" 
+            :alt="$t('message.myname')" 
+            @click="openImg"
+            class="avatar-img"
+          />
+        </div> -->
       </div>
     </section>
     <section class="info">
@@ -80,9 +92,68 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      // 您可以替换为您的头像图片URL，或者上传头像到static目录
+      avatarUrl: "https://nibilin33.github.io/nibl-resume/static/me.jpg" // 临时使用现有图标，建议替换为您的头像
+    };
   },
   mounted() {},
   computed: {},
+  methods: {
+    openImg(e) {
+      const { target } = e;
+      if (target.currentSrc) {
+        window.open(target.currentSrc);
+      }
+    }
+  }
 };
 </script>
+
+<style scoped>
+.title-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title-text {
+  flex: 1;
+}
+
+.avatar {
+  margin-left: 20px;
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 3px solid #f0f0f0;
+}
+
+.avatar-img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .title-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  
+  .avatar-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+</style>
