@@ -299,13 +299,13 @@
           <div class="flex gap-3">
             <div class="text-emerald-400/60 font-bold flex-shrink-0">•</div>
             <div class="text-sm text-zinc-200/90 leading-relaxed">
-              <span class="font-bold text-zinc-100">AI Agent 端到端落地：</span>在海马体主导 <span class="text-emerald-400 font-semibold">微信成交经营助手</span>、<span class="text-emerald-400 font-semibold">Nexus 产品发现平台</span>、AI 导购等多个 AI 应用：成交助手使门店会话核查从抽检 <span class="text-emerald-400 font-bold">1%–3% 到全量</span>、节省督导人力约 <span class="text-emerald-400 font-bold">200 小时/月</span>，AI 导购转化率提升 <span class="text-emerald-400 font-bold">1 个百分点</span>；业余独立上线 AI 雅思备考、AI 餐饮代运营两款产品
+              <span class="font-bold text-zinc-100">AI Agent 端到端落地：</span>在海马体主导 <span class="text-emerald-400 font-semibold">微信成交经营助手</span>、<span class="text-emerald-400 font-semibold">Nexus 产品发现平台</span>、AI 导购等多个 AI 应用：成交助手使门店会话核查从抽检 <span class="text-emerald-400 font-bold">1%–3% 到全量</span>、节省督导人力约 <span class="text-emerald-400 font-bold">200 小时/月</span>，AI 导购转化率提升 <span class="text-emerald-400 font-bold">1 个百分点</span>；业余独立开发并上线过 AI 雅思备考、AI 餐饮代运营两款产品
             </div>
           </div>
           <div class="flex gap-3">
             <div class="text-cyan-400/60 font-bold flex-shrink-0">•</div>
             <div class="text-sm text-zinc-200/90 leading-relaxed">
-              <span class="font-bold text-zinc-100">可控、可评测的 AI 工程：</span>擅长「先判断再生成」的 Agent 决策链路、按场景的上下文工程与确定性兜底；自研 AI Harness 统一模型调用、离线评测与发布路由。主导 AI 驱动的低代码测试平台，覆盖 <span class="text-cyan-400 font-semibold">20+ 项目</span>，回归测试时间从 <span class="text-cyan-400 font-bold">4 小时降至 1 小时</span>
+              <span class="font-bold text-zinc-100">可控、可评测的 AI 工程：</span>让 Agent 先判断再生成，关键决策交给确定性规则兜底；自研 AI 调用网关，统一模型接入、离线评测与灰度发布，并用 AI 将 <span class="text-cyan-400 font-semibold">20+ 项目</span>的回归测试从 <span class="text-cyan-400 font-bold">4 小时压到 1 小时</span>
             </div>
           </div>
           <div class="flex gap-3">
@@ -368,9 +368,9 @@
             <div class="grid gap-1.5 text-sm text-zinc-200/90 leading-relaxed">
               <div>面向本地服务商家的微信成交副驾驶：判断本轮该不该推进、推进到什么强度，再生成符合店长风格的可控草稿，并把店长反馈沉淀为长期资产</div>
               <div><span class="text-zinc-100 font-semibold">落地效果：</span>门店会话核查覆盖率从 <span class="text-emerald-400 font-bold">1%–3% 提升至全量</span>，50 家门店一轮核查从 <span class="text-emerald-400 font-bold">约 12.5 小时降至分钟级</span>，问题发现从周级缩短到 <span class="text-emerald-400 font-bold">日级</span>，节省督导人力约 <span class="text-emerald-400 font-bold">200 小时/月</span></div>
-              <div><span class="text-zinc-100 font-semibold">「先判断再生成」决策链路：</span>信号解析 → 槽位抽取 → 意图分类（Tool Call，超时自动降级规则路由）→ 跨轮控制平面（模式锁定 / 重评开关）→ ReplyPolicy + SOP 执行 → 生成与输出质检</div>
-              <div><span class="text-zinc-100 font-semibold">上下文工程：</span>按场景生成取数计划与 Token 预算，Provider 并发取数并按能力分级降级；长对话采用「滚动摘要 + 关键证据 + 近期窗口」三段式装配；定价、档期走确定性引擎，不交给模型</div>
-              <div><span class="text-zinc-100 font-semibold">学习飞轮：</span>草稿采用 / 改写、结果标注、店长自然语言纠正自动归类为 Policy / Rule / Playbook；相似案例召回与检索质量回流持续优化</div>
+              <div><span class="text-zinc-100 font-semibold">「先判断再生成」决策链路：</span>信号解析 → 槽位抽取 → 意图分类（Tool Call，超时自动降级为规则）→ 跨轮对话状态管理 → 回复策略与门店 SOP 约束 → 生成与输出质检</div>
+              <div><span class="text-zinc-100 font-semibold">上下文工程：</span>按场景决定取哪些数据、分配 Token 预算，多数据源并发获取、失败分级降级；长对话采用「滚动摘要 + 关键证据 + 近期窗口」三段式装配；定价、档期走确定性引擎，不交给模型</div>
+              <div><span class="text-zinc-100 font-semibold">学习飞轮：</span>店长的采用 / 改写、成交结果标注和自然语言纠正，自动沉淀为长期偏好、硬性规则和话术打法；相似案例召回与检索质量回流持续优化</div>
               <div><span class="text-zinc-100 font-semibold">可控与可观测：</span>转人工条件由 LLM 解析、商家确认后生效；SOP 发布闸门、门店级回归测试集、全链路 Trace 回放，复核队列一键转测试用例</div>
             </div>
           </div>
@@ -381,8 +381,8 @@
             </div>
             <div class="grid gap-1.5 text-sm text-zinc-200/90 leading-relaxed">
               <div>回答「下一款摄影产品该研发什么」：汇聚 AI 导购沉淀的真实用户问题、小红书语料与商品供给目录发现产品机会，贯穿 机会池 → 概念设计 → 消费者快速测试 → 决策 → 小批量上线 全生命周期</div>
-              <div><span class="text-zinc-100 font-semibold">消费者快速测试：</span>C 端盲测答题 + AI 动态追问（触发条件、追问类型、归因闭集），内置熔断与停止条件防止过度追问</div>
-              <div><span class="text-zinc-100 font-semibold">自研 AI Harness：</span>独立服务统一承载模型调用，每个 AI 能力以能力包声明白名单、预算与输出 Schema，经 Release → 离线评测 → 发布 → 路由上线；配套四层 AI 功能测试规范</div>
+              <div><span class="text-zinc-100 font-semibold">消费者快速测试：</span>C 端盲测答题 + AI 根据回答动态追问、归因用户选择原因，内置熔断与停止条件防止过度追问</div>
+              <div><span class="text-zinc-100 font-semibold">自研 AI 调用网关：</span>独立服务统一承载模型调用，每个 AI 能力声明可用数据、调用预算与输出格式，经离线评测通过后才能发布和切换模型；配套 AI 功能测试规范</div>
               <div><span class="text-zinc-100 font-semibold">设计原则：</span>AI 只出候选、不推进状态、不下结论——判定交给确定性规则，关键节点由人拍板</div>
             </div>
           </div>
@@ -409,7 +409,7 @@
           <div>
             <div class="flex items-baseline gap-2 mb-2">
               <div class="text-sm font-bold text-zinc-100">AI 餐饮代运营</div>
-              <a href="https://app-c.jarvis.zj.cn/" target="_blank" class="text-xs text-purple-400/80 hover:text-purple-300">在线体验 ↗</a>
+              <span class="text-xs text-zinc-400">个人项目</span>
             </div>
             <div class="grid gap-1.5 text-sm text-zinc-200/90 leading-relaxed">
               <div>面向餐饮商家的智能运营助手：定时采集店铺经营数据，由 AI 分析并产出菜品优化、营销策略等运营建议</div>
@@ -419,7 +419,7 @@
           <div>
             <div class="flex items-baseline gap-2 mb-2">
               <div class="text-sm font-bold text-zinc-100">AI 雅思备考系统</div>
-              <a href="https://lique.site/" target="_blank" class="text-xs text-purple-400/80 hover:text-purple-300">在线体验 ↗</a>
+              <span class="text-xs text-zinc-400">个人项目</span>
             </div>
             <div class="grid gap-1.5 text-sm text-zinc-200/90 leading-relaxed">
               <div>根据目标分数、可投入时间等参数，由 AI 生成个性化备考计划与每日任务</div>
@@ -452,7 +452,7 @@
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
             <div>
               <div class="text-base font-bold text-zinc-100">海马体集团</div>
-              <div class="text-xs text-emerald-400/80 mt-1">前端架构负责人 · AI 应用方向</div>
+              <div class="text-xs text-emerald-400/80 mt-1">前端架构负责人（兼 AI 应用研发）</div>
             </div>
             <div class="text-xs text-zinc-400 sm:text-right whitespace-nowrap">2023.03 — 至今</div>
           </div>
@@ -517,24 +517,6 @@
         </div>
       </section>
 
-      <!-- 荣誉 -->
-      <section class="mt-4 gstroke p-5">
-        <div class="flex items-center gap-2 mb-4">
-          <svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-          </svg>
-          <div class="text-sm font-black text-amber-400/90">荣誉与评价</div>
-        </div>
-        <div class="grid gap-2.5">
-          <div class="text-sm text-zinc-200/90">
-            <span class="text-amber-400 font-bold">🏆</span> 国家奖学金/一等奖学金 获得者
-          </div>
-          <div class="text-sm text-zinc-200/90">
-            <span class="text-cyan-400 font-bold">🌐</span> 雅思 7 分，可直接阅读英文论文与模型文档
-          </div>
-        </div>
-      </section>
-
       <section class="mt-4 gstroke p-5">
         <div class="flex items-center gap-2 mb-4">
           <svg class="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -547,10 +529,24 @@
         </div>
       </section>
 
-      <!-- Footer -->
-      <div class="mt-6 text-center text-xs text-zinc-400/60 pb-4">
-        <p>感谢您的阅读 | 期待与您交流</p>
-      </div>
+      <!-- 教育经历 -->
+      <section class="mt-4 gstroke p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+          </svg>
+          <div class="text-sm font-black text-amber-400/90">教育经历</div>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+          <div class="text-sm text-zinc-200/90">
+            <span class="font-bold text-zinc-100">闽南师范大学</span> · 软件工程 · 本科 · <span class="text-amber-400/90">国家奖学金</span> · 雅思 7 分
+          </div>
+          <div class="text-xs text-zinc-400 whitespace-nowrap">2013 — 2017</div>
+        </div>
+      </section>
+
+      <div class="pb-4"></div>
 
     </div>
   </div>
